@@ -5,9 +5,88 @@ h1 {
   color: #1c1d21;
 }
 
-#3cacb4#3eabb3
+.title-text {
+  font-family: "DM Serif Display", serif;
+}
+
+.sub-title-text {
+  font-family: "Manrope", serif;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.fs-42 {
+  font-size: 42px !important;
+}
+
+.fs-30 {
+  font-size: 30px !important;
+}
+
+.fs-28 {
+  font-size: 28px !important;
+}
+
+.fs-26 {
+  font-size: 26px !important;
+}
+
+.fs-24 {
+  font-size: 24px !important;
+}
+
+.fs-22 {
+  font-size: 22px !important;
+}
+
+.fs-20 {
+  font-size: 20px !important;
+}
+
+.fs-18 {
+  font-size: 18px !important;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+
 .fs-14 {
   font-size: 14px !important;
+}
+
+.fw-200 {
+  font-weight: 200 !important;
+}
+
+.fw-300 {
+  font-weight: 300 !important;
+}
+
+.fw-400 {
+  font-weight: 400 !important;
+}
+
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.fw-800 {
+  font-weight: 800 !important;
+}
+
+.fw-900 {
+  font-weight: 900 !important;
 }
 
 .text-light-1 {
@@ -37,6 +116,193 @@ h1 {
 
 .btn.btn-primary:hover {
   background: #3bb2bb;
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+#main #sidenav,
+#main #content {
+  height: 100%;
+}
+
+#main #sidenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main #sidenav .small,
+#main #sidenav .desc {
+  padding-top: 38px;
+  height: 100%;
+}
+
+#main #sidenav .small {
+  width: 84px;
+  background-color: #1c1d21;
+  text-align: center;
+}
+
+#main #sidenav .small .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 3rem;
+}
+
+#main #sidenav .small .nav .item {
+  display: block;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main #sidenav .small .nav .item .img {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+#main #sidenav .small .nav .item .img img {
+  width: 23px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#main #sidenav .small .nav .item .img img.active {
+  opacity: 0;
+}
+
+#main #sidenav .small .nav .item .img img.inactive {
+  opacity: 1;
+}
+
+#main #sidenav .small .nav .item.active .img {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#main #sidenav .small .nav .item.active .img img.inactive {
+  opacity: 0;
+}
+
+#main #sidenav .small .nav .item.active .img img.active {
+  opacity: 1;
+}
+
+#main #sidenav .desc {
+  position: relative;
+  width: 389px;
+  background-color: rgba(93, 142, 146, 0.08);
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+#main #sidenav .desc .hamburger {
+  position: absolute;
+  right: 40px;
+  top: 38px;
+}
+
+#main #sidenav .desc .avatar {
+  margin-top: 46px;
+  background-color: #4acbd3;
+  width: 98px;
+  height: 98px;
+  border-radius: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main #sidenav .desc .avatar .text {
+  color: #fff;
+}
+
+#main #sidenav .desc .explore {
+  margin-top: 45px;
+}
+
+#main #sidenav .desc .explore .item {
+  padding-top: 35px;
+  padding-bottom: 14px;
+  margin-bottom: 10px;
+}
+
+#main #sidenav .desc .explore .item .title {
+  position: relative;
+}
+
+#main #sidenav .desc .explore .item .title::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  height: 1px;
+  width: 100%;
+  border-top: 0.5px solid #3e4244;
+}
+
+#main #sidenav .desc .explore .item .title .arrow {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  background-color: rgba(75, 84, 88, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+#main #content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .radio-container,
@@ -144,5 +410,71 @@ h1 {
   background: #fff;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 /*# sourceMappingURL=utilities.css.map */
