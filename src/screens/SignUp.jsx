@@ -41,11 +41,11 @@ const SignUp = () => {
               />
 
               <div className="tos">
-                <div class="radio-container">
-                  <label class="custom-radio">
+                <div className="radio-container">
+                  <label className="custom-radio">
                     I agree with terms &amp; conditions
                     <input type="radio" checked="checked" name="gender" />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                 </div>
               </div>
@@ -69,9 +69,9 @@ const SignUp = () => {
             </div>
           </div>
         </div>
-        <div className="right">
+        {/* <div className="right">
           <div className="main"></div>
-        </div>
+        </div> */}
       </div>
     </>
   );
