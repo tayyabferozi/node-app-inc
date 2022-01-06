@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url(./bootstrap-grid.min.css);
 @import url(./bootstrap-utilities.css);
 @import url(./utilities.scss);
@@ -64,30 +65,6 @@ button {
   margin-top: 4rem;
 }
 
-#signup .left .form .custom-form-control {
-  margin: 2rem 0;
-}
-
-#signup .left .form .custom-form-control .input {
-  position: relative;
-}
-
-#signup .left .form .custom-form-control .input input {
-  font-weight: 600;
-  padding: 0.25rem 0 0.5rem;
-  border: 0;
-  border-bottom: 1px solid #f2f2f2;
-  width: 100%;
-}
-
-#signup .left .form .custom-form-control .input img {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 #signup .left .form .tos * {
   font-weight: bold;
 }
@@ -118,5 +95,57 @@ button {
   left: 0;
   right: 0;
   height: 100%;
+}
+
+#dashboard-main-content .card .heading {
+  margin-bottom: 35px;
+}
+
+#dashboard-main-content .card.stats .top {
+  font-weight: bold;
+}
+
+#dashboard-main-content .card.stats .bottom {
+  font-size: 12px;
+}
+
+#dashboard-main-content .card.performance .item {
+  margin-bottom: 25px;
+}
+
+#dashboard-main-content .card.performance .item .percent {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
+}
+
+#dashboard-main-content .logs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#dashboard-main-content .logs .card {
+  width: 157px;
+  height: 98px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+#dashboard-main-content .logs .card .number {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+#dashboard-main-content .card.clients .table-card td {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 /*# sourceMappingURL=styles.css.map */
