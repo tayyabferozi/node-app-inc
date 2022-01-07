@@ -42,7 +42,7 @@ const SignUp = () => {
                 </a>
               </div>
 
-              <div className="text-center text-sm-left">
+              <div className="text-center text-sm-start">
                 <button className="btn btn-primary mt-4">Signin</button>
               </div>
             </form>
