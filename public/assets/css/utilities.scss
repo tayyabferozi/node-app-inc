@@ -6,6 +6,11 @@ h1 {
   font-family: "DM Serif Display", serif;
   color: $color3;
 
+  @media screen and (max-width: 575px) {
+    font-size: 24px;
+    line-height: 27px;
+  }
+
   .dark {
     color: $color1;
   }
@@ -14,6 +19,10 @@ h1 {
 h2 {
   font-family: "Libre Baskerville", serif;
   font-size: 18px;
+}
+
+a {
+  color: $color22;
 }
 
 .text-blue {
@@ -76,6 +85,24 @@ h2 {
   font-size: 14px !important;
 }
 
+.fs-1399-11 {
+  @media screen and (max-width: 1399px) {
+    font-size: 11px !important;
+  }
+}
+
+.fs-1399-12 {
+  @media screen and (max-width: 1399px) {
+    font-size: 12px !important;
+  }
+}
+
+.fs-1399-10 {
+  @media screen and (max-width: 1399px) {
+    font-size: 10px !important;
+  }
+}
+
 .fw-200 {
   font-weight: 200 !important;
 }
@@ -118,20 +145,59 @@ h2 {
   color: $color7;
 }
 
+.page-container {
+  max-width: 1390px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: 0.25s ease;
+
+  &.overlay-sidenav {
+    @media screen and (max-width: 1299px) {
+      &.active {
+        left: 0;
+      }
+    }
+  }
+}
+
 .btn {
   background: transparent;
   border: 0;
   transition: 0.4s ease;
 
-  &.btn-primary {
-    background: $color6;
-    color: #fff;
+  &.btn-primary,
+  &.btn-light-blue {
     border-radius: 8px;
     padding: 1.125rem 4.5rem;
     line-height: 1;
+    font-weight: bold;
+  }
+
+  &.btn-primary {
+    background: $color6;
+    color: #fff;
 
     &:hover {
       background: $color9;
+    }
+  }
+
+  &.btn-light-blue {
+    background: $color15;
+    color: $color4;
+
+    &:hover {
+      background: $color21;
     }
   }
 
@@ -144,6 +210,7 @@ h2 {
 }
 
 #main {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,6 +225,27 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    transition: 0.4s ease;
+
+    @media screen and (max-width: 1299px) {
+      position: absolute;
+      left: -473px;
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    @media screen and (max-width: 525px) {
+      left: -90%;
+      width: 90%;
+    }
+
+    @media screen and (max-width: 390px) {
+      left: -100%;
+      width: 100%;
+    }
 
     .small,
     .desc {
@@ -189,6 +277,7 @@ h2 {
       width: 84px;
       background-color: $color3;
       text-align: center;
+      overflow-x: hidden;
 
       .nav {
         display: flex;
@@ -259,9 +348,13 @@ h2 {
     .desc {
       position: relative;
       width: 389px;
-      background-color: $color10;
+      background-color: $color20;
       padding-left: 28px;
       padding-right: 28px;
+
+      @media screen and (max-width: 1550px) and (min-width: 1300px) {
+        width: 275px;
+      }
 
       .main {
         position: relative;
@@ -271,9 +364,12 @@ h2 {
         position: absolute;
         bottom: 0;
         z-index: -1;
-        // background-image: url("../vectors/sidenav-right-1.svg");
-        // background-repeat: no-repeat;
-        // background-position: center bottom;
+        padding-right: 28px;
+        z-index: 1;
+
+        img {
+          width: 100%;
+        }
 
         @media screen and (max-height: 920px) {
           position: sticky;
@@ -286,8 +382,8 @@ h2 {
 
       .hamburger {
         position: absolute;
-        right: 40px;
-        top: 38px;
+        right: 0px;
+        top: 0px;
       }
 
       .avatar {
@@ -351,35 +447,83 @@ h2 {
     padding-top: 20px;
     overflow-y: auto;
 
+    @media screen and (max-width: 1650px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
     .page-heading {
       display: flex;
       align-items: center;
+
+      .hamburger {
+        cursor: pointer;
+      }
+
+      .indicator {
+        @media screen and (max-width: 575px) {
+          width: 16px;
+        }
+      }
+
+      h1 {
+        @media screen and (max-width: 575px) {
+          font-size: 20px;
+        }
+      }
     }
 
     .head {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 8px;
+      padding-right: 8px;
       // position: fixed;
       // top: 0;
       // right: 0;
       // width: 100%;
       // background-color: #fff;
 
+      // @media screen and (max-width: 575px) {
+      //   flex-direction: column;
+      //   align-items: flex-start;
+      // }
+
       .info {
         display: flex;
         justify-content: flex-end;
         align-items: center;
 
+        @media screen and (max-width: 575px) {
+          width: 100%;
+        }
+
         .custom-form-control {
           width: 260px;
+
+          @media screen and (max-width: 768px) {
+            width: 120px;
+          }
+
+          @media screen and (max-width: 575px) {
+            display: none;
+          }
+        }
+
+        .qr,
+        .user {
+          display: flex;
+          align-items: center;
         }
 
         .qr {
           margin-left: 50px;
           margin-right: 20px;
+
+          @media screen and (max-width: 768px) {
+            margin-left: 25px;
+          }
         }
       }
     }
@@ -646,12 +790,17 @@ h2 {
 .table-card-wrap {
   margin-left: -20px;
   margin-right: -20px;
+
+  @media screen and (max-width: 575px) {
+    overflow-x: auto;
+  }
 }
 
 .table-card {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
+  min-width: 441px;
 
   thead {
     background-color: $color17;
@@ -717,7 +866,8 @@ h2 {
 
 .tabs {
   border-bottom: 2px solid $color18;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 
   .tab {
     position: relative;

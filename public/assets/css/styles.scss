@@ -23,10 +23,16 @@ button {
 }
 
 #signup {
+  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background: $color6;
+
+  @media screen and (max-width: 991px) {
+    min-height: unset;
+  }
 
   & > * {
     height: 100%;
@@ -42,17 +48,54 @@ button {
     background: #fff;
     z-index: 1;
     height: 100vh;
-    overflow-y: auto;
     width: 57%;
+    min-height: 684px;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      height: unset;
+      border-radius: 0;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
 
     .main {
       margin: 4rem 0;
+      min-height: 630px;
+      overflow-y: auto;
+
+      @media screen and (min-width: 576px) {
+        width: 360px;
+      }
+
+      @media screen and (max-width: 991px) {
+        min-height: unset;
+      }
     }
 
     .form {
       margin-top: 4rem;
 
-      .tos {
+      .tos,
+      .remember {
         * {
           font-weight: bold;
         }
@@ -69,23 +112,28 @@ button {
   }
 
   .right {
+    height: 100%;
     width: 45.5%;
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
-    background-size: cover;
-    background: $color6;
+    top: 0;
+    right: 0;
+    overflow: hidden;
 
-    .main {
-      background-image: url("../images/hero-right-1.png");
-      background-size: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
+    @media screen and (max-width: 991px) {
+      display: none;
     }
+
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+    // background-image: url("../img/hero-right-1.png");
+    // background-size: cover;
+    // background-position: right right;
   }
 }
 
@@ -98,7 +146,16 @@ button {
 // ***********************************************************************************************************************************
 
 #dashboard-main-content {
+  .month-performances {
+  }
+
+  .row {
+    height: 100%;
+  }
+
   .card {
+    height: 100%;
+
     .heading {
       margin-bottom: 35px;
     }
@@ -114,6 +171,10 @@ button {
     }
 
     &.performance {
+      @media screen and (min-width: 1400px) {
+        margin-left: 8px;
+      }
+
       .item {
         margin-bottom: 25px;
 
@@ -124,6 +185,40 @@ button {
         }
       }
     }
+
+    &.node-coin {
+      margin-left: 7px;
+
+      .top-info {
+      }
+
+      .tabs .tab {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @media screen and (max-width: 575px) {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+
+      .chart-container {
+        margin-top: 3.25rem;
+
+        .additional {
+          position: relative;
+
+          .sub {
+            position: absolute;
+            top: 2.25rem;
+          }
+        }
+      }
+    }
+
+    &.recently-viewed {
+      height: unset;
+    }
   }
 
   .logs {
@@ -131,11 +226,38 @@ button {
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 1399px) and (min-width: 1300px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 1050px) and (min-width: 992px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+    }
+
     .card {
       width: 157px;
       height: 98px;
       padding-top: 25px;
       padding-bottom: 20px;
+
+      @media screen and (max-width: 1399px) and (min-width: 1300px) {
+        width: 100%;
+        margin-bottom: 0.75rem;
+      }
+
+      @media screen and (max-width: 1050px) and (min-width: 992px) {
+        width: 100%;
+        margin-bottom: 0.75rem;
+      }
+
+      @media screen and (max-width: 575px) {
+        width: 100%;
+        margin-bottom: 0.75rem;
+      }
 
       .number {
         font-size: 20px;
