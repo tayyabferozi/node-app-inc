@@ -13,7 +13,7 @@ const SignupInput = ({ id, label, value, icon, alt, type, placeholder }) => {
           placeholder={placeholder || ""}
         />
 
-        <img src={`./assets/${icon}`} alt={alt} />
+        {icon && <img src={`./assets/${icon}`} alt={alt} />}
       </div>
     </div>
   );
