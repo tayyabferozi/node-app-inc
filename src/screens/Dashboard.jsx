@@ -232,7 +232,7 @@ const Dashboard = () => {
           <div className="head">
             <div className="page-heading">
               <img
-                className="me-sm-5 me-4 hamburger"
+                className="me-sm-5 me-4 hamburger d-1300-none"
                 src="./assets/vectors/hamburger.svg"
                 alt="hamburger"
                 onClick={toggleSideNav}
