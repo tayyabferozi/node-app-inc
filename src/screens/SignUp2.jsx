@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SignupInput from "../components/SignupInput";
 
 const SignUp = () => {
   return (
     <>
-      <div id="signup" className="step-1">
+      <div id="auth" className="step-1">
         <div className="left">
           <div className="main">
             <h1>
@@ -41,10 +42,15 @@ const SignUp = () => {
               />
 
               <div className="d-flex flex-sm-row flex-column justifify-content-start mt-5">
-                <button className="btn btn-light-blue me-sm-3 me-0 mb-3 mb-sm-0">
+                <Link
+                  to="/signup-1"
+                  className="btn btn-light-blue me-sm-3 me-0 mb-3 mb-sm-0"
+                >
                   Back
-                </button>
-                <button className="btn btn-primary ">Signup</button>
+                </Link>
+                <Link to="/signin" className="btn btn-primary ">
+                  Signup
+                </Link>
               </div>
             </form>
           </div>

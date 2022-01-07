@@ -5,7 +5,7 @@ import SignupInput from "../components/SignupInput";
 const SignUp = () => {
   return (
     <>
-      <div id="signup" className="step-1">
+      <div id="auth" className="step-1">
         <div className="left">
           <div className="main">
             <h1>
@@ -52,7 +52,7 @@ const SignUp = () => {
               </div>
 
               <div className="text-center text-sm-start">
-                <Link to="signup-2" className="btn btn-primary mt-4">
+                <Link to="/signup-2" className="btn btn-primary mt-4">
                   Signup
                 </Link>
               </div>
