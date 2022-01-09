@@ -143,13 +143,13 @@ const Dashboard = () => {
                             display: false,
                           },
                         },
-                        yAxes: [
-                          {
-                            gridLines: {
-                              drawBorder: false,
-                            },
-                          },
-                        ],
+                        // yAxes: [
+                        //   {
+                        //     gridLines: {
+                        //       drawBorder: false,
+                        //     },
+                        //   },
+                        // ],
 
                         x: {
                           grid: {
