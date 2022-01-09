@@ -3,6 +3,7 @@ import SignUp from "./screens/SignUp";
 import SignUp2 from "./screens/SignUp2";
 import Signin from "./screens/Signin";
 import Dashboard from "./screens/Dashboard";
+import ClientsList from "./screens/ClientsList";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           <Route path="/signup-2" element={<SignUp2 />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="*" element={<Navigate to="/signup-1" />} />
+          <Route path="/clients-list" element={<ClientsList />} />
+          <Route path="/" element={<Navigate to="/signup-1" />} />
         </Routes>
       </BrowserRouter>
     </>

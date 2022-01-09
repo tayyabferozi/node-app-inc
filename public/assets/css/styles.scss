@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @import url(./bootstrap-grid.min.css);
 @import url(./bootstrap-utilities.css);
@@ -22,7 +23,7 @@ button {
   cursor: pointer;
 }
 
-#signup {
+#auth {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -83,7 +84,7 @@ button {
       overflow-y: auto;
 
       @media screen and (min-width: 576px) {
-        width: 360px;
+        width: 368px;
       }
 
       @media screen and (max-width: 991px) {
@@ -272,6 +273,437 @@ button {
       td {
         padding-top: 12px;
         padding-bottom: 12px;
+      }
+    }
+  }
+}
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  ********************************************************* CLIENT LIST PAGE *******************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+#client-list-main-content {
+  table {
+    th {
+      text-align: left;
+      font-family: 12px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .label {
+    padding: 15px 10px;
+    font-size: 12px;
+    background-color: $color17;
+  }
+
+  .client-card {
+    border-radius: 12px;
+    padding: 25px 16px;
+    padding-bottom: 20px;
+    border: 1px solid $color5;
+    height: 100%;
+    cursor: pointer;
+
+    .head {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .img {
+        margin-right: 14px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .body {
+      margin-top: 34px;
+
+      .section {
+        margin-top: 22px;
+
+        &.noded {
+          min-height: 59px;
+        }
+
+        .text-bold {
+          word-wrap: break-word;
+        }
+      }
+
+      .btn {
+        margin-top: 22px;
+      }
+    }
+  }
+}
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  ********************************************************* CLIENT OVERVIEW PAGE ***************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+#client-overview-main-content {
+  .tabs .tab {
+    @media screen and (min-width: 670px) {
+      margin-left: 40px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .user-jumbotron-container {
+    @media screen and (min-width: 992px) {
+      padding-right: 1.75rem;
+    }
+  }
+
+  .user-jumbotron {
+    background-color: $color5;
+    padding: 14px 0;
+    border-radius: 10px;
+
+    .top {
+      margin-left: 16px;
+
+      .lock {
+        width: 15px;
+        height: 18px;
+      }
+    }
+
+    .profile-info {
+      padding: 0 52px;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 991px) {
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 1440px) {
+        padding: 0 25px;
+
+        & > * {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .left {
+        width: 120px;
+
+        .img {
+          position: relative;
+          width: 108px;
+          height: 108px;
+          border-radius: 50%;
+          background-color: $color23;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 100%;
+          }
+
+          .badge {
+            position: absolute;
+            padding: 4px 10px;
+            font-weight: 600;
+            color: #fff;
+            background-color: $color24;
+            border-radius: 4px;
+            bottom: -17px;
+          }
+        }
+
+        .social {
+          margin-top: 2.25rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .btn {
+            background-color: $color15;
+            width: 36px;
+            height: 36px;
+            margin-right: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .right {
+        flex-grow: 1;
+        margin-left: 90px;
+
+        @media screen and (max-width: 1440px) {
+          margin-left: 45px;
+        }
+
+        @media screen and (max-width: 991px) {
+          margin-left: 0;
+        }
+
+        .user-name,
+        .location {
+          @media screen and (max-width: 991px) {
+            text-align: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  .garage-card {
+    @media screen and (min-width: 992px) {
+      padding-left: 40px;
+    }
+
+    .desc-p {
+      max-width: 188px;
+    }
+
+    .section {
+      margin-top: 1rem;
+    }
+  }
+
+  .listing {
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+
+      & > * {
+        border-bottom: 1px solid $color27;
+        flex-grow: 1;
+        padding: 16px 0 12px;
+      }
+
+      .order-num {
+        padding-left: 10px;
+
+        .round-box {
+          margin-right: 0.75rem;
+        }
+      }
+
+      .order-date,
+      .order-price.price-1 {
+        margin: 0 18px;
+      }
+
+      .order-date {
+        max-width: 90px;
+      }
+
+      .order-price {
+        max-width: 78px;
+        text-align: right;
+
+        &,
+        & * {
+          font-family: "manrope", serif;
+        }
+
+        .price-text {
+          position: relative;
+
+          .price-sign {
+            position: absolute;
+            right: -22px;
+            top: 60%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .profiles-main {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .left {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1rem;
+      }
+      .item {
+        padding: 12px 20px;
+
+        &.active {
+          // background-color: $color15;
+        }
+
+        .img {
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .text {
+        margin-left: 16px;
+
+        & > * {
+          line-height: 1.1;
+        }
+      }
+    }
+
+    .right {
+      margin-left: 34px;
+      flex-grow: 1;
+
+      .body {
+        .section {
+          padding: 13px 0 7px;
+          border-bottom: 1px solid $color5;
+
+          & > *:nth-child(1) {
+            margin-bottom: 0.5rem;
+            font-family: "manrope", sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  .last-work-orders {
+    .listing-container {
+      overflow-y: auto;
+
+      .listing {
+        min-width: 320px;
+      }
+    }
+  }
+
+  .profiles-container {
+    @media screen and (min-width: 1440px) {
+      padding-left: 4rem;
+    }
+
+    .title,
+    .left .item {
+      @media screen and (min-width: 992px) {
+        padding-left: 1.75rem;
+      }
+    }
+  }
+
+  .client-overview-tabs {
+    .title-container > * {
+      padding-bottom: 1rem;
+    }
+
+    .title {
+      border-bottom: 1px solid $color5;
+      min-width: 266px;
+
+      @media screen and (max-width: 99px) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .invoices-main {
+    padding-right: 3rem;
+
+    @media screen and (max-width: 992px) {
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .listing-container {
+      overflow-y: auto;
+
+      .listing {
+        min-width: 425px;
+      }
+    }
+  }
+
+  .requests-list-container {
+    overflow-y: auto;
+
+    .requests-list {
+      min-width: 660px;
+    }
+  }
+
+  .requests-list {
+    .requests-list-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid $color5;
+
+      .mini-info {
+        display: flex;
+        align-items: center;
+      }
+
+      .more-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 350px;
+
+        .badge-container {
+          min-width: 100px;
+
+          .btn.badge {
+            border-radius: 25px;
+            padding: 2px 7px;
+            color: #fff;
+            font-weight: 400;
+          }
+        }
+
+        .prod-name {
+          display: flex;
+          align-items: center;
+        }
       }
     }
   }

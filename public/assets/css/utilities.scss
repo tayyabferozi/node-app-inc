@@ -25,20 +25,16 @@ a {
   color: $color22;
 }
 
-.text-blue {
-  color: $color4;
+a,
+button,
+.btn {
+  cursor: pointer;
 }
 
-.text-cyan {
-  color: $color13;
-}
-
-.title-text {
-  font-family: "DM Serif Display", serif;
-}
-
-.sub-title-text {
-  font-family: "Manrope", serif;
+.d-1300-none {
+  @media screen and (min-width: 1300px) {
+    display: none;
+  }
 }
 
 .lh-1 {
@@ -51,6 +47,10 @@ a {
 
 .fs-30 {
   font-size: 30px !important;
+}
+
+.fs-32 {
+  font-size: 32px !important;
 }
 
 .fs-28 {
@@ -83,6 +83,18 @@ a {
 
 .fs-14 {
   font-size: 14px !important;
+}
+
+.fs-12 {
+  font-size: 12px !important;
+}
+
+.fs-10 {
+  font-size: 10px !important;
+}
+
+.fs-7 {
+  font-size: 7px !important;
 }
 
 .fs-1399-11 {
@@ -135,14 +147,87 @@ a {
   font-weight: 900 !important;
 }
 
-.text-light-1 {
+.text-black {
+  color: #000;
+}
+
+.text-dark-1 {
+  color: $color26;
+}
+
+.text-dark-2 {
+  color: $color26;
+  font-weight: 600;
+}
+
+.text-dark-3 {
+  color: $color3;
+}
+
+.text-bold,
+.text-x-bold {
+  color: $color1;
+  font-weight: 600;
+}
+
+.text-x-bold {
+  font-size: 12px;
+}
+
+.text-light-1,
+.text-light-2,
+.text-light-3,
+.text-light-4,
+.text-manrope {
   font-family: "Manrope", sans-serif;
-  color: $color8;
 }
 
 .text-light-1 {
-  font-family: "Manrope", sans-serif;
+  color: $color8;
+}
+
+.text-light-2 {
   color: $color7;
+}
+
+.text-light-3 {
+  color: $color19;
+}
+
+.text-light-4 {
+  color: $color25;
+  font-weight: 300;
+}
+
+.text-light-5 {
+  color: $color2;
+}
+
+.text-small,
+.text-x-small {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  color: $color2;
+}
+
+.text-x-small {
+  font-size: 10px;
+}
+
+.text-blue {
+  color: $color4;
+}
+
+.text-cyan {
+  color: $color13;
+}
+
+.title-text {
+  font-family: "DM Serif Display", serif;
+}
+
+.sub-title-text {
+  font-family: "Manrope", serif;
 }
 
 .page-container {
@@ -186,6 +271,7 @@ a {
   &.btn-primary {
     background: $color6;
     color: #fff;
+    display: inline-block;
 
     &:hover {
       background: $color9;
@@ -206,6 +292,29 @@ a {
     color: #fff;
     padding: 14px 30px;
     display: inline-block;
+  }
+
+  &.btn-vert {
+    background-color: $color5;
+    color: $color19;
+    padding: 8px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  &.btn-add {
+    color: $color3;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+  }
+
+  &.btn-blue-high {
+    color: $color4;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 8px;
+    background-color: $color15;
   }
 }
 
@@ -291,11 +400,25 @@ a {
           display: flex;
           justify-content: center;
           align-items: center;
+          transform: 0.4s ease;
 
           .img {
             position: relative;
             width: 48px;
             height: 48px;
+            transition: 0.4s ease;
+
+            &::after {
+              content: "";
+              position: absolute;
+              right: -17px;
+              top: 0;
+              width: 2px;
+              height: 100%;
+              background-color: #fff;
+              opacity: 0;
+              transition: 0.4s ease;
+            }
 
             img {
               width: 23px;
@@ -303,6 +426,7 @@ a {
               left: 50%;
               top: 50%;
               transform: translate(-50%, -50%);
+              transition: 0.4s ease;
 
               &.active {
                 opacity: 0;
@@ -316,18 +440,11 @@ a {
 
           &.active {
             .img {
-              position: relative;
               background-color: #fff;
               border-radius: 5px;
 
               &::after {
-                content: "";
-                position: absolute;
-                right: -17px;
-                top: 0;
-                width: 2px;
-                height: 100%;
-                background-color: #fff;
+                opacity: 1;
               }
 
               img {
@@ -445,6 +562,8 @@ a {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;
+    padding-bottom: 50px;
+
     overflow-y: auto;
 
     @media screen and (max-width: 1650px) {
@@ -467,13 +586,15 @@ a {
       }
 
       h1 {
+        flex-shrink: 0;
+
         @media screen and (max-width: 575px) {
           font-size: 20px;
         }
       }
     }
 
-    .head {
+    & > .page-container > .head {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -502,7 +623,7 @@ a {
         .custom-form-control {
           width: 260px;
 
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 850px) {
             width: 120px;
           }
 
@@ -797,18 +918,7 @@ a {
 }
 
 .table-card {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
   min-width: 441px;
-
-  thead {
-    background-color: $color17;
-
-    th {
-      font-weight: normal;
-    }
-  }
 
   td,
   th {
@@ -864,6 +974,16 @@ a {
   }
 }
 
+.tabContents {
+  .tabContent {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
 .tabs {
   border-bottom: 2px solid $color18;
   padding-right: 0.5rem;
@@ -874,6 +994,7 @@ a {
     padding: 0.5rem 0.75rem;
     background-color: transparent;
     border: none;
+    font-family: "Manrope", serif;
 
     &::after {
       opacity: 0;
@@ -895,5 +1016,87 @@ a {
         opacity: 1;
       }
     }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  thead {
+    background-color: $color17;
+
+    th {
+      font-weight: normal;
+      padding: 15px 28px;
+    }
+  }
+
+  td,
+  th {
+    font-family: "Manrope", sans-serif;
+  }
+}
+
+.pagination {
+  * {
+    font-family: "Lato", sans-serif;
+  }
+
+  .nav-btn {
+    background-color: $color5;
+    font-weight: 900;
+    padding: 14px 18px;
+    border-radius: 6px;
+
+    &.prev {
+      padding-left: 31px;
+    }
+
+    &.next {
+      padding-right: 31px;
+    }
+  }
+
+  .pages .btn {
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin: 0 8px;
+
+    &.active {
+      border-color: $color2;
+    }
+  }
+}
+
+.round-box {
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+.short-vertical-scrollbar {
+  &::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }
