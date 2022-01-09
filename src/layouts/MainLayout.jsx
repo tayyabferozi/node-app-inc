@@ -182,11 +182,11 @@ const MainLayout = ({
               <div className="fs-10">{exploreSub}</div>
 
               <div className="item">
-                {exploreContent.map((el) => {
+                {exploreContent.map((el, idx) => {
                   const { time, title, sub } = el;
 
                   return (
-                    <div className="item">
+                    <div className="item" key={"explore" + idx}>
                       <div className="title">
                         <div className="arrow">
                           <img
