@@ -4,13 +4,6 @@ import Tabs from "../components/Tabs";
 import TabContents from "../components/TabContents";
 import TabContentItem from "../components/TabContentItem";
 
-const colors = [
-  "#ECA0A0",
-  "#1E55A9",
-  "linear-gradient(0deg, #4ACBD3, #4ACBD3)",
-  "linear-gradient(0deg, #1E55A9, #1E55A9)",
-];
-
 const ClientsList = () => {
   const [clientSelected, setClientSelected] = useState(false);
 
