@@ -12,7 +12,7 @@ const colors = [
 ];
 
 const ClientsList = () => {
-  const [clientSelected, setClientSelected] = useState(true);
+  const [clientSelected, setClientSelected] = useState(false);
 
   return (
     <MainLayout
@@ -251,7 +251,7 @@ const ClientsList = () => {
                                     orderDate: "2021-10-22",
                                     orderPrice: "83.25",
                                   },
-                                ].map((el) => {
+                                ].map((el, idx) => {
                                   const {
                                     orderNum,
                                     orderDate,
@@ -260,7 +260,10 @@ const ClientsList = () => {
                                   } = el;
 
                                   return (
-                                    <div className="list-item">
+                                    <div
+                                      key={"order-list" + idx}
+                                      className="list-item"
+                                    >
                                       <div className="order-num d-flex align-items-center">
                                         <div
                                           className="round-box"
@@ -327,7 +330,7 @@ const ClientsList = () => {
                                   text1: "Anti-starter lever",
                                   text3: "Can’t be Noded",
                                 },
-                              ].map((el) => {
+                              ].map((el, idx) => {
                                 const {
                                   vector,
                                   text1,
@@ -340,6 +343,7 @@ const ClientsList = () => {
 
                                 return (
                                   <div
+                                    key={"prod-list" + idx}
                                     className="item active d-flex align-items-center"
                                     style={{ backgroundColor: bg }}
                                   >
@@ -504,7 +508,7 @@ const ClientsList = () => {
                                     price1: 230.1,
                                     price2: 230.1,
                                   },
-                                ].map((el) => {
+                                ].map((el, idx) => {
                                   const {
                                     orderNum,
                                     orderDate,
@@ -513,7 +517,10 @@ const ClientsList = () => {
                                   } = el;
 
                                   return (
-                                    <div className="list-item">
+                                    <div
+                                      className="list-item"
+                                      key={"invoice-list" + idx}
+                                    >
                                       <div className="order-num d-flex align-items-center">
                                         <div
                                           className="round-box"
@@ -589,11 +596,14 @@ const ClientsList = () => {
                                     name: "WO #893788784",
                                     date: "2021-10-22",
                                   },
-                                ].map((el) => {
+                                ].map((el, idx) => {
                                   const { label, name, date } = el;
 
                                   return (
-                                    <div className="list-item">
+                                    <div
+                                      className="list-item"
+                                      key={"ins" + idx}
+                                    >
                                       <div className="label">
                                         <div className="text-dark-2">
                                           {label}
@@ -656,7 +666,7 @@ const ClientsList = () => {
                             prodName: "WO 326323233",
                             date: "21 Sep 2021",
                           },
-                        ].map((el) => {
+                        ].map((el, idx) => {
                           const {
                             titleText,
                             prodName,
@@ -667,7 +677,10 @@ const ClientsList = () => {
                           } = el;
 
                           return (
-                            <div className="requests-list-item">
+                            <div
+                              className="requests-list-item"
+                              key={"req-list" + idx}
+                            >
                               <div className="mini-info">
                                 <img
                                   src="./assets/vectors/request-accept.svg"
@@ -819,10 +832,12 @@ const ClientsList = () => {
                 const { img, name, visits, email, phone, noded, avatarBg } = el;
 
                 return (
-                  <div className="col-lg-3 col-md-4 col-sm-6 col-12">
+                  <div
+                    className="col-lg-3 col-md-4 col-sm-6 col-12"
+                    key={"client-list" + idx}
+                  >
                     <ClientCard
                       setClientSelected={setClientSelected}
-                      key={idx}
                       img={img}
                       name={name}
                       visits={visits}
