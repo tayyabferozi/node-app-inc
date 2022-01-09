@@ -587,6 +587,23 @@ button,
   border-top: 0.5px solid #3e4244;
 }
 
+#main #sidenav .desc .explore .item .title .time-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main #sidenav .desc .explore .item .title .time-container .circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #3e4244;
+  margin-right: 8px;
+}
+
 #main #sidenav .desc .explore .item .title .arrow {
   position: absolute;
   width: 29px;
@@ -606,6 +623,66 @@ button,
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border-radius: 5px;
+}
+
+#main #sidenav .desc.minimal {
+  padding-top: 25px;
+}
+
+#main #sidenav .desc.minimal .main .user {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main #sidenav .desc.minimal .main .user::after {
+  content: "";
+  position: absolute;
+  left: -28px;
+  right: -28px;
+  bottom: -23px;
+  border-bottom: 1px solid #f0f0f3;
+  height: 1px;
+}
+
+#main #sidenav .desc.minimal .main .user .avatar {
+  width: 36px;
+  height: 36px;
+  margin-top: 0;
+  border-radius: 6px;
+}
+
+#main #sidenav .desc.minimal .main .user .avatar .text {
+  font-family: "Lato", sans-serif;
+  font-size: 30px !important;
+}
+
+#main #sidenav .desc.minimal .main .user .noun {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-left: 12px;
+}
+
+#main #sidenav .desc.minimal .main .user .noun .user-name {
+  font-family: "manrope", sans-serif;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+}
+
+#main #sidenav .desc.minimal .main .user .noun .user-label {
+  font-size: 10px !important;
+  font-family: "manrope", sans-serif;
+  font-weight: 400 !important;
+  margin-top: 0.25rem !important;
 }
 
 #main #content {

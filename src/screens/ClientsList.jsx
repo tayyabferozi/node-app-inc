@@ -10,9 +10,27 @@ const ClientsList = () => {
   return (
     <MainLayout
       headVector="./assets/vectors/nav-5__active.svg"
-      sideNavVector="./assets/vectors/sidenav-right-1.svg"
+      sideNavVector="./assets/vectors/sidenav-right-2.svg"
       title={clientSelected ? "Client Overview" : "Clients List"}
       minimalNavRight
+      exploreSub="Services &amp; Request Assign to you"
+      exploreContent={[
+        {
+          time: "11:30",
+          title: "Oil Change",
+          sub: "Ford Focus 2021",
+        },
+        {
+          time: "11:45",
+          title: "Engine + AC Check up",
+          sub: "Chevroley Cruze 2020",
+        },
+        {
+          time: "13:00",
+          title: "Broken Light",
+          sub: "Honda Civic 2021",
+        },
+      ]}
     >
       {clientSelected ? (
         <div id="client-overview-main-content" className="mt-4 mt-sm-0">

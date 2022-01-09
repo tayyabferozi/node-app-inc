@@ -18,6 +18,21 @@ const Dashboard = () => {
       headVector="./assets/vectors/nav-1__active.svg"
       sideNavVector="./assets/vectors/sidenav-right-1.svg"
       title="Dashboard"
+      exploreSub="Tasks assign to you"
+      exploreContent={[
+        {
+          title: "Order Rear Brake Light",
+          sub: "Service 8372782392",
+        },
+        {
+          title: "Make Inventory of Tires",
+          sub: "Nothing",
+        },
+        {
+          title: "Call Mathilde",
+          sub: "Client Mathilde Ducharme",
+        },
+      ]}
     >
       <div id="dashboard-main-content">
         <div className="container-fluid px-0">

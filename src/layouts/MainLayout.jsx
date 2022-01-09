@@ -9,6 +9,8 @@ const MainLayout = ({
   headVector,
   sideNavVector,
   minimalNavRight,
+  exploreSub,
+  exploreContent,
 }) => {
   const toggleSideNav = () => {
     $("#sidenav").toggleClass("active");
@@ -154,7 +156,7 @@ const MainLayout = ({
             </NavLink>
           </div>
         </div>
-        <div className={`desc ${minimalNavRight ? "minimal" : ""}`}>
+        <div className={`desc${minimalNavRight ? " minimal" : ""}`}>
           <div className="main">
             <img
               className="hamburger d-sm-none d-block"
@@ -167,53 +169,45 @@ const MainLayout = ({
               <div className="avatar">
                 <div className="text fs-42 fw-700">G</div>
               </div>
-              <div className="fs-20 fw-200 lh-1 mt-4">Team</div>
-              <div className="fw-600 fs-22 lh-1">Garage Lelaval</div>
+              <div className="noun">
+                <div className="fs-20 fw-200 lh-1 mt-4 user-label">Team</div>
+                <div className="fw-600 fs-22 lh-1 user-name">
+                  Garage Lelaval
+                </div>
+              </div>
             </div>
 
             <div className="explore">
               <div className="fs-26 fw-400 title-text">What's next?</div>
-              <div className="fs-10">Tasks assign to you</div>
+              <div className="fs-10">{exploreSub}</div>
 
               <div className="item">
-                <div className="title">
-                  <div className="arrow">
-                    <img
-                      src="./assets/vectors/arrow-right.svg"
-                      alt="arrow-right"
-                    />
-                  </div>
-                  <div className="fs-14 fw-600">Order Rear Brake Light</div>
-                  <div className="fs-12 fw-400 sub-title-text">
-                    Service 8372782392
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="title">
-                  <div className="arrow">
-                    <img
-                      src="./assets/vectors/arrow-right.svg"
-                      alt="arrow-right"
-                    />
-                  </div>
-                  <div className="fs-14 fw-600">Make Inventory of Tires</div>
-                  <div className="fs-12 fw-400 sub-title-text">Nothing</div>
-                </div>
-              </div>
-              <div className="item">
-                <div className="title">
-                  <div className="arrow">
-                    <img
-                      src="./assets/vectors/arrow-right.svg"
-                      alt="arrow-right"
-                    />
-                  </div>
-                  <div className="fs-14 fw-600">Call Mathilde</div>
-                  <div className="fs-12 fw-400 sub-title-text">
-                    Client Mathilde Ducharme
-                  </div>
-                </div>
+                {exploreContent.map((el) => {
+                  const { time, title, sub } = el;
+
+                  return (
+                    <div className="item">
+                      <div className="title">
+                        <div className="arrow">
+                          <img
+                            src="./assets/vectors/arrow-right.svg"
+                            alt="arrow-right"
+                          />
+                        </div>
+                        {time && (
+                          <div className="time-container">
+                            <div className="circle"></div>
+                            <div className="fs-12 fw-700 font-manrope">
+                              {time}
+                            </div>
+                          </div>
+                        )}
+                        <div className="fs-14 fw-600">{title}</div>
+                        <div className="fs-12 fw-400 sub-title-text">{sub}</div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
