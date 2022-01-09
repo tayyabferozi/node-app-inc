@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AuthLayout from "../layouts/AuthLayout";
 import SignupInput from "../components/SignupInput";
 
 const SignUp = () => {
+  const [formState, setFormState] = useState({
+    name: "Catherine Shaw",
+    email: "catherine.shaw@gmail.com",
+    password: "",
+  });
+
+  const inputChangeHandler = (e) => {
+    const { name, value } = e.target;
+
+    setFormState((prevVal) => {
+      return { ...prevVal, [name]: value };
+    });
+  };
   return (
     <AuthLayout rightImg="./assets/vectors/auth-right-1.svg" rootClass="step-1">
       <h1>
@@ -16,33 +29,45 @@ const SignUp = () => {
       <form action="" className="form">
         <SignupInput
           id="name"
+          name="name"
           label="Full name"
-          value="Catherine Shaw"
           icon="vectors/user.svg"
           alt="user"
+          value={formState.name}
+          onChange={inputChangeHandler}
         />
         <SignupInput
           id="email"
+          name="email"
           label="Email"
           type="email"
-          value="catherine.shaw@gmail.com"
           icon="vectors/mail.svg"
           alt="email"
+          value={formState.email}
+          onChange={inputChangeHandler}
         />
         <SignupInput
           id="password"
+          name="password"
           label="Password"
           type="password"
           placeholder="Start typing.."
           icon="vectors/lock.svg"
           alt="lock"
+          value={formState.password}
+          onChange={inputChangeHandler}
         />
 
         <div className="tos">
           <div className="radio-container">
             <label className="custom-radio">
               I agree with terms &amp; conditions
-              <input type="radio" checked="checked" name="gender" />
+              <input
+                type="radio"
+                checked="checked"
+                name="gender"
+                onChange={inputChangeHandler}
+              />
               <span className="checkmark"></span>
             </label>
           </div>

@@ -1,4 +1,13 @@
-const SignupInput = ({ id, label, value, icon, alt, type, placeholder }) => {
+const SignupInput = ({
+  id,
+  label,
+  value,
+  icon,
+  alt,
+  type,
+  placeholder,
+  ...rest
+}) => {
   return (
     <div className="custom-form-control">
       <label htmlFor={id} className="text-light-1">
@@ -6,6 +15,7 @@ const SignupInput = ({ id, label, value, icon, alt, type, placeholder }) => {
       </label>
       <div className="input">
         <input
+          {...rest}
           className="custom-input"
           type={type || "text"}
           id={id}

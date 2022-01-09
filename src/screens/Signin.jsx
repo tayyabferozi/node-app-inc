@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AuthLayout from "../layouts/AuthLayout";
 import SignupInput from "../components/SignupInput";
 
 const SignUp = () => {
+  const [formState, setFormState] = useState({
+    email: "john.doe@gmail.com",
+    password: "",
+  });
+
+  const inputChangeHandler = (e) => {
+    const { name, value } = e.target;
+
+    setFormState((prevVal) => {
+      return { ...prevVal, [name]: value };
+    });
+  };
   return (
     <AuthLayout rightImg="./assets/vectors/auth-right-3.svg" rootClass="step-3">
       <h1>
@@ -16,22 +28,32 @@ const SignUp = () => {
       <form action="" className="form">
         <SignupInput
           id="email"
+          name="email"
           label="Email"
           type="email"
-          value="john.doe@gmail.com"
+          value={formState.email}
+          onChange={inputChangeHandler}
         />
         <SignupInput
           id="password"
+          name="password"
           label="Password"
           type="password"
+          value={formState.password}
           placeholder="Start typing.."
+          onChange={inputChangeHandler}
         />
 
         <div className="remember d-flex justify-content-between align-items-start align-items-sm-center flex-column flex-sm-row mb-sm-0 mb-4">
           <div className="radio-container">
             <label className="custom-radio">
               Remember me
-              <input type="radio" checked="checked" name="gender" />
+              <input
+                type="radio"
+                onChange={inputChangeHandler}
+                checked="checked"
+                name="gender"
+              />
               <span className="checkmark"></span>
             </label>
           </div>

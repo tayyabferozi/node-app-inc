@@ -26,7 +26,7 @@ const MainLayout = ({
           <img src="./assets/vectors/logo.svg" alt="logo" className="logo" />
 
           <div className="nav">
-            <NavLink activeClassName="active" to="/dashboard" className="item">
+            <NavLink to="/dashboard" className="item">
               <div className="img">
                 <img
                   className="inactive"
@@ -245,6 +245,7 @@ const MainLayout = ({
                       id="search"
                       placeholder="Start typing.."
                       value=""
+                      readOnly
                     />
                   </div>
                 </div>

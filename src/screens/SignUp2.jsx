@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AuthLayout from "../layouts/AuthLayout";
 import SignupInput from "../components/SignupInput";
 
 const SignUp = () => {
+  const [formState, setFormState] = useState({
+    company: "Garage Lelaval",
+    employees: "1-10 Employees",
+    enterprise: "Automobile workshop",
+    phone: "",
+  });
+
+  const inputChangeHandler = (e) => {
+    const { name, value } = e.target;
+
+    setFormState((prevVal) => {
+      return { ...prevVal, [name]: value };
+    });
+  };
   return (
     <AuthLayout rightImg="./assets/vectors/auth-right-2.svg" className="step-2">
       <h1>
@@ -14,24 +28,37 @@ const SignUp = () => {
       <p className="text-light-1 mt-3">Enter your details to proceed further</p>
 
       <form action="" className="form">
-        <SignupInput id="company" label="Company name" value="Garage Lelaval" />
+        <SignupInput
+          id="company"
+          name="company"
+          label="Company name"
+          value={formState.company}
+          onChange={inputChangeHandler}
+        />
         <SignupInput
           id="employees"
+          name="employees"
           label="Employees"
           type="text"
-          value="1-10 Employees"
+          value={formState.employees}
+          onChange={inputChangeHandler}
         />
         <SignupInput
           id="enterprise"
+          name="enterprise"
           label="Enterprise type"
           type="text"
-          value="Automobile workshop"
+          value={formState.enterprise}
+          onChange={inputChangeHandler}
         />
         <SignupInput
           id="phone"
+          name="phone"
           label="Phone"
           type="tel"
           placeholder="Start typing..."
+          value={formState.phone}
+          onChange={inputChangeHandler}
         />
 
         <div className="d-flex flex-sm-row flex-column justifify-content-start mt-5">
