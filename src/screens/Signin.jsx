@@ -27,6 +27,7 @@ const SignUp = () => {
 
       <form action="" className="form">
         <SignupInput
+          icon="vectors/mail.svg"
           id="email"
           name="email"
           label="Email"
@@ -35,6 +36,7 @@ const SignUp = () => {
           onChange={inputChangeHandler}
         />
         <SignupInput
+          icon="vectors/lock.svg"
           id="password"
           name="password"
           label="Password"

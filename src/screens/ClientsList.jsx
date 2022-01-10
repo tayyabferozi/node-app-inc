@@ -10,7 +10,7 @@ const ClientsList = () => {
   return (
     <MainLayout
       headVector="./assets/vectors/nav-5__active.svg"
-      sideNavVector="./assets/vectors/sidenav-right-2.svg"
+      sideNavVector="./assets/vectors/sidenav-right-3.svg"
       title={clientSelected ? "Client Overview" : "Clients List"}
       minimalNavRight
       exploreSub="Services &amp; Request Assign to you"
@@ -36,7 +36,7 @@ const ClientsList = () => {
         <div id="client-overview-main-content" className="mt-4 mt-sm-0">
           <div className="container-fluid">
             <div className="row g-4">
-              <div className="col-md-8 col-sm-7 d-flex flex-column user-jumbotron-container">
+              <div className="col-md-9 col-sm-7 d-flex flex-column user-jumbotron-container">
                 <div className="user-jumbotron flex-grow-1">
                   <div className="top d-flex align-items-center">
                     <img
@@ -151,7 +151,7 @@ const ClientsList = () => {
                   ]}
                 />
               </div>
-              <div className="col-md-4 col-sm-5">
+              <div className="col-md-3 col-sm-5 garage-specs-container">
                 <div className="card garage-card shadowed">
                   <img src="./assets/vectors/garage.svg" alt="garage" />
                   <h2 className="mt-3">Garage Specs</h2>
@@ -221,7 +221,14 @@ const ClientsList = () => {
                                   Services &amp; Products
                                 </div>
                               </div>
-                              <button className="btn btn-add">ADD</button>
+                              <button className="btn btn-add">
+                                <img
+                                  src="./assets/vectors/add.svg"
+                                  alt="add"
+                                  className="add"
+                                />
+                                ADD
+                              </button>
                             </div>
                             <div className="listing-container short-vertical-scrollbar">
                               <div className="listing mt-3">
@@ -307,7 +314,14 @@ const ClientsList = () => {
                                 Noded &amp; Internal
                               </div>
                             </div>
-                            <button className="btn btn-add">ADD</button>
+                            <button className="btn btn-add">
+                              <img
+                                src="./assets/vectors/add.svg"
+                                alt="add"
+                                className="add"
+                              />
+                              ADD
+                            </button>
                           </div>
 
                           <div className="profiles-main mt-3">
@@ -474,7 +488,7 @@ const ClientsList = () => {
                   <TabContentItem target="invoices">
                     <div className="container-fluid p-0">
                       <div className="row gx-sm-5 gy-5">
-                        <div className="col-lg-7">
+                        <div className="col-lg-7 invoices-wrapper">
                           <div className="invoices-main">
                             <div className="d-flex justify-content-between title-container">
                               <div className="title">
@@ -483,7 +497,14 @@ const ClientsList = () => {
                                   Services &amp; Articles
                                 </div>
                               </div>
-                              <button className="btn btn-add">ADD</button>
+                              <button className="btn btn-add">
+                                <img
+                                  src="./assets/vectors/add.svg"
+                                  alt="add"
+                                  className="add"
+                                />
+                                ADD
+                              </button>
                             </div>
 
                             <div className="listing-container ">
@@ -576,7 +597,14 @@ const ClientsList = () => {
                                   All check responses
                                 </div>
                               </div>
-                              <button className="btn btn-add">ADD</button>
+                              <button className="btn btn-add">
+                                <img
+                                  src="./assets/vectors/add.svg"
+                                  alt="add"
+                                  className="add"
+                                />
+                                ADD
+                              </button>
                             </div>
 
                             <div className="listing-container">
@@ -648,7 +676,14 @@ const ClientsList = () => {
                           Relating Client or Items Noded
                         </div>
                       </div>
-                      <button className="btn btn-add">ADD</button>
+                      <button className="btn btn-add">
+                        <img
+                          src="./assets/vectors/add.svg"
+                          alt="add"
+                          className="add"
+                        />
+                        ADD
+                      </button>
                     </div>
                     <div className="requests-list-container">
                       <div className="requests-list mt-4">
@@ -752,14 +787,35 @@ const ClientsList = () => {
                 <div className="label ps-4">Name</div>
               </div>
               <div className="col-3">
-                <div className="label">Email</div>
+                <div className="label">
+                  <img
+                    src="./assets/vectors/a-z-sort.svg"
+                    alt="sort"
+                    className="sort-icon"
+                  />
+                  Email
+                </div>
               </div>
               <div className="col-3">
-                <div className="label">Phone</div>
+                <div className="label">
+                  <img
+                    src="./assets/vectors/a-z-sort.svg"
+                    alt="sort"
+                    className="sort-icon"
+                  />
+                  Phone
+                </div>
               </div>
               <div className="col-3">
                 <div className="label d-flex justify-content-end pe-4">
-                  <button className="btn btn-add">ADD</button>
+                  <button className="btn btn-add">
+                    <img
+                      src="./assets/vectors/add.svg"
+                      alt="add"
+                      className="add"
+                    />
+                    ADD
+                  </button>
                 </div>
               </div>
             </div>
@@ -863,7 +919,14 @@ const ClientsList = () => {
             </div>
             <div className="col-12">
               <div className="pagination mt-5 d-flex justify-content-between">
-                <button className="btn nav-btn prev">PREV</button>
+                <button className="btn nav-btn prev">
+                  <img
+                    className="arrow"
+                    src="./assets/vectors/arrow-left-btn.svg"
+                    alt="arrow-left"
+                  />
+                  PREV
+                </button>
                 <div className="pages">
                   <button className="btn page-button">1</button>
                   <button className="btn page-button">2</button>
@@ -871,7 +934,14 @@ const ClientsList = () => {
                   <button className="btn page-button">4</button>
                   <button className="btn page-button active">6</button>
                 </div>
-                <button className="btn nav-btn next">PREV</button>
+                <button className="btn nav-btn next">
+                  PREV
+                  <img
+                    className="arrow"
+                    src="./assets/vectors/arrow-right-btn.svg"
+                    alt="arrow-right"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -896,7 +966,10 @@ const ClientCard = ({
   return (
     <div className="client-card" onClick={() => setClientSelected(true)}>
       <div className="head">
-        <div className="img" style={{ background: avatarBg }}>
+        <div
+          className="img"
+          // style={{ background: avatarBg }}
+        >
           <img src={img} alt={name} />
         </div>
         <div className="text">

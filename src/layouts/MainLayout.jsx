@@ -159,7 +159,7 @@ const MainLayout = ({
         <div className={`desc${minimalNavRight ? " minimal" : ""}`}>
           <div className="main">
             <img
-              className="hamburger d-sm-none d-block"
+              className="hamburger"
               src="./assets/vectors/hamburger.svg"
               alt="hamburger"
               onClick={toggleSideNav}
@@ -240,6 +240,11 @@ const MainLayout = ({
                       placeholder="Start typing.."
                       value=""
                       readOnly
+                    />
+                    <img
+                      src="./assets/vectors/arrow-down.svg"
+                      className="arrow-down"
+                      alt="arrow-down"
                     />
                   </div>
                 </div>
