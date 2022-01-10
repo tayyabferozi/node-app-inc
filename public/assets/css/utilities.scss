@@ -307,6 +307,12 @@ button,
     font-size: 12px;
     font-weight: 900;
     font-family: "Lato", sans-serif;
+    display: flex;
+    align-items: center;
+
+    .add {
+      margin-right: 5px;
+    }
   }
 
   &.btn-blue-high {
@@ -572,6 +578,10 @@ button,
         padding-top: 25px;
 
         .main {
+          .hamburger {
+            top: 12px;
+          }
+
           .user {
             position: relative;
             display: flex;
@@ -688,6 +698,7 @@ button,
 
         .custom-form-control {
           width: 260px;
+          position: relative;
 
           @media screen and (max-width: 850px) {
             width: 120px;
@@ -695,6 +706,13 @@ button,
 
           @media screen and (max-width: 575px) {
             display: none;
+          }
+
+          .arrow-down {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
           }
         }
 
@@ -1111,17 +1129,32 @@ table {
   }
 
   .nav-btn {
+    position: relative;
     background-color: $color5;
     font-weight: 900;
     padding: 14px 18px;
     border-radius: 6px;
 
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     &.prev {
       padding-left: 31px;
+
+      .arrow {
+        left: 12px;
+      }
     }
 
     &.next {
       padding-right: 31px;
+
+      .arrow {
+        right: 12px;
+      }
     }
   }
 

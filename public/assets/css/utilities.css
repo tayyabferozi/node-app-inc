@@ -307,6 +307,16 @@ button,
   font-size: 12px;
   font-weight: 900;
   font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn.btn-add .add {
+  margin-right: 5px;
 }
 
 .btn.btn-blue-high {
@@ -629,6 +639,10 @@ button,
   padding-top: 25px;
 }
 
+#main #sidenav .desc.minimal .main .hamburger {
+  top: 12px;
+}
+
 #main #sidenav .desc.minimal .main .user {
   position: relative;
   display: -webkit-box;
@@ -767,6 +781,7 @@ button,
 
 #main #content > .page-container > .head .info .custom-form-control {
   width: 260px;
+  position: relative;
 }
 
 @media screen and (max-width: 850px) {
@@ -779,6 +794,14 @@ button,
   #main #content > .page-container > .head .info .custom-form-control {
     display: none;
   }
+}
+
+#main #content > .page-container > .head .info .custom-form-control .arrow-down {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
 }
 
 #main #content > .page-container > .head .info .qr,
@@ -1195,18 +1218,34 @@ table th {
 }
 
 .pagination .nav-btn {
+  position: relative;
   background-color: #f2f2f2;
   font-weight: 900;
   padding: 14px 18px;
   border-radius: 6px;
 }
 
+.pagination .nav-btn .arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .pagination .nav-btn.prev {
   padding-left: 31px;
 }
 
+.pagination .nav-btn.prev .arrow {
+  left: 12px;
+}
+
 .pagination .nav-btn.next {
   padding-right: 31px;
+}
+
+.pagination .nav-btn.next .arrow {
+  right: 12px;
 }
 
 .pagination .pages .btn {

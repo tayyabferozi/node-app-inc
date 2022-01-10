@@ -219,6 +219,7 @@ button {
 
     &.recently-viewed {
       height: unset;
+      min-height: 510px;
     }
   }
 
@@ -244,6 +245,10 @@ button {
       height: 98px;
       padding-top: 25px;
       padding-bottom: 20px;
+
+      @media screen and (min-width: 1681px) {
+        width: 30%;
+      }
 
       @media screen and (max-width: 1399px) and (min-width: 1300px) {
         width: 100%;
@@ -299,18 +304,28 @@ button {
   }
 
   .label {
+    position: relative;
     padding: 15px 10px;
     font-size: 12px;
     background-color: $color17;
+
+    .sort-icon {
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   .client-card {
+    position: relative;
     border-radius: 12px;
     padding: 25px 16px;
     padding-bottom: 20px;
     border: 1px solid $color5;
     height: 100%;
     cursor: pointer;
+    min-height: 337px;
 
     .head {
       display: flex;
@@ -326,6 +341,7 @@ button {
 
         img {
           width: 100%;
+          border-radius: 7px;
         }
       }
 
@@ -342,6 +358,8 @@ button {
 
         &.noded {
           min-height: 59px;
+          position: absolute;
+          bottom: 25px;
         }
 
         .text-bold {
@@ -378,6 +396,20 @@ button {
   .user-jumbotron-container {
     @media screen and (min-width: 992px) {
       padding-right: 1.75rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 68.5%;
+    }
+  }
+
+  .garage-specs-container {
+    // @media screen and (min-width: 992px) {
+
+    // }
+
+    @media screen and (min-width: 768px) {
+      width: 31.5%;
     }
   }
 
@@ -428,6 +460,8 @@ button {
 
           img {
             width: 100%;
+
+            border-radius: 6px;
           }
 
           .badge {
@@ -630,6 +664,10 @@ button {
     }
   }
 
+  .tabs.client-overview-tabs {
+    max-width: 584px;
+  }
+
   .client-overview-tabs {
     .title-container > * {
       padding-bottom: 1rem;
@@ -645,8 +683,15 @@ button {
     }
   }
 
+  .invoices-wrapper {
+  }
+
   .invoices-main {
     padding-right: 3rem;
+
+    @media screen and (min-width: 992px) {
+      max-width: 578px;
+    }
 
     @media screen and (max-width: 992px) {
       padding-right: 1.5rem;

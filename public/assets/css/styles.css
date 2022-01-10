@@ -222,6 +222,7 @@ button {
 
 #dashboard-main-content .card.recently-viewed {
   height: unset;
+  min-height: 510px;
 }
 
 #dashboard-main-content .logs {
@@ -270,6 +271,12 @@ button {
   padding-bottom: 20px;
 }
 
+@media screen and (min-width: 1681px) {
+  #dashboard-main-content .logs .card {
+    width: 30%;
+  }
+}
+
 @media screen and (max-width: 1399px) and (min-width: 1300px) {
   #dashboard-main-content .logs .card {
     width: 100%;
@@ -312,18 +319,29 @@ button {
 }
 
 #client-list-main-content .label {
+  position: relative;
   padding: 15px 10px;
   font-size: 12px;
   background-color: rgba(234, 234, 234, 0.29);
 }
 
+#client-list-main-content .label .sort-icon {
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 #client-list-main-content .client-card {
+  position: relative;
   border-radius: 12px;
   padding: 25px 16px;
   padding-bottom: 20px;
   border: 1px solid #f2f2f2;
   height: 100%;
   cursor: pointer;
+  min-height: 337px;
 }
 
 #client-list-main-content .client-card .head {
@@ -349,6 +367,7 @@ button {
 
 #client-list-main-content .client-card .head .img img {
   width: 100%;
+  border-radius: 7px;
 }
 
 #client-list-main-content .client-card .head .text {
@@ -365,6 +384,8 @@ button {
 
 #client-list-main-content .client-card .body .section.noded {
   min-height: 59px;
+  position: absolute;
+  bottom: 25px;
 }
 
 #client-list-main-content .client-card .body .section .text-bold {
@@ -387,6 +408,18 @@ button {
 @media screen and (min-width: 992px) {
   #client-overview-main-content .user-jumbotron-container {
     padding-right: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #client-overview-main-content .user-jumbotron-container {
+    width: 68.5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #client-overview-main-content .garage-specs-container {
+    width: 31.5%;
   }
 }
 
@@ -457,6 +490,7 @@ button {
 
 #client-overview-main-content .user-jumbotron .profile-info .left .img img {
   width: 100%;
+  border-radius: 6px;
 }
 
 #client-overview-main-content .user-jumbotron .profile-info .left .img .badge {
@@ -688,6 +722,10 @@ button {
   }
 }
 
+#client-overview-main-content .tabs.client-overview-tabs {
+  max-width: 584px;
+}
+
 #client-overview-main-content .client-overview-tabs .title-container > * {
   padding-bottom: 1rem;
 }
@@ -705,6 +743,12 @@ button {
 
 #client-overview-main-content .invoices-main {
   padding-right: 3rem;
+}
+
+@media screen and (min-width: 992px) {
+  #client-overview-main-content .invoices-main {
+    max-width: 578px;
+  }
 }
 
 @media screen and (max-width: 992px) {
