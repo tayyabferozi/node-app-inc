@@ -753,3 +753,98 @@ button {
     }
   }
 }
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  ********************************************************* FINANCES INVVOICE PAGE ***************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+.finances-invoice-main-content {
+  input {
+    padding: 10px;
+    background-color: $color30;
+    border: none;
+    outline: none;
+    font-family: "Manrope", sans-serif;
+    width: 490px;
+  }
+  .add-new-btn {
+    p {
+      font-family: "Lato", sans-serif;
+      font-weight: 900;
+    }
+  }
+  .dummy-data {
+    .invoice-details {
+      .box {
+        width: 52px;
+        height: 52px;
+        border-radius: 8px;
+        background-color: $color5;
+      }
+    }
+    .invoice-number {
+      color: $color3;
+      font-family: "Manorope", sans-serif;
+      font-weight: 200;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .date {
+      font-family: "Lato", sans-serif;
+      color: $color1;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .pic-name {
+      img {
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      p {
+        color: $color1;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: "Lato", sans-serif;
+      }
+    }
+    .is-paid {
+      div {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        width: 114px;
+        height: 36px;
+        background: linear-gradient(0deg, rgba(159, 168, 144, 0.08), rgba(88, 109, 54, 0.08)), #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+      }
+      .paid {
+        color: $color31;
+      }
+      .unpaid {
+        color: $color32;
+      }
+    }
+    .price {
+      font-family: "Manrope", sans-serif;
+      font-weight: 200;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: right;
+      color: $color3;
+    }
+    .del {
+      width: 36px;
+      height: 36px;
+      border: 1px solid #F2F2F2;
+      border-radius: 8px;
+    }
+  }
+}

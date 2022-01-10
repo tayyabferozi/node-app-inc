@@ -4,6 +4,7 @@ import SignUp2 from "./screens/SignUp2";
 import Signin from "./screens/Signin";
 import Dashboard from "./screens/Dashboard";
 import ClientsList from "./screens/ClientsList";
+import FinancesIncome from "./screens/FinancesIncome";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/clients-list" element={<ClientsList />} />
+          <Route path="/finances-income" element={<FinancesIncome />} />
           <Route path="/" element={<Navigate to="/signup-1" />} />
         </Routes>
       </BrowserRouter>
