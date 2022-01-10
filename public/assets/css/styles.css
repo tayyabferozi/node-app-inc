@@ -782,4 +782,97 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.finances-invoice-main-content input {
+  padding: 10px;
+  background-color: #F5F5FA66;
+  border: none;
+  outline: none;
+  font-family: "Manrope", sans-serif;
+  width: 490px;
+}
+
+.finances-invoice-main-content .add-new-btn p {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+}
+
+.finances-invoice-main-content .dummy-data .invoice-details .box {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.finances-invoice-main-content .dummy-data .invoice-number {
+  color: #3e4244;
+  font-family: "Manorope", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.finances-invoice-main-content .dummy-data .date {
+  font-family: "Lato", sans-serif;
+  color: #1c1d21;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.finances-invoice-main-content .dummy-data .pic-name img {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.finances-invoice-main-content .dummy-data .pic-name p {
+  color: #1c1d21;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+.finances-invoice-main-content .dummy-data .is-paid div {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  width: 114px;
+  height: 36px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(159, 168, 144, 0.08)), to(rgba(88, 109, 54, 0.08))), #FFFFFF;
+  background: linear-gradient(0deg, rgba(159, 168, 144, 0.08), rgba(88, 109, 54, 0.08)), #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+}
+
+.finances-invoice-main-content .dummy-data .is-paid .paid {
+  color: #7E8876;
+}
+
+.finances-invoice-main-content .dummy-data .is-paid .unpaid {
+  color: #C26666;
+}
+
+.finances-invoice-main-content .dummy-data .price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #3e4244;
+}
+
+.finances-invoice-main-content .dummy-data .del {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
+}
 /*# sourceMappingURL=styles.css.map */
