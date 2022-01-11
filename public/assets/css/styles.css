@@ -841,11 +841,62 @@ button {
   font-weight: 900;
 }
 
+.finances-invoice-main-content .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.finances-invoice-main-content .filters .filter {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #dbdbdb;
+  padding: 5px 20px;
+}
+
+.finances-invoice-main-content .filters .filter.active {
+  color: #4B5458;
+  border: 1px solid #ECECF2;
+  border-radius: 8px;
+}
+
+.finances-invoice-main-content .table-heading {
+  background-color: rgba(234, 234, 234, 0.29);
+}
+
+.finances-invoice-main-content .label {
+  position: relative;
+  padding: 15px 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.finances-invoice-main-content .dummy-data {
+  border: 1px solid #ECECF2;
+  border-radius: 10px;
+}
+
 .finances-invoice-main-content .dummy-data .invoice-details .box {
   width: 52px;
   height: 52px;
   border-radius: 8px;
   background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .finances-invoice-main-content .dummy-data .invoice-number {
@@ -882,8 +933,6 @@ button {
   line-height: 21px;
   width: 114px;
   height: 36px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(159, 168, 144, 0.08)), to(rgba(88, 109, 54, 0.08))), #FFFFFF;
-  background: linear-gradient(0deg, rgba(159, 168, 144, 0.08), rgba(88, 109, 54, 0.08)), #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,11 +946,13 @@ button {
 }
 
 .finances-invoice-main-content .dummy-data .is-paid .paid {
-  color: #7E8876;
+  background-color: rgba(75, 64, 209, 0.07);
+  color: #4b40d1;
 }
 
 .finances-invoice-main-content .dummy-data .is-paid .unpaid {
-  color: #C26666;
+  background-color: rgba(255, 128, 139, 0.08);
+  color: #eca0a0;
 }
 
 .finances-invoice-main-content .dummy-data .price {
@@ -916,7 +967,16 @@ button {
 .finances-invoice-main-content .dummy-data .del {
   width: 36px;
   height: 36px;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
