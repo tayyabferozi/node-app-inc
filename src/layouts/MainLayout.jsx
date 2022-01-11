@@ -126,7 +126,7 @@ const MainLayout = ({
                 />
               </div>
             </NavLink>
-            <NavLink to="/signup-1" className="item">
+            <NavLink to="/inventory" className="item">
               <div className="img">
                 <img
                   className="inactive"

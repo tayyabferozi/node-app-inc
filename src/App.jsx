@@ -6,6 +6,7 @@ import Dashboard from "./screens/Dashboard";
 import ClientsList from "./screens/ClientsList";
 import FinancesIncome from "./screens/FinancesIncome";
 import FinancesExpense from "./screens/FinancesExpense";
+import Inventory from "./screens/Inventory";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/clients-list" element={<ClientsList />} />
           <Route path="/finances-income" element={<FinancesIncome />} />
           <Route path="/finances-expense" element={<FinancesExpense />} />
+          <Route path="/inventory" element={<Inventory />} />
           <Route path="/" element={<Navigate to="/signup-1" />} />
         </Routes>
       </BrowserRouter>
