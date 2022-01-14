@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @import url(./bootstrap-grid.min.css);
 @import url(./bootstrap-utilities.css);
@@ -819,7 +820,12 @@ button {
         line-height: 21px;
         width: 114px;
         height: 36px;
-        background: linear-gradient(0deg, rgba(159, 168, 144, 0.08), rgba(88, 109, 54, 0.08)), #FFFFFF;
+        background: linear-gradient(
+            0deg,
+            rgba(159, 168, 144, 0.08),
+            rgba(88, 109, 54, 0.08)
+          ),
+          #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -843,8 +849,366 @@ button {
     .del {
       width: 36px;
       height: 36px;
-      border: 1px solid #F2F2F2;
+      border: 1px solid #f2f2f2;
       border-radius: 8px;
+    }
+  }
+}
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  ********************************************************* CONVERSATIONS PAGE *****************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+#conversations-main-content {
+  .tabs.conversatoins-tabs {
+    border-bottom-width: 4.4px;
+    justify-content: space-around !important;
+
+    .tab {
+      padding-bottom: 12px;
+      font-family: "poppins", sans-serif;
+
+      &.active {
+        font-weight: 600;
+      }
+
+      &::after {
+        height: 4.4px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .left-content {
+    padding-left: 1rem;
+
+    .custom-form-control {
+      flex-grow: 1;
+      margin-right: 1rem;
+    }
+
+    .chat-list {
+      .chat {
+        display: flex;
+        padding: 16px 20px;
+
+        &.active {
+          background-color: $color5;
+        }
+
+        .img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .text {
+          height: 43px;
+          flex-grow: 1;
+          margin-left: 1rem;
+          display: flex;
+          justify-content: space-between;
+
+          & > .left,
+          .right {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .right {
+            align-items: flex-end;
+          }
+
+          .right {
+            .badge {
+              height: 24px;
+              background-color: $color4;
+              color: #fff;
+              font-family: "manrope", sans-serif;
+              padding-left: 8px;
+              padding-right: 8px;
+              line-height: 2.2;
+              font-size: 10px;
+              border-radius: 8px;
+              font-weight: 400;
+              margin-bottom: -4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-content {
+    .main-chat {
+      .chat-header {
+        padding: 20px 0;
+        border-bottom: 1px solid $color53;
+
+        .img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .chat-main-body {
+        .chat-msg {
+          margin: 0.5rem 0;
+
+          .msg-body {
+            display: flex;
+            align-items: flex-end;
+            width: 60%;
+            margin: 11px 0;
+
+            .img {
+              margin-right: 0.75rem;
+
+              img {
+                width: 100%;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                visibility: hidden;
+              }
+            }
+
+            .text {
+              background-color: $color53;
+              padding: 10px;
+              border-radius: 10px;
+              flex-grow: 1;
+
+              * {
+                font-family: "manrope", sans-serif;
+              }
+
+              .file-container {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px 0;
+
+                .file-desc {
+                  display: flex;
+                  align-items: center;
+
+                  .file-text {
+                    margin-left: 20px;
+                  }
+                }
+
+                .download {
+                  margin-right: 4px;
+                }
+              }
+            }
+
+            &:first-child {
+              img {
+                visibility: visible;
+              }
+
+              .text {
+                border-bottom-left-radius: 0;
+              }
+            }
+          }
+
+          .msg-foot {
+            padding: 0 48px;
+          }
+
+          &.me {
+            .msg-body {
+              flex-direction: row-reverse;
+              margin-left: auto;
+
+              .img {
+                margin-right: 0;
+                margin-left: 0.75rem;
+              }
+
+              .text {
+                background-color: transparent;
+                border: 1px solid $color53;
+                border-radius: 10px;
+              }
+
+              &:first-child {
+                .text {
+                  border-bottom-right-radius: 0;
+                }
+              }
+            }
+
+            .msg-foot {
+              text-align: right;
+            }
+          }
+        }
+
+        .timetag-container {
+          position: relative;
+          text-align: center;
+          height: 26px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+
+          &::after {
+            content: "";
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1px;
+            border-bottom: 1px solid $color15;
+            position: absolute;
+          }
+
+          .time-tag {
+            position: relative;
+            background-color: #fff;
+            padding: 0 1rem;
+            z-index: 1;
+
+            .tag {
+              padding: 4px 12px;
+              font-family: "manrope", sans-serif;
+              font-weight: 800;
+              font-size: 12px;
+              color: $color4;
+              background-color: $color15;
+              border-radius: 11px;
+            }
+          }
+        }
+      }
+    }
+
+    .new-msg {
+      .btn {
+        margin-left: auto;
+        width: 126px;
+      }
+    }
+  }
+}
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  ********************************************************* CONVERSATIONS PAGE *****************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+#form-cards-main-content {
+  .tabs.form-cards-tabs {
+    @media screen and (min-width: 576px) {
+      width: 380px;
+      justify-content: space-around;
+
+      .tab {
+        width: 144px;
+      }
+    }
+  }
+
+  .card.form-card {
+    width: 238px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    margin: auto;
+
+    .main {
+      text-align: center;
+
+      .checkboxes {
+        margin-left: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .btn {
+      margin-top: 3rem;
+      border-radius: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 64px;
+      text-align: left;
+      font-weight: 500;
+      font-family: "inter", sans-serif;
+    }
+  }
+}
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  ********************************************************* FORM BUILDER PAGE ******************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+#form-builder-main-content {
+  .form-builder {
+    max-width: 580px;
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      max-width: 530px;
+
+      .title {
+        width: 75%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color2;
+      }
+
+      .node {
+        width: 76px;
+      }
+    }
+
+    .body {
+      .custom-form-control {
+        margin-bottom: 30px;
+
+        .input {
+          img {
+            left: unset;
+            right: 70px;
+          }
+
+          input {
+            &::placeholder {
+              color: $color51;
+            }
+          }
+        }
+      }
     }
   }
 }

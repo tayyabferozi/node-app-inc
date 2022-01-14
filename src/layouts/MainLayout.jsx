@@ -98,7 +98,7 @@ const MainLayout = ({
                 />
               </div>
             </NavLink>
-            <NavLink to="/signup-1" className="item">
+            <NavLink to="/conversations" className="item">
               <div className="img">
                 <img
                   className="inactive"
@@ -140,7 +140,7 @@ const MainLayout = ({
                 />
               </div>
             </NavLink>
-            <NavLink to="/signup-1" className="item">
+            <NavLink to="/form-cards" className="item">
               <div className="img">
                 <img
                   className="inactive"

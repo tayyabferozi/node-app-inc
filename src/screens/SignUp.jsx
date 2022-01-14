@@ -63,9 +63,9 @@ const SignUp = () => {
             <label className="custom-radio">
               I agree with terms &amp; conditions
               <input
-                type="radio"
-                checked="checked"
+                type="checkbox"
                 name="gender"
+                defaultValue={"checked"}
                 onChange={inputChangeHandler}
               />
               <span className="checkmark"></span>

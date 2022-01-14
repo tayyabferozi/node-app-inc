@@ -51,9 +51,9 @@ const SignUp = () => {
             <label className="custom-radio">
               Remember me
               <input
-                type="radio"
+                type="checkbox"
                 onChange={inputChangeHandler}
-                checked="checked"
+                defaultValue={"checked"}
                 name="gender"
               />
               <span className="checkmark"></span>
