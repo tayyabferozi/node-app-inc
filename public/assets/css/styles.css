@@ -842,11 +842,62 @@ button {
   font-weight: 900;
 }
 
+.finances-invoice-main-content .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.finances-invoice-main-content .filters .filter {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #dbdbdb;
+  padding: 5px 20px;
+}
+
+.finances-invoice-main-content .filters .filter.active {
+  color: #4b5458;
+  border: 1px solid #ececf2;
+  border-radius: 8px;
+}
+
+.finances-invoice-main-content .table-heading {
+  background-color: rgba(234, 234, 234, 0.29);
+}
+
+.finances-invoice-main-content .label {
+  position: relative;
+  padding: 15px 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.finances-invoice-main-content .dummy-data {
+  border: 1px solid #ececf2;
+  border-radius: 10px;
+}
+
 .finances-invoice-main-content .dummy-data .invoice-details .box {
   width: 52px;
   height: 52px;
   border-radius: 8px;
   background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .finances-invoice-main-content .dummy-data .invoice-number {
@@ -898,11 +949,13 @@ button {
 }
 
 .finances-invoice-main-content .dummy-data .is-paid .paid {
-  color: #7e8876;
+  background-color: rgba(75, 64, 209, 0.07);
+  color: #4b40d1;
 }
 
 .finances-invoice-main-content .dummy-data .is-paid .unpaid {
-  color: #c26666;
+  background-color: rgba(255, 128, 139, 0.08);
+  color: #eca0a0;
 }
 
 .finances-invoice-main-content .dummy-data .price {
@@ -919,6 +972,175 @@ button {
   height: 36px;
   border: 1px solid #f2f2f2;
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#inventory-main-content .search {
+  padding: 10px;
+  width: 480px;
+  outline: none;
+  border: none;
+  color: #dbdbdb;
+  background-color: rgba(245, 245, 250, 0.4);
+}
+
+#inventory-main-content .packages .packages-record {
+  border: 1px solid #ececf2;
+  border-radius: 12px;
+}
+
+#inventory-main-content .packages .packages-record .box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #f0f3f3;
+}
+
+#inventory-main-content .packages .packages-record .name {
+  color: #4b5458;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 24px;
+}
+
+#inventory-main-content .packages .packages-record .complete-brake {
+  color: #8181a5;
+  font-family: "Lato", sans-serif;
+  line-height: 21px;
+  font-size: 16px;
+}
+
+#inventory-main-content .packages .packages-record .complete-brake span {
+  color: #1c1d21;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+#inventory-main-content .packages .packages-record .price {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  color: #1c1d21;
+}
+
+#inventory-main-content .packages .packages-record button {
+  background-color: rgba(30, 85, 169, 0.08);
+  border-radius: 8px;
+  color: #1e55a9;
+  border: none;
+}
+
+#inventory-main-content .packages .packages-record .packages-menu {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #ececf2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#inventory-main-content .articles .inventory-record {
+  border: 1px solid #ececf2;
+  border-radius: 12px;
+}
+
+#inventory-main-content .articles .inventory-record.checked {
+  background-color: rgba(245, 245, 250, 0.4);
+}
+
+#inventory-main-content .articles .info input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+#inventory-main-content .articles .info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+
+#inventory-main-content .articles .info .name .title {
+  font-size: 16px;
+  color: #4b5458;
+}
+
+#inventory-main-content .articles .info .name .caption {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  color: #dbdbdb;
+}
+
+#inventory-main-content .articles .quantity {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  line-height: 21px;
+  color: #1c1d21;
+}
+
+#inventory-main-content .articles .quantity div {
+  color: #8181a5;
+  font-size: 14px;
+}
+
+#inventory-main-content .articles .price {
+  color: #1c1d21;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#inventory-main-content .articles .price div {
+  color: #8181a5;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+#inventory-main-content .articles button {
+  border: none;
+  border-radius: 8px;
+}
+
+#inventory-main-content .articles button.is-brake {
+  background-color: rgba(77, 213, 222, 0.08);
+  color: #4acbd3;
+}
+
+#inventory-main-content .articles button.is-engine {
+  background-color: rgba(255, 128, 139, 0.08);
+  color: #eca0a0;
+}
+
+#inventory-main-content .articles .inventory-menu {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #ececf2;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #conversations-main-content .tabs.conversatoins-tabs {

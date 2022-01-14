@@ -60,12 +60,12 @@ const dummyData = [
   },
 ]
 
-const FinancesIncome = () => {
+const FinancesExpense = () => {
   return (
     <MainLayout
       headVector="./assets/vectors/nav-7__active.svg"
       sideNavVector="./assets/vectors/sidenav-right-2.svg"
-      title={"Invoices List"}
+      title={"Purchases List"}
       minimalNavRight
       exploreSub="Services &amp; Request Assign to you"
       exploreContent={[
@@ -85,6 +85,14 @@ const FinancesIncome = () => {
     >
       <div className="finances-invoice-main-content">
         <div className="container-fluid">
+          <div className="d-flex align-items-center justify-content-end py-2">
+            <div className="tabs">
+              <div className="tab active d-flex align-items-center justify-content-between gap-4"><img src="./assets/vectors/invoices.svg" alt="" /> <span> Invoices </span></div>
+            </div>
+            <div className="tabs">
+              <div className="tab d-flex align-items-center justify-content-between gap-4"><img src="./assets/vectors/supplies.svg" alt="" /> <span> Supplies </span></div>
+            </div>
+          </div>
           <div className="d-flex align-items-center justify-content-between">
             <div className='filters'>
               <div className="filter active">All</div>
@@ -161,12 +169,11 @@ const FinancesIncome = () => {
                   <div className="col-3 invoice-details d-flex align-items-center gap-3"> <div className='box'><img src="./assets/vectors/calculator.svg" alt="" /></div> <p className='invoice-number'>{data.invoiceNumber}</p></div>
                   <div className="col-2 font-weight-bold date">{data.date}</div>
                   <div className="col-3 d-flex align-items-center gap-3 pic-name">
-                    <img src={data.imgUrl} alt="" />
                     <p>{data.name}</p>
                   </div>
                   <div className="col-2 is-paid">
                     <div className={data.isPaid ? "paid" : "unpaid"}>
-                      {data.isPaid ? "Paid" : "Unpaid"}
+                      {data.isPaid ? "Paid" : "To Pay"}
                     </div>
                   </div>
                   <div className="col-1 price">{data.price}.00$</div>
@@ -200,4 +207,4 @@ const FinancesIncome = () => {
   )
 }
 
-export default FinancesIncome
+export default FinancesExpense

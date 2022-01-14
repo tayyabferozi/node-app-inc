@@ -778,13 +778,44 @@ button {
       font-weight: 900;
     }
   }
+  .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .filter {
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      color: $color8;
+      padding: 5px 20px;
+    }
+    .filter.active {
+      color: $color34;
+      border: 1px solid $color33;
+      border-radius: 8px;
+    }
+  }
+  .table-heading {
+    background-color: $color17;
+  }
+  .label {
+    position: relative;
+    padding: 15px 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
   .dummy-data {
+    border: 1px solid $color33;
+    border-radius: 10px;
     .invoice-details {
       .box {
         width: 52px;
         height: 52px;
         border-radius: 8px;
         background-color: $color5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     .invoice-number {
@@ -832,10 +863,12 @@ button {
         border-radius: 8px;
       }
       .paid {
-        color: $color31;
+        background-color: rgba(75, 64, 209, 0.07);
+        color: $color24;
       }
       .unpaid {
-        color: $color32;
+        background-color: rgba(255, 128, 139, 0.08);
+        color: $color23;
       }
     }
     .price {
@@ -851,6 +884,156 @@ button {
       height: 36px;
       border: 1px solid #f2f2f2;
       border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  ********************************************************* INVENTORY PAGE ***************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+#inventory-main-content {
+  .search {
+    padding: 10px;
+    width: 480px;
+    outline: none;
+    border: none;
+    color: $color8;
+    background-color: rgba($color: $color36, $alpha: 0.4);
+  }
+  .packages {
+    .packages-record {
+      border: 1px solid $color33;
+      border-radius: 12px;
+
+      .box {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background-color: $color35;
+      }
+      .name {
+        color: $color34;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: lighter;
+        line-height: 24px;
+      }
+      .complete-brake {
+        color: $color7;
+        font-family: "Lato", sans-serif;
+        line-height: 21px;
+        font-size: 16px;
+
+        span {
+          color: $color1;
+          font-size: 16px;
+          font-family: "Lato", sans-serif;
+        }
+      }
+      .price {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Lato", sans-serif;
+        color: $color1;
+      }
+      button {
+        background-color: rgba($color: $color4, $alpha: 0.08);
+        border-radius: 8px;
+        color: $color4;
+        border: none;
+      }
+      .packages-menu {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid $color33;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .articles {
+    .inventory-record {
+      border: 1px solid $color33;
+      border-radius: 12px;
+    }
+    .inventory-record.checked {
+      background-color: rgba($color: $color36, $alpha: 0.4);
+    }
+    .info {
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+      }
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+      }
+      .name {
+        .title {
+          font-size: 16px;
+          color: $color34;
+        }
+        .caption {
+          font-family: "Manrope", sans-serif;
+          font-size: 14px;
+          color: $color8;
+        }
+      }
+    }
+    .quantity {
+      font-size: 16px;
+      font-family: "Lato", sans-serif;
+      line-height: 21px;
+      color: $color1;
+
+      div {
+        color: $color7;
+        font-size: 14px;
+      }
+    }
+    .price {
+      color: $color1;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+
+      div {
+        color: $color7;
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+    button {
+      border: none;
+      border-radius: 8px;
+    }
+    button.is-brake {
+      background-color: rgba($color: $color37, $alpha: 0.08);
+      color: $color6;
+    }
+    button.is-engine {
+      background-color: rgba($color: $color38, $alpha: 0.08);
+      color: $color23;
+    }
+    .inventory-menu {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid $color33;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
