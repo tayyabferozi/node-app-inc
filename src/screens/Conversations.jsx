@@ -256,7 +256,7 @@ const Converstaions = () => {
                             className={`chat-msg${me ? " me" : ""}`}
                           >
                             {msgContents.map((item, idx2) => {
-                              const { type, icon, text, info } = item;
+                              const { type, text, info } = item;
                               return (
                                 <div
                                   className="msg-body"
@@ -302,7 +302,7 @@ const Converstaions = () => {
                         );
                       } else {
                         return (
-                          <div className="timetag-container">
+                          <div className="timetag-container" key={"foot" + idx}>
                             <div className="time-tag">
                               <div className="tag">{date}</div>
                             </div>

@@ -4,11 +4,11 @@ import SignUp2 from "./screens/SignUp2";
 import Signin from "./screens/Signin";
 import Dashboard from "./screens/Dashboard";
 import ClientsList from "./screens/ClientsList";
-import FinancesIncome from "./screens/FinancesIncome";
-import Conversations from "./screens/Conversations";
-import FormCards from "./screens/FormCards";
-import FinancesExpense from "./screens/FinancesExpense";
-import Inventory from "./screens/Inventory";
+// import FinancesIncome from "./screens/FinancesIncome";
+// import Conversations from "./screens/Conversations";
+// import FormCards from "./screens/FormCards";
+// import FinancesExpense from "./screens/FinancesExpense";
+// import Inventory from "./screens/Inventory";
 
 function App() {
   return (
@@ -20,11 +20,11 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/360" element={<Dashboard />} />
           <Route path="/way" element={<ClientsList />} />
-          <Route path="/finances-income" element={<FinancesIncome />} />
+          {/* <Route path="/finances-income" element={<FinancesIncome />} />
           <Route path="/conversations" element={<Conversations />} />
           <Route path="/form-cards" element={<FormCards />} />
           <Route path="/finances-expense" element={<FinancesExpense />} />
-          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/inventory" element={<Inventory />} /> */}
           <Route path="/" element={<Navigate to="/signup-1" />} />
         </Routes>
       </BrowserRouter>

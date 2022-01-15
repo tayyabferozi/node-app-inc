@@ -1,5 +1,5 @@
-import React from 'react'
-import MainLayout from '../layouts/MainLayout'
+import React from "react";
+import MainLayout from "../layouts/MainLayout";
 
 const dummyData = [
   {
@@ -8,7 +8,7 @@ const dummyData = [
     imgUrl: "./assets/img/invoices-1.png",
     name: "Sophia Wagner",
     isPaid: true,
-    price: 1890
+    price: 1890,
   },
   {
     invoiceNumber: "AA-04-19-1890",
@@ -16,7 +16,7 @@ const dummyData = [
     imgUrl: "./assets/img/invoices-1.png",
     name: "Sophia Wagner",
     isPaid: false,
-    price: 1890
+    price: 1890,
   },
   {
     invoiceNumber: "AA-04-19-1890",
@@ -24,7 +24,7 @@ const dummyData = [
     imgUrl: "./assets/img/invoices-1.png",
     name: "Sophia Wagner",
     isPaid: false,
-    price: 1890
+    price: 1890,
   },
   {
     invoiceNumber: "AA-04-19-1890",
@@ -32,7 +32,7 @@ const dummyData = [
     imgUrl: "./assets/img/invoices-1.png",
     name: "Sophia Wagner",
     isPaid: true,
-    price: 1890
+    price: 1890,
   },
   {
     invoiceNumber: "AA-04-19-1890",
@@ -40,7 +40,7 @@ const dummyData = [
     imgUrl: "./assets/img/invoices-1.png",
     name: "Sophia Wagner",
     isPaid: true,
-    price: 1890
+    price: 1890,
   },
   {
     invoiceNumber: "AA-04-19-1890",
@@ -48,7 +48,7 @@ const dummyData = [
     imgUrl: "./assets/img/invoices-1.png",
     name: "Sophia Wagner",
     isPaid: true,
-    price: 1890
+    price: 1890,
   },
   {
     invoiceNumber: "AA-04-19-1890",
@@ -56,9 +56,9 @@ const dummyData = [
     imgUrl: "./assets/img/invoices-1.png",
     name: "Sophia Wagner",
     isPaid: true,
-    price: 1890
+    price: 1890,
   },
-]
+];
 
 const FinancesExpense = () => {
   return (
@@ -87,14 +87,20 @@ const FinancesExpense = () => {
         <div className="container-fluid">
           <div className="d-flex align-items-center justify-content-end py-2">
             <div className="tabs">
-              <div className="tab active d-flex align-items-center justify-content-between gap-4"><img src="./assets/vectors/invoices.svg" alt="" /> <span> Invoices </span></div>
+              <div className="tab active d-flex align-items-center justify-content-between gap-4">
+                <img src="./assets/vectors/invoices.svg" alt="" />{" "}
+                <span> Invoices </span>
+              </div>
             </div>
             <div className="tabs">
-              <div className="tab d-flex align-items-center justify-content-between gap-4"><img src="./assets/vectors/supplies.svg" alt="" /> <span> Supplies </span></div>
+              <div className="tab d-flex align-items-center justify-content-between gap-4">
+                <img src="./assets/vectors/supplies.svg" alt="" />{" "}
+                <span> Supplies </span>
+              </div>
             </div>
           </div>
           <div className="d-flex align-items-center justify-content-between">
-            <div className='filters'>
+            <div className="filters">
               <div className="filter active">All</div>
               <div className="filter">UnPaid</div>
               <div className="filter">Paid</div>
@@ -118,7 +124,11 @@ const FinancesExpense = () => {
                     className="add"
                   />
                   SORT: A-Z
-                  <img className='ps-2' src="/assets/vectors/arrow-down.svg" alt="" />
+                  <img
+                    className="ps-2"
+                    src="/assets/vectors/arrow-down.svg"
+                    alt=""
+                  />
                 </button>
               </div>
             </div>
@@ -127,65 +137,56 @@ const FinancesExpense = () => {
             <div className="row table-heading gx-0">
               <div className="col-3 d-flex justify-content-between align-items-center">
                 <div className="label ps-4">Number</div>
-                <img
-                  src="./assets/vectors/a-z-sort.svg"
-                  alt="sort"
-                />
+                <img src="./assets/vectors/a-z-sort.svg" alt="sort" />
               </div>
               <div className="col-2 d-flex justify-content-between align-items-center">
                 <div className="label ps-4">Date</div>
-                <img
-                  src="./assets/vectors/a-z-sort.svg"
-                  alt="sort"
-                />
+                <img src="./assets/vectors/a-z-sort.svg" alt="sort" />
               </div>
               <div className="col-3 d-flex justify-content-between align-items-center">
                 <div className="label ps-4">Client</div>
-                <img
-                  src="./assets/vectors/a-z-sort.svg"
-                  alt="sort"
-                />
+                <img src="./assets/vectors/a-z-sort.svg" alt="sort" />
               </div>
               <div className="col-2 d-flex justify-content-between align-items-center">
                 <div className="label ps-4">Status</div>
-                <img
-                  src="./assets/vectors/a-z-sort.svg"
-                  alt="sort"
-                />
+                <img src="./assets/vectors/a-z-sort.svg" alt="sort" />
               </div>
               <div className="col-1 d-flex justify-content-between align-items-center">
                 <div className="label ps-4">Amount</div>
-                <img
-                  src="./assets/vectors/a-z-sort.svg"
-                  alt="sort"
-                />
+                <img src="./assets/vectors/a-z-sort.svg" alt="sort" />
               </div>
             </div>
           </div>
-          {
-            dummyData.map((data) => {
-              return (
-                <div className="row align-items-center py-3 my-3 dummy-data">
-                  <div className="col-3 invoice-details d-flex align-items-center gap-3"> <div className='box'><img src="./assets/vectors/calculator.svg" alt="" /></div> <p className='invoice-number'>{data.invoiceNumber}</p></div>
-                  <div className="col-2 font-weight-bold date">{data.date}</div>
-                  <div className="col-3 d-flex align-items-center gap-3 pic-name">
-                    <p>{data.name}</p>
+          {dummyData.map((data, idx) => {
+            return (
+              <div
+                key={"financeslist" + idx}
+                className="row align-items-center py-3 my-3 dummy-data"
+              >
+                <div className="col-3 invoice-details d-flex align-items-center gap-3">
+                  <div className="box">
+                    <img src="./assets/vectors/calculator.svg" alt="" />
                   </div>
-                  <div className="col-2 is-paid">
-                    <div className={data.isPaid ? "paid" : "unpaid"}>
-                      {data.isPaid ? "Paid" : "To Pay"}
-                    </div>
-                  </div>
-                  <div className="col-1 price">{data.price}.00$</div>
-                  <div className="col-1 d-flex align-items-center justify-content-center">
-                    <div className="del p-2">
-                      <img src="./assets/vectors/horizontal-menu.svg" alt="" />
-                    </div>
+                  <p className="invoice-number">{data.invoiceNumber}</p>
+                </div>
+                <div className="col-2 font-weight-bold date">{data.date}</div>
+                <div className="col-3 d-flex align-items-center gap-3 pic-name">
+                  <p>{data.name}</p>
+                </div>
+                <div className="col-2 is-paid">
+                  <div className={data.isPaid ? "paid" : "unpaid"}>
+                    {data.isPaid ? "Paid" : "To Pay"}
                   </div>
                 </div>
-              )
-            })
-          }
+                <div className="col-1 price">{data.price}.00$</div>
+                <div className="col-1 d-flex align-items-center justify-content-center">
+                  <div className="del p-2">
+                    <img src="./assets/vectors/horizontal-menu.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
           <div className="row">
             <div className="col-12">
               <div className="pagination mt-5 d-flex justify-content-between">
@@ -204,7 +205,7 @@ const FinancesExpense = () => {
         </div>
       </div>
     </MainLayout>
-  )
-}
+  );
+};
 
-export default FinancesExpense
+export default FinancesExpense;

@@ -1,8 +1,8 @@
-import React from 'react'
-import TabContentItem from '../components/TabContentItem'
-import TabContents from '../components/TabContents'
-import Tabs from '../components/Tabs'
-import MainLayout from '../layouts/MainLayout'
+import React from "react";
+import TabContentItem from "../components/TabContentItem";
+import TabContents from "../components/TabContents";
+import Tabs from "../components/Tabs";
+import MainLayout from "../layouts/MainLayout";
 
 const packagesData = [
   {
@@ -45,7 +45,7 @@ const packagesData = [
     completeBrake: 2,
     price: 2700,
   },
-]
+];
 
 const inventoryData = [
   {
@@ -54,7 +54,7 @@ const inventoryData = [
     quantity: 4890,
     price: 2642,
     isBrake: true,
-    isChecked: true
+    isChecked: true,
   },
   {
     name: "Macbook Pro 15’ 2019",
@@ -62,7 +62,7 @@ const inventoryData = [
     quantity: 4890,
     price: 2642,
     isBrake: false,
-    isChecked: true
+    isChecked: true,
   },
   {
     name: "Macbook Pro 15’ 2019",
@@ -70,7 +70,7 @@ const inventoryData = [
     quantity: 4890,
     price: 2642,
     isBrake: true,
-    isChecked: false
+    isChecked: false,
   },
   {
     name: "Macbook Pro 15’ 2019",
@@ -78,7 +78,7 @@ const inventoryData = [
     quantity: 4890,
     price: 2642,
     isBrake: true,
-    isChecked: false
+    isChecked: false,
   },
   {
     name: "Macbook Pro 15’ 2019",
@@ -86,7 +86,7 @@ const inventoryData = [
     quantity: 4890,
     price: 2642,
     isBrake: false,
-    isChecked: false
+    isChecked: false,
   },
   {
     name: "Macbook Pro 15’ 2019",
@@ -94,7 +94,7 @@ const inventoryData = [
     quantity: 4890,
     price: 2642,
     isBrake: true,
-    isChecked: false
+    isChecked: false,
   },
   {
     name: "Macbook Pro 15’ 2019",
@@ -102,9 +102,9 @@ const inventoryData = [
     quantity: 4890,
     price: 2642,
     isBrake: true,
-    isChecked: false
+    isChecked: false,
   },
-]
+];
 
 const Inventory = () => {
   return (
@@ -137,7 +137,11 @@ const Inventory = () => {
           <div className="row">
             <div className="col-6">
               <div className="d-flex align-items-center py-5">
-                <input className="search px-4 py-3" type="text" placeholder='Search into the list...' />
+                <input
+                  className="search px-4 py-3"
+                  type="text"
+                  placeholder="Search into the list..."
+                />
               </div>
             </div>
             <div className="col-4 d-flex justify-content-end">
@@ -156,7 +160,7 @@ const Inventory = () => {
                       icon: "./assets/vectors/mail.svg",
                       label: "Articles",
                       target: "articles",
-                      active: true
+                      active: true,
                     },
                   ]}
                 />
@@ -177,30 +181,37 @@ const Inventory = () => {
           </div>
           <TabContents tabGroupName="inventory-tabs">
             <TabContentItem target="packages">
-              {
-                packagesData.map(data => {
-                  return (
-                    <div className="row my-2 align-items-center py-3 packages-record">
-                      <div className="col-4 d-flex gap-3 align-items-center">
-                        <div className="box"></div>
-                        <div className='name'>{data.name}</div>
-                      </div>
-                      <div className="col-4">
-                        <div className='complete-brake'>Complete brake... <span className='px-4'>{data.completeBrake}</span></div>
-                      </div>
-                      <div className="col-1 price">{data.price}$</div>
-                      <div className="col-2">
-                        <button className='py-2 px-4'>Define</button>
-                      </div>
-                      <div className="col-1">
-                        <div className="packages-menu">
-                          <img src="./assets/vectors/horizontal-menu.svg" alt="" />
-                        </div>
+              {packagesData.map((data, idx) => {
+                return (
+                  <div
+                    key={"packages-data" + idx}
+                    className="row my-2 align-items-center py-3 packages-record"
+                  >
+                    <div className="col-4 d-flex gap-3 align-items-center">
+                      <div className="box"></div>
+                      <div className="name">{data.name}</div>
+                    </div>
+                    <div className="col-4">
+                      <div className="complete-brake">
+                        Complete brake...{" "}
+                        <span className="px-4">{data.completeBrake}</span>
                       </div>
                     </div>
-                  )
-                })
-              }
+                    <div className="col-1 price">{data.price}$</div>
+                    <div className="col-2">
+                      <button className="py-2 px-4">Define</button>
+                    </div>
+                    <div className="col-1">
+                      <div className="packages-menu">
+                        <img
+                          src="./assets/vectors/horizontal-menu.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
               <div className="row">
                 <div className="col-12">
                   <div className="pagination mt-5 d-flex justify-content-between">
@@ -218,42 +229,60 @@ const Inventory = () => {
               </div>
             </TabContentItem>
             <TabContentItem target="articles">
-              {
-                inventoryData.map(data => {
-                  return (
-                    <div className={`row my-2 p-3 align-items-center inventory-record ${data.isChecked ? 'checked' : ''}`}>
-                      <div className="col-5 d-flex align-items-center gap-4 info">
-                        <div className="checkbox"><input type="checkbox" checked={data.isChecked} name="" id="" /></div>
-                        <img src="./assets/img/inventory-1.png" alt="" />
-                        <div className="name">
-                          <div className="title">{data.name}</div>
-                          <div className="caption">{data.number}</div>
-                        </div>
+              {inventoryData.map((data, idx) => {
+                return (
+                  <div
+                    key={"articles" + idx}
+                    className={`row my-2 p-3 align-items-center inventory-record ${
+                      data.isChecked ? "checked" : ""
+                    }`}
+                  >
+                    <div className="col-5 d-flex align-items-center gap-4 info">
+                      <div className="checkbox">
+                        <input
+                          type="checkbox"
+                          checked={data.isChecked}
+                          name=""
+                          id=""
+                        />
                       </div>
-                      <div className="col-3">
-                        <div className="quantity">
-                          {data.quantity.toLocaleString()}
-                          <div>Qty.</div>
-                        </div>
-                      </div>
-                      <div className="col-1">
-                        <div className="price">
-                          {data.price}$
-                          <div>Price</div>
-                        </div>
-                      </div>
-                      <div className="col-2 d-flex justify-content-center align-items-center">
-                        <button className={`${data.isBrake ? 'is-brake' : 'is-engine'}  py-2 px-5`}>{data.isBrake ? "Brake" : "Engine"}</button>
-                      </div>
-                      <div className="col-1">
-                        <div className="inventory-menu">
-                          <img src="./assets/vectors/horizontal-menu.svg" alt="" />
-                        </div>
+                      <img src="./assets/img/inventory-1.png" alt="" />
+                      <div className="name">
+                        <div className="title">{data.name}</div>
+                        <div className="caption">{data.number}</div>
                       </div>
                     </div>
-                  )
-                })
-              }
+                    <div className="col-3">
+                      <div className="quantity">
+                        {data.quantity.toLocaleString()}
+                        <div>Qty.</div>
+                      </div>
+                    </div>
+                    <div className="col-1">
+                      <div className="price">
+                        {data.price}$<div>Price</div>
+                      </div>
+                    </div>
+                    <div className="col-2 d-flex justify-content-center align-items-center">
+                      <button
+                        className={`${
+                          data.isBrake ? "is-brake" : "is-engine"
+                        }  py-2 px-5`}
+                      >
+                        {data.isBrake ? "Brake" : "Engine"}
+                      </button>
+                    </div>
+                    <div className="col-1">
+                      <div className="inventory-menu">
+                        <img
+                          src="./assets/vectors/horizontal-menu.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
               <div className="row">
                 <div className="col-12">
                   <div className="pagination mt-5 d-flex justify-content-between">
@@ -274,7 +303,7 @@ const Inventory = () => {
         </div>
       </div>
     </MainLayout>
-  )
-}
+  );
+};
 
-export default Inventory
+export default Inventory;
