@@ -1,7 +1,13 @@
 import React, { useEffect } from "react";
 import $ from "jquery";
 
-const Tabs = ({ data, tabGroupName, className, tabClassName }) => {
+const Tabs = ({
+  data,
+  tabGroupName,
+  className,
+  tabClassName,
+  verticalButtons,
+}) => {
   const changeTab = (target) => {
     $(`.tabs.${tabGroupName} .tab`).removeClass("active");
     $(`.tabs.${tabGroupName} .tab.${target}`).addClass("active");
@@ -26,18 +32,25 @@ const Tabs = ({ data, tabGroupName, className, tabClassName }) => {
       } ${className}`}
     >
       {data.map((el, idx) => {
-        const { active, icon, label, target } = el;
+        const { active, icon, iconActive, label, target } = el;
 
         return (
           <button
             key={tabGroupName + idx}
             data-target={target}
             className={`tab d-flex align-items-center ${
-              active ? " active" : ""
-            } ${target} ${tabClassName ? tabClassName : ""}`}
+              verticalButtons ? "vertical" : ""
+            }${active ? " active" : ""} ${target} ${
+              tabClassName ? tabClassName : ""
+            }`}
             onClick={() => changeTab(target)}
           >
-            {icon && <img className="me-3" src={icon} alt={label} />}
+            {icon && iconActive && (
+              <div className="icon-container">
+                <img className="me-3 inactive" src={icon} alt={label} />
+                <img className="me-3 active" src={iconActive} alt={label} />
+              </div>
+            )}
             {label}
           </button>
         );

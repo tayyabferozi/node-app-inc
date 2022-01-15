@@ -65,7 +65,7 @@ const SignUp = () => {
         </div>
 
         <div className="text-center text-sm-start">
-          <Link to="/dashboard" className="btn btn-primary mt-4">
+          <Link to="/360" className="btn btn-primary mt-4">
             Signin
           </Link>
         </div>

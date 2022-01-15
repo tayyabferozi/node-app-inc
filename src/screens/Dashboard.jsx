@@ -15,22 +15,28 @@ ChartJS.register(CategoryScale, LineElement, PointElement, LinearScale, Title);
 const Dashboard = () => {
   return (
     <MainLayout
-      headVector="./assets/vectors/nav-1__active.svg"
+      headVector="./assets/vectors/360.svg"
       sideNavVector="./assets/vectors/sidenav-right-1.svg"
-      title="Dashboard"
-      exploreSub="Tasks assign to you"
+      title="360"
+      itemVector="./assets/vectors/arrow-right.svg"
+      progressNum={5}
+      exploreTitle="What’s next ?"
+      itemsControlledWidth
       exploreContent={[
         {
           title: "Order Rear Brake Light",
           sub: "Service 8372782392",
+          small: "Due on 23/02/2022",
         },
         {
           title: "Make Inventory of Tires",
           sub: "Nothing",
+          small: "Due on 23/02/2022",
         },
         {
           title: "Call Mathilde",
           sub: "Client Mathilde Ducharme",
+          small: "Due on 23/02/2022",
         },
       ]}
     >
@@ -38,17 +44,57 @@ const Dashboard = () => {
         <div className="container-fluid px-0">
           <div className="row mt-4 g-4">
             <div className="col-lg-6 ">
-              <div className="row gy-xxl-0 gy-4 month-performances">
-                <div className="col-xxl-6">
-                  <div className="stats card shadowed">
-                    <h2 className="heading">
-                      <img
-                        className="me-3"
-                        src="./assets/vectors/calender.svg"
-                        alt="calender"
-                      />
+              <div className="row gy-lg-0 gy-4 month-performances">
+                <div className="col-md-6">
+                  <div className="stats card performance">
+                    <div className="heading">
+                      <h3 className="section-title text-center">
+                        Today Overview
+                      </h3>
+                    </div>
+
+                    <div className="performances">
+                      <div className="item">
+                        <h3 className="section-title">47%</h3>
+                        <h4 className="sub-title">Today's work</h4>
+                        <div className="progress-bar">
+                          <div className="bg"></div>
+                          <div
+                            className="progress"
+                            style={{ width: "47%" }}
+                          ></div>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <h3 className="section-title">76%</h3>
+                        <h4 className="sub-title">Clients Connected</h4>
+                        <div className="progress-bar">
+                          <div className="bg"></div>
+                          <div
+                            className="progress"
+                            style={{ width: "76%" }}
+                          ></div>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <h3 className="section-title">97%</h3>
+                        <h4 className="sub-title">Satisfaction</h4>
+                        <div className="progress-bar">
+                          <div className="bg"></div>
+                          <div
+                            className="progress"
+                            style={{ width: "97%" }}
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="stats card">
+                    <h3 className="heading section-title text-center">
                       This Month
-                    </h2>
+                    </h3>
                     <div className="chart-container">
                       <svg
                         style={{ margin: "0 auto 3rem", display: "block" }}
@@ -116,56 +162,8 @@ const Dashboard = () => {
                         <div className="bottom">Services</div>
                       </div>
                       <div className="item">
-                        <div className="top text-cyan">29</div>
+                        <div className="top text-light-5">29</div>
                         <div className="bottom">Customers</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xxl-6">
-                  <div className="stats card grey performance">
-                    <div className="heading d-flex align-items-center">
-                      <img
-                        className="me-3"
-                        src="./assets/vectors/arrow-up.svg"
-                        alt="arrow-up"
-                      />
-                      <h2>Performances</h2>
-                    </div>
-
-                    <div className="performances">
-                      <div className="item">
-                        <div className="percent">47%</div>
-                        <div>Today's work</div>
-                        <div className="progress-bar">
-                          <div className="bg"></div>
-                          <div
-                            className="progress"
-                            style={{ width: "47%" }}
-                          ></div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <div className="percent">76%</div>
-                        <div>Clients Connected</div>
-                        <div className="progress-bar">
-                          <div className="bg"></div>
-                          <div
-                            className="progress"
-                            style={{ width: "76%" }}
-                          ></div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <div className="percent">97%</div>
-                        <div>Satisfaction</div>
-                        <div className="progress-bar">
-                          <div className="bg"></div>
-                          <div
-                            className="progress"
-                            style={{ width: "97%" }}
-                          ></div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -173,15 +171,15 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="card shadowed node-coin">
+              <div className="card node-coin">
                 <div className="top-info d-flex align-items-center justify-content-between flex-sm-row flex-column">
                   <div className="brand d-flex align-items-center mb-4 mb-sm-0">
                     <img
                       className="me-4"
-                      src="./assets/vectors/node-coin.svg"
-                      alt="node-coin"
+                      src="./assets/vectors/incomes.svg"
+                      alt="incomes"
                     />
-                    <h2 className="lh-1">Node Coin</h2>
+                    <h3 className="lh-1 section-title">Incomes</h3>
                   </div>
                   <div className="tabs">
                     <button className="tab">Day</button>
@@ -191,8 +189,8 @@ const Dashboard = () => {
                 </div>
                 <div className="chart-container">
                   <div className="additional mb-2">
-                    <div className="fs-22 fw-700 lh-1">397$</div>
-                    <div className="fs-14 text-light-1 sub">Live Value</div>
+                    <h4 className="evidence-word lh-1">320 197$</h4>
+                    <div className="fs-14 text-light-1 sub">Overall</div>
                   </div>
                   <Line
                     datasetIdKey="id"
@@ -222,13 +220,6 @@ const Dashboard = () => {
                             display: false,
                           },
                         },
-                        // yAxes: [
-                        //   {
-                        //     gridLines: {
-                        //       drawBorder: false,
-                        //     },
-                        //   },
-                        // ],
 
                         x: {
                           grid: {
@@ -242,15 +233,15 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="card shadowed clients">
+              <div className="card clients">
                 <div className="lg-head px-4 flex-column flex-sm-row d-flex justify-content-between align-items-sm-end align-items-center">
-                  <h2 className="heading mb-2 mb-sm-0 pb-2">
+                  <h2 className="heading d-flex align-items-center mb-2 mb-sm-0 pb-2">
                     <img
                       src="./assets/vectors/clients.svg"
                       className="me-4"
                       alt="clients"
-                    />{" "}
-                    Clients
+                    />
+                    <h3 className="ms-2 section-title">Clients</h3>
                   </h2>
                   <div className="tabs">
                     <button className="tab">Noded</button>
@@ -258,38 +249,44 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="table-card-wrap">
-                  <table className="table-card mt-5">
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Linked</th>
-                      </tr>
-                    </thead>
+                  <table className="table-card mt-3">
                     <tbody>
                       {[
                         {
-                          img: "./assets/img/table-user-1.png",
+                          img: "./assets/vectors/client-1.svg",
                           name: "Georges Lacombe",
-                          num: "+1 (438) 823-9382",
-                          linked: "Noded",
+                          lastVisit: "18/02/2021",
+                          noded: true,
                         },
                         {
-                          img: "./assets/img/table-user-2.png",
+                          img: "./assets/vectors/client-2.svg",
                           name: "Mathieu Orsino-Côté",
-                          num: "+1 (514) 223-9987",
-                          linked: "Noded",
+                          lastVisit: "+03/02/2020",
+                          noded: true,
                         },
                         {
-                          img: "./assets/img/table-user-3.png",
+                          img: "./assets/vectors/client-3.svg",
                           name: "Mathilde Ducharme",
-                          num: "+1 (514) 793-3263",
-                          linked: "To Node",
+                          lastVisit: "23/11/2019",
+                          noded: false,
                         },
                         {
-                          img: "./assets/img/table-user-4.png",
+                          img: "./assets/vectors/client-4.svg",
                           name: "Vanessa Dubé",
-                          num: "+1 (450) 293-1269",
-                          linked: "Noded",
+                          lastVisit: "03/05/2020",
+                          noded: true,
+                        },
+                        {
+                          img: "./assets/vectors/client-4.svg",
+                          name: "Mathilde Ducharme",
+                          lastVisit: "01/03/2021",
+                          noded: false,
+                        },
+                        {
+                          img: "./assets/vectors/client-4.svg",
+                          name: "Alicia Duclos",
+                          lastVisit: "02/03/2021",
+                          noded: false,
                         },
                       ].map((el, idx) => {
                         return (
@@ -301,54 +298,83 @@ const Dashboard = () => {
                                 </div>
                                 <div className="text">
                                   <h4>{el.name}</h4>
-                                  <div>{el.num}</div>
+                                  <div className="text-manrope">
+                                    Last visit : {el.lastVisit}
+                                  </div>
                                 </div>
                               </div>
                             </td>
-                            <td>{el.linked}</td>
+                            <td>
+                              <h4 className="sub-title text-dark">
+                                {el.noded ? (
+                                  "Noded"
+                                ) : (
+                                  <a
+                                    href="#0"
+                                    className="text-dark text-underline"
+                                  >
+                                    Send Invite
+                                  </a>
+                                )}
+                              </h4>
+                            </td>
                           </tr>
                         );
                       })}
                     </tbody>
                   </table>
                 </div>
-                <div className="btn btn-dark mt-5">All Clients</div>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="logs">
-                <div className="card dark-blue">
-                  <div className="number">29</div>
-                  <div className="">New Messages</div>
-                </div>
                 <div className="card light-blue">
-                  <div className="number">2 387</div>
-                  <div className="">Total Clients</div>
+                  <div className="number title">
+                    34
+                    <img
+                      className="arrow"
+                      src="./assets/vectors/blue-up-arrow.svg"
+                      alt="blue-up-arrow"
+                    />
+                  </div>
+                  <h4 className="sub-title">New requests</h4>
                 </div>
-                <div className="card cyan">
-                  <div className="number">2 108</div>
-                  <div className="">Active Clients</div>
+                <div className="card grey">
+                  <div className="number title">
+                    2 387
+                    <img
+                      className="arrow"
+                      src="./assets/vectors/blue-up-arrow.svg"
+                      alt="blue-up-arrow"
+                    />
+                  </div>
+                  <h4 className="sub-title">Total Clients</h4>
+                </div>
+                <div className="card dark-blue">
+                  <div className="number title">
+                    108
+                    <img
+                      className="arrow"
+                      src="./assets/vectors/white-down-arrow.svg"
+                      alt="blue-up-arrow"
+                    />
+                  </div>
+                  <h4 className="sub-title">Active Services</h4>
                 </div>
               </div>
-              <div className="card shadowed mt-4 recently-viewed">
+              <div className="card mt-4 recently-viewed">
                 <div className="lg-head px-4">
-                  <h2 className="heading mb-0">
+                  <h3 className="heading section-title mb-0 d-flex align-items-center">
                     <img
                       src="./assets/vectors/recently-viewed.svg"
                       alt="recently-viewed"
                       className="me-4"
                     />
                     Recently Viewed
-                  </h2>
+                  </h3>
                 </div>
                 <div className="table-card-wrap">
-                  <table className="table-card mt-5">
-                    <thead>
-                      <tr>
-                        <th>Type / Title</th>
-                        <th>Detail</th>
-                      </tr>
-                    </thead>
+                  <table className="table-card mt-3">
                     <tbody>
                       {[
                         {
@@ -356,6 +382,7 @@ const Dashboard = () => {
                           title: "#AA-04-19-1890678",
                           sub: "Bernard Stanley",
                           type: "118.00$",
+                          boxBg: "#C26666",
                         },
                         {
                           vector: "./assets/vectors/recently-viewed-2.svg",
@@ -368,15 +395,17 @@ const Dashboard = () => {
                           title: "Toyota Prius 2021",
                           sub: "VIN 21738263910318",
                           type: "29 Oct 2019",
+                          boxBg: "#D9CC9E",
                         },
                         {
                           vector: "./assets/vectors/recently-viewed-4.svg",
                           title: "#AA-04-19-1890243",
                           sub: "Mathilde Ducharme",
                           type: "578.00$",
+                          boxBg: "#7E8876",
                         },
                       ].map((el) => {
-                        const { vector, title, sub, type } = el;
+                        const { vector, title, sub, type, boxBg } = el;
 
                         return (
                           <tr>
@@ -386,12 +415,24 @@ const Dashboard = () => {
                                   <img src={vector} alt="user" />
                                 </div>
                                 <div className="text">
-                                  <h4>{title}</h4>
-                                  <div>{sub}</div>
+                                  <h4 className="text-dark-4">{title}</h4>
+                                  <div className="text-manrope text-dark-4 fw-300">
+                                    {sub}
+                                  </div>
                                 </div>
                               </div>
                             </td>
-                            <td>{type}</td>
+                            <td>
+                              <span className="sub-title d-flex justify-content-end align-items-center">
+                                {boxBg && (
+                                  <div
+                                    style={{ backgroundColor: boxBg }}
+                                    className="round-box me-2"
+                                  ></div>
+                                )}
+                                {type}
+                              </span>
+                            </td>
                           </tr>
                         );
                       })}

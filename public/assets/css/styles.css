@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(./bootstrap-grid.min.css);
 @import url(./bootstrap-utilities.css);
 @import url(./utilities.scss);
@@ -45,6 +46,14 @@ button {
 
 #auth > * {
   height: 100%;
+}
+
+#auth h1 {
+  font-family: "DM Serif Display", serif;
+}
+
+#auth .btn.btn-primary, #auth .btn.btn-light-blue {
+  padding: 1.125rem 4.5rem;
 }
 
 #auth .left {
@@ -169,10 +178,11 @@ button {
 }
 
 #dashboard-main-content .card.stats .top {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #dashboard-main-content .card.stats .bottom {
+  font-family: "manrope", sans-serif;
   font-size: 12px;
 }
 
@@ -184,12 +194,6 @@ button {
 
 #dashboard-main-content .card.performance .item {
   margin-bottom: 25px;
-}
-
-#dashboard-main-content .card.performance .item .percent {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 1;
 }
 
 #dashboard-main-content .card.node-coin {
@@ -213,6 +217,7 @@ button {
 }
 
 #dashboard-main-content .card.node-coin .chart-container .additional {
+  padding-left: 30px;
   position: relative;
 }
 
@@ -224,6 +229,11 @@ button {
 #dashboard-main-content .card.recently-viewed {
   height: unset;
   min-height: 510px;
+}
+
+#dashboard-main-content .card.recently-viewed .aligned .img {
+  width: 52px;
+  height: 52px;
 }
 
 #dashboard-main-content .logs {
@@ -256,6 +266,13 @@ button {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #dashboard-main-content .logs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   #dashboard-main-content .logs {
     -webkit-box-orient: vertical;
@@ -270,6 +287,18 @@ button {
   height: 98px;
   padding-top: 25px;
   padding-bottom: 20px;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#dashboard-main-content .logs .card .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (min-width: 1681px) {
@@ -303,6 +332,7 @@ button {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 0.25rem;
+  font-family: "Work Sans", sans-serif;
 }
 
 #dashboard-main-content .card.clients .table-card td {
@@ -342,7 +372,7 @@ button {
   border: 1px solid #f2f2f2;
   height: 100%;
   cursor: pointer;
-  min-height: 337px;
+  min-height: 270px;
 }
 
 #client-list-main-content .client-card .head {
@@ -430,6 +460,14 @@ button {
   border-radius: 10px;
 }
 
+#client-overview-main-content .user-jumbotron .btn.btn-blue-high {
+  border-radius: 37px;
+  min-width: 109px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: 1rem;
+}
+
 #client-overview-main-content .user-jumbotron .top {
   margin-left: 16px;
 }
@@ -496,12 +534,12 @@ button {
 
 #client-overview-main-content .user-jumbotron .profile-info .left .img .badge {
   position: absolute;
-  padding: 4px 10px;
+  padding: 0px 10px;
   font-weight: 600;
   color: #fff;
-  background-color: #4b40d1;
+  background-color: #1e55a9;
   border-radius: 4px;
-  bottom: -17px;
+  bottom: -15px;
 }
 
 #client-overview-main-content .user-jumbotron .profile-info .left .social {
@@ -557,16 +595,6 @@ button {
   }
 }
 
-@media screen and (max-width: 991px) {
-  #client-overview-main-content .user-jumbotron .profile-info .right .user-name,
-  #client-overview-main-content .user-jumbotron .profile-info .right .location {
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 @media screen and (min-width: 992px) {
   #client-overview-main-content .garage-card {
     padding-left: 40px;
@@ -578,7 +606,7 @@ button {
 }
 
 #client-overview-main-content .garage-card .section {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 #client-overview-main-content .listing .list-item {
@@ -682,7 +710,7 @@ button {
 }
 
 #client-overview-main-content .profiles-main .left .text > * {
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 #client-overview-main-content .profiles-main .right {
@@ -727,13 +755,18 @@ button {
   max-width: 584px;
 }
 
-#client-overview-main-content .client-overview-tabs .title-container > * {
+#client-overview-main-content .client-overview-tabs .title-container > .title {
   padding-bottom: 1rem;
 }
 
 #client-overview-main-content .client-overview-tabs .title {
   border-bottom: 1px solid #f2f2f2;
-  min-width: 266px;
+}
+
+@media screen and (min-width: 576px) {
+  #client-overview-main-content .client-overview-tabs .title {
+    min-width: 266px;
+  }
 }
 
 @media screen and (max-width: 99px) {
@@ -764,6 +797,18 @@ button {
   }
   #client-overview-main-content .listing-container .listing {
     min-width: 425px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #client-overview-main-content .requests-container {
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #client-overview-main-content .interactions-container {
+    padding-left: 2rem;
   }
 }
 
@@ -819,13 +864,33 @@ button {
   font-weight: 400;
 }
 
-#client-overview-main-content .requests-list .requests-list-item .more-info .prod-name {
+#client-overview-main-content .requests-list .requests-list-item .more-info .caption {
+  color: #c26666;
+}
+
+#client-overview-main-content .requests-list .requests-list-item .more-info > * {
+  width: 65px;
+}
+
+#client-overview-main-content .requests-list .requests-list-item .more-info > *:last-child {
+  width: 90px;
+}
+
+#client-overview-main-content .interactions-container .list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#client-overview-main-content .interactions-container .list-item > *:nth-child(2),
+#client-overview-main-content .interactions-container .list-item > *:nth-child(3) {
+  width: 73px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 .finances-invoice-main-content input {

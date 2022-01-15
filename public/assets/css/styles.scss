@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import url(./bootstrap-grid.min.css);
 @import url(./bootstrap-utilities.css);
@@ -38,6 +39,17 @@ button {
 
   & > * {
     height: 100%;
+  }
+
+  h1 {
+    font-family: "DM Serif Display", serif;
+  }
+
+  .btn {
+    &.btn-primary,
+    &.btn-light-blue {
+      padding: 1.125rem 4.5rem;
+    }
   }
 
   .left {
@@ -164,10 +176,11 @@ button {
 
     &.stats {
       .top {
-        font-weight: bold;
+        font-weight: 600;
       }
 
       .bottom {
+        font-family: "manrope", sans-serif;
         font-size: 12px;
       }
     }
@@ -179,12 +192,6 @@ button {
 
       .item {
         margin-bottom: 25px;
-
-        .percent {
-          font-weight: bold;
-          font-size: 22px;
-          line-height: 1;
-        }
       }
     }
 
@@ -208,6 +215,7 @@ button {
         margin-top: 3.25rem;
 
         .additional {
+          padding-left: 30px;
           position: relative;
 
           .sub {
@@ -221,6 +229,13 @@ button {
     &.recently-viewed {
       height: unset;
       min-height: 510px;
+
+      .aligned {
+        .img {
+          width: 52px;
+          height: 52px;
+        }
+      }
     }
   }
 
@@ -237,6 +252,11 @@ button {
       flex-direction: column;
     }
 
+    @media screen and (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
     @media screen and (max-width: 575px) {
       flex-direction: column;
     }
@@ -246,6 +266,14 @@ button {
       height: 98px;
       padding-top: 25px;
       padding-bottom: 20px;
+      border-radius: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+      }
 
       @media screen and (min-width: 1681px) {
         width: 30%;
@@ -270,6 +298,7 @@ button {
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 0.25rem;
+        font-family: "Work Sans", sans-serif;
       }
     }
   }
@@ -326,7 +355,7 @@ button {
     border: 1px solid $color5;
     height: 100%;
     cursor: pointer;
-    min-height: 337px;
+    min-height: 270px;
 
     .head {
       display: flex;
@@ -419,6 +448,13 @@ button {
     padding: 14px 0;
     border-radius: 10px;
 
+    .btn.btn-blue-high {
+      border-radius: 37px;
+      min-width: 109px;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
     .top {
       margin-left: 16px;
 
@@ -467,12 +503,12 @@ button {
 
           .badge {
             position: absolute;
-            padding: 4px 10px;
+            padding: 0px 10px;
             font-weight: 600;
             color: #fff;
-            background-color: $color24;
+            background-color: $color4;
             border-radius: 4px;
-            bottom: -17px;
+            bottom: -15px;
           }
         }
 
@@ -511,13 +547,13 @@ button {
           margin-left: 0;
         }
 
-        .user-name,
-        .location {
-          @media screen and (max-width: 991px) {
-            text-align: center;
-            justify-content: center;
-          }
-        }
+        // .user-name,
+        // .location {
+        //   @media screen and (max-width: 991px) {
+        //     text-align: center;
+        //     justify-content: center;
+        //   }
+        // }
       }
     }
   }
@@ -532,7 +568,7 @@ button {
     }
 
     .section {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
   }
 
@@ -619,7 +655,7 @@ button {
         margin-left: 16px;
 
         & > * {
-          line-height: 1.1;
+          line-height: 1.2;
         }
       }
     }
@@ -670,13 +706,16 @@ button {
   }
 
   .client-overview-tabs {
-    .title-container > * {
+    .title-container > .title {
       padding-bottom: 1rem;
     }
 
     .title {
       border-bottom: 1px solid $color5;
-      min-width: 266px;
+
+      @media screen and (min-width: 576px) {
+        min-width: 266px;
+      }
 
       @media screen and (max-width: 99px) {
         padding-left: 0;
@@ -706,6 +745,18 @@ button {
       .listing {
         min-width: 425px;
       }
+    }
+  }
+
+  .requests-container {
+    @media screen and (min-width: 992px) {
+      padding-right: 4rem;
+    }
+  }
+
+  .interactions-container {
+    @media screen and (min-width: 992px) {
+      padding-left: 2rem;
     }
   }
 
@@ -746,10 +797,30 @@ button {
           }
         }
 
-        .prod-name {
-          display: flex;
-          align-items: center;
+        .caption {
+          color: $color32;
         }
+
+        & > * {
+          width: 65px;
+
+          &:last-child {
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  .interactions-container {
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+
+      & > *:nth-child(2),
+      & > *:nth-child(3) {
+        width: 73px;
+        flex-grow: 0;
       }
     }
   }
