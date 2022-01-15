@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import $ from "jquery";
@@ -102,30 +102,30 @@ const MainLayout = ({
               Overall business desk Usage
             </div>
 
-            <div class="progress-bar mt-4">
-              <div class="bg"></div>
+            <div className="progress-bar mt-4">
+              <div className="bg"></div>
               <div
-                class="progress"
+                className="progress"
                 style={{ width: "38.7%", backgroundColor: "#4B40D1" }}
               ></div>
             </div>
             <div className="progress-sub">
               <span className="fw-700">Call</span> 387 / 1000 min.
             </div>
-            <div class="progress-bar">
-              <div class="bg"></div>
+            <div className="progress-bar">
+              <div className="bg"></div>
               <div
-                class="progress"
+                className="progress"
                 style={{ width: "72", backgroundColor: "#ECA0A0" }}
               ></div>
             </div>
             <div className="progress-sub">
               <span className="fw-700">Video</span> 72 / 100 min.
             </div>
-            <div class="progress-bar">
-              <div class="bg"></div>
+            <div className="progress-bar">
+              <div className="bg"></div>
               <div
-                class="progress"
+                className="progress"
                 style={{ width: "100%", backgroundColor: "#4ACBD3" }}
               ></div>
             </div>

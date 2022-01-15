@@ -7,7 +7,7 @@ import Tabs from "../components/Tabs";
 
 const FormCards = () => {
   const [cardSelected, setCardSelected] = useState(true);
-  const [formState, setFormState] = useState({
+  const [formState] = useState({
     label: "",
   });
 
@@ -184,15 +184,15 @@ const FormCards = () => {
                             >
                               <div className="main">
                                 <div className="d-flex checkboxes">
-                                  <label class="checkbox-container-2">
+                                  <label className="checkbox-container-2">
                                     One
                                     <input type="checkbox" checked="checked" />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
-                                  <label class="checkbox-container-2">
+                                  <label className="checkbox-container-2">
                                     Two
                                     <input type="checkbox" />
-                                    <span class="checkmark"></span>
+                                    <span className="checkmark"></span>
                                   </label>
                                 </div>
                                 <h2>{title}</h2>
