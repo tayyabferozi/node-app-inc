@@ -190,7 +190,7 @@ const Dashboard = () => {
                 <div className="chart-container">
                   <div className="additional mb-2">
                     <h4 className="evidence-word lh-1">320 197$</h4>
-                    <div className="fs-14 text-light-1 sub">Overall</div>
+                    <div className="fs-14 text-light-5 sub">Overall</div>
                   </div>
                   <Line
                     datasetIdKey="id"
@@ -202,7 +202,7 @@ const Dashboard = () => {
                           label: "",
                           data: [500, 400, 200, 800, 600, 700],
                           lineTension: 0.7,
-                          borderColor: "#4ACBD3",
+                          borderColor: "#1E55A9",
                         },
                       ],
                     }}

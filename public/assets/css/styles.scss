@@ -160,6 +160,8 @@ button {
 // ***********************************************************************************************************************************
 
 #dashboard-main-content {
+  overflow: hidden;
+
   .month-performances {
   }
 
@@ -297,7 +299,7 @@ button {
       .number {
         font-size: 20px;
         font-weight: bold;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
         font-family: "Work Sans", sans-serif;
       }
     }
@@ -444,7 +446,7 @@ button {
   }
 
   .user-jumbotron {
-    background-color: $color5;
+    background-color: $color58;
     padding: 14px 0;
     border-radius: 10px;
 
@@ -701,10 +703,6 @@ button {
     }
   }
 
-  .tabs.client-overview-tabs {
-    max-width: 584px;
-  }
-
   .client-overview-tabs {
     .title-container > .title {
       padding-bottom: 1rem;
@@ -714,7 +712,7 @@ button {
       border-bottom: 1px solid $color5;
 
       @media screen and (min-width: 576px) {
-        min-width: 266px;
+        min-width: 219px;
       }
 
       @media screen and (max-width: 99px) {
@@ -735,6 +733,22 @@ button {
 
     @media screen and (max-width: 992px) {
       padding-right: 1.5rem;
+    }
+  }
+
+  .forms-main {
+    .listing-container {
+      overflow-y: auto;
+    }
+    .listing {
+      min-width: 375px;
+    }
+    .label {
+      width: 150px;
+    }
+
+    .name {
+      width: 150px;
     }
   }
 

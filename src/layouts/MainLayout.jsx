@@ -13,6 +13,7 @@ const MainLayout = ({
   exploreTitle,
   exploreSub,
   exploreContent,
+  lightBorder,
   itemsControlledWidth,
   itemVector,
   progressNum,
@@ -62,7 +63,10 @@ const MainLayout = ({
                   const { time, title, sub, small } = el;
 
                   return (
-                    <div className={`item`} key={"explore" + idx}>
+                    <div
+                      className={`item${lightBorder ? " light-border" : ""}`}
+                      key={"explore" + idx}
+                    >
                       <div
                         className={`title${
                           itemsControlledWidth ? " max-width" : ""
@@ -143,6 +147,9 @@ const MainLayout = ({
         </div>
       </div>
       <div id="content">
+        <div className="copyright">
+          © Node Technologies 2022 | All Rights Reserved
+        </div>
         <div className="page-container">
           <div className="head">
             <div className="sidemenu">

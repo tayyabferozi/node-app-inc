@@ -19,6 +19,7 @@ const ClientsList = () => {
       exploreSub="Take full advantage of the Node experience"
       itemVector="./assets/vectors/email.svg"
       subClr="#9C9C9C"
+      lightBorder
       progressNum={98}
       exploreContent={[
         {
@@ -180,7 +181,7 @@ const ClientsList = () => {
                 <Tabs
                   verticalButtons
                   tabClassName="mb-4 mb-sm-0"
-                  className="mt-4 justify-content-center flex-column flex-sm-row"
+                  className="mt-4 flex-column flex-sm-row w-100"
                   tabGroupName="client-overview-tabs"
                   data={[
                     {
@@ -402,7 +403,7 @@ const ClientsList = () => {
                                     Noded &amp; Validated
                                   </div>
                                 </div>
-                                <div className="fs-7  text-xx-small">
+                                <div className="fs-10 text-xx-small">
                                   Client’s Attribute
                                 </div>
                               </div>
@@ -462,7 +463,7 @@ const ClientsList = () => {
                                 <button className="btn btn-blue-high mb-3 mb-sm-0">
                                   Print Node QR
                                 </button>
-                                <button className="btn btn-blue-high ms-3">
+                                <button className="btn btn-blue-high ms-0 ms-sm-3">
                                   New Appointment
                                 </button>
                               </div>
@@ -557,13 +558,13 @@ const ClientsList = () => {
                                       </div>
                                       <div className="order-price">
                                         <div className="price-text">
-                                          {price2}
-                                          <div className="price-sign">
+                                          {price2}$
+                                          {/* <div className="price-sign">
                                             <img
                                               src="./assets/vectors/dollar-sign.svg"
                                               alt="dollar"
                                             />
-                                          </div>
+                                          </div> */}
                                         </div>
                                       </div>
                                     </div>
@@ -596,8 +597,13 @@ const ClientsList = () => {
                                     date: "2021-10-22",
                                   },
                                   {
-                                    label: "Inspection",
+                                    label: "Note",
                                     name: "WO #893788784",
+                                    date: "2021-10-22",
+                                  },
+                                  {
+                                    label: "Brake Photo",
+                                    name: "photo-brake.jpg",
                                     date: "2021-10-22",
                                   },
                                   {
@@ -606,12 +612,17 @@ const ClientsList = () => {
                                     date: "2021-10-22",
                                   },
                                   {
-                                    label: "Inspection",
+                                    label: "Scratch",
                                     name: "WO #893788784",
                                     date: "2021-10-22",
                                   },
                                   {
-                                    label: "Inspection",
+                                    label: "Outside verification",
+                                    name: "WO #893788784",
+                                    date: "2021-10-22",
+                                  },
+                                  {
+                                    label: "Note",
                                     name: "WO #893788784",
                                     date: "2021-10-22",
                                   },
@@ -628,14 +639,12 @@ const ClientsList = () => {
                                           {label}
                                         </div>
                                       </div>
-                                      <div className="name">
-                                        <div className="text-light-4 text-end">
-                                          {name}
-                                        </div>
+                                      <div className="name text-light-4">
+                                        {name}
                                       </div>
                                       <div className="date">
                                         <div className="font-manrope text-end">
-                                          {date}$
+                                          {date}
                                         </div>
                                       </div>
                                     </div>

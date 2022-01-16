@@ -51,7 +51,7 @@ h5.sub-title {
 .progress-sub,
 .progress-sub * {
   font-family: "manrope", sans-serif;
-  font-size: 8px;
+  font-size: 10px;
   color: #9c9c9c;
   font-weight: 400;
 }
@@ -259,6 +259,16 @@ button,
 
 .text-xx-small {
   font-size: 7px;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  font-family: "inter", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: right;
 }
 
 .title-label {
@@ -639,6 +649,10 @@ button,
   border-top: 0.5px solid #9c9c9c;
 }
 
+#main #sidenav .desc .explore .item.light-border::after {
+  border-color: rgba(151, 151, 151, 0.3);
+}
+
 #main #sidenav .desc .explore .item .title {
   position: relative;
 }
@@ -847,6 +861,12 @@ button,
   font-weight: 300;
   font-size: 7px;
   color: #3e4244;
+}
+
+@media screen and (min-width: 380px) {
+  #main #content > .page-container > .head .text {
+    font-size: 9px;
+  }
 }
 
 #main #content > .page-container > .head .sidemenu {
@@ -1606,7 +1626,7 @@ button,
 }
 
 .tabs {
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid #f2f2f2;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
@@ -1618,7 +1638,7 @@ button,
   padding: 0.5rem 0.75rem;
   background-color: transparent;
   border: none;
-  font-weight: 400;
+  font-weight: bold;
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
 }
@@ -1677,7 +1697,6 @@ button,
 
 .tabs .tab.active {
   color: #1e55a9;
-  font-weight: bold;
 }
 
 .tabs .tab.active::after {
