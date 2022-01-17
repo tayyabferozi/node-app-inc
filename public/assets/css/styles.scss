@@ -849,131 +849,246 @@ button {
 // ***********************************************************************************************************************************
 
 .finances-invoice-main-content {
-  input {
-    padding: 10px;
-    background-color: $color30;
-    border: none;
-    outline: none;
-    font-family: "Manrope", sans-serif;
-    width: 490px;
-  }
-  .add-new-btn {
-    p {
-      font-family: "Lato", sans-serif;
-      font-weight: 900;
-    }
-  }
-  .filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .filter {
-      font-weight: bold;
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-      color: $color8;
-      padding: 5px 20px;
-    }
-    .filter.active {
-      color: $color34;
-      border: 1px solid $color33;
-      border-radius: 8px;
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    .table {
+      min-width: 800px;
     }
   }
   .table-heading {
     background-color: $color17;
   }
+  
   .label {
     position: relative;
-    padding: 15px 10px;
-    font-size: 12px;
-    font-weight: bold;
+    padding: 15px 0px;
+    font-size: 14px;
+    font-weight: normal;
+    color: $color3;
+    font-family: "Manrope", sans-serif;
   }
   .dummy-data {
-    border: 1px solid $color33;
-    border-radius: 10px;
-    .invoice-details {
-      .box {
-        width: 52px;
-        height: 52px;
-        border-radius: 8px;
-        background-color: $color5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    .invoice-number {
-      color: $color3;
-      font-family: "Manorope", sans-serif;
-      font-weight: 200;
-      font-size: 20px;
-      line-height: 24px;
-    }
-    .date {
-      font-family: "Lato", sans-serif;
-      color: $color1;
-      font-size: 16px;
-      line-height: 24px;
-    }
-    .pic-name {
-      img {
-        border-radius: 6px;
-        overflow: hidden;
-      }
-      p {
-        color: $color1;
-        font-size: 16px;
-        line-height: 24px;
-        font-family: "Lato", sans-serif;
-      }
-    }
-    .is-paid {
-      div {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 21px;
-        width: 114px;
-        height: 36px;
-        background: linear-gradient(
-            0deg,
-            rgba(159, 168, 144, 0.08),
-            rgba(88, 109, 54, 0.08)
-          ),
-          #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-      }
-      .paid {
-        background-color: rgba(75, 64, 209, 0.07);
-        color: $color24;
-      }
-      .unpaid {
-        background-color: rgba(255, 128, 139, 0.08);
-        color: $color23;
-      }
-    }
-    .price {
-      font-family: "Manrope", sans-serif;
-      font-weight: 200;
-      font-size: 20px;
-      line-height: 24px;
-      text-align: right;
-      color: $color3;
-    }
-    .del {
+    border-bottom: 1px solid $color5;
+    .circle {
       width: 36px;
       height: 36px;
-      border: 1px solid #f2f2f2;
-      border-radius: 8px;
+      border-radius: 50%;
+    }
+    .name, .invoice-number {
+      color: $color39;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Inter", sans-serif;
+    }
+    .email, .username {
+      color: $color2;
+      font-size: 14px;
+      font-family: "Inter", sans-serif;
+    }
+    .created-at, .due-on {
+      color: $color2;
+      font-size: 12px;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+    }
+    .chip {
+      padding: 5px;
+      border-radius: 20px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      gap: 5px;
+      background-color: rgba($color: $color40, $alpha: 0.29);
+      width: min-content;
+
+      .chip-circle {
+        width: 6px;
+        height: 6px;
+        background-color: $color2;
+        border-radius: 50%;
+      }
+      .chip-text {
+        font-size: 12px;
+        font-weight: 600;
+        color: $color2;
+        font-family: "Inter", sans-serif;
+      }
+    }
+    .chip.is-noded {
+      background-color: $color5;
+
+      .chip-circle {
+        background-color: $color4;
+      }
+      .chip-text {
+        color: $color4;
+      }
+    }
+    .last-login {
+      color: $color2;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: "Inter", sans-serif;
+    }
+    .chip.unpaid {
+      .chip-circle {
+        background-color: $color32;
+      }
+      .chip-text {
+        color: $color32;
+      }
+    }
+    .paid-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: $color39;
+      font-family: "Inter", sans-serif;
+    }
+    .amount {
+      color: $color39;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Inter", sans-serif;
+
+    }
+    .currency {
+      color: $color2;
+      font-size: 12px;
+      font-family: "Inter", sans-serif;
+
+    }
+    .more-menu {
+      color: $color4;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 12px;
     }
   }
+  .load-more {
+    color: $color4;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    
+  }
+  // input {
+  //   padding: 10px;
+  //   background-color: $color30;
+  //   border: none;
+  //   outline: none;
+  //   font-family: "Manrope", sans-serif;
+  //   width: 490px;
+  // }
+  // .add-new-btn {
+  //   p {
+  //     font-family: "Lato", sans-serif;
+  //     font-weight: 900;
+  //   }
+  // }
+  // .filters {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   .filter {
+  //     font-weight: bold;
+  //     font-family: "Poppins", sans-serif;
+  //     font-size: 14px;
+  //     color: $color8;
+  //     padding: 5px 20px;
+  //   }
+  //   .filter.active {
+  //     color: $color34;
+  //     border: 1px solid $color33;
+  //     border-radius: 8px;
+  //   }
+  // }
+  
+  // .dummy-data {
+  //   border: 1px solid $color33;
+  //   border-radius: 10px;
+  //   .invoice-details {
+  //     .box {
+  //       width: 52px;
+  //       height: 52px;
+  //       border-radius: 8px;
+  //       background-color: $color5;
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //     }
+  //   }
+  //   .invoice-number {
+  //     color: $color3;
+  //     font-family: "Manorope", sans-serif;
+  //     font-weight: 200;
+  //     font-size: 20px;
+  //     line-height: 24px;
+  //   }
+  //   .date {
+  //     font-family: "Lato", sans-serif;
+  //     color: $color1;
+  //     font-size: 16px;
+  //     line-height: 24px;
+  //   }
+  //   .pic-name {
+  //     img {
+  //       border-radius: 6px;
+  //       overflow: hidden;
+  //     }
+  //     p {
+  //       color: $color1;
+  //       font-size: 16px;
+  //       line-height: 24px;
+  //       font-family: "Lato", sans-serif;
+  //     }
+  //   }
+  //   .is-paid {
+  //     div {
+  //       font-family: "Poppins", sans-serif;
+  //       font-weight: 600;
+  //       font-size: 14px;
+  //       line-height: 21px;
+  //       width: 114px;
+  //       height: 36px;
+  //       background: linear-gradient(
+  //           0deg,
+  //           rgba(159, 168, 144, 0.08),
+  //           rgba(88, 109, 54, 0.08)
+  //         ),
+  //         #ffffff;
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       border-radius: 8px;
+  //     }
+  //     .paid {
+  //       background-color: rgba(75, 64, 209, 0.07);
+  //       color: $color24;
+  //     }
+  //     .unpaid {
+  //       background-color: rgba(255, 128, 139, 0.08);
+  //       color: $color23;
+  //     }
+  //   }
+  //   .price {
+  //     font-family: "Manrope", sans-serif;
+  //     font-weight: 200;
+  //     font-size: 20px;
+  //     line-height: 24px;
+  //     text-align: right;
+  //     color: $color3;
+  //   }
+  //   .del {
+  //     width: 36px;
+  //     height: 36px;
+  //     border: 1px solid #f2f2f2;
+  //     border-radius: 8px;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+  // }
 }
 // ***********************************************************************************************************************************
 // ***********************************************************************************************************************************
@@ -992,9 +1107,17 @@ button {
     color: $color8;
     background-color: rgba($color: $color36, $alpha: 0.4);
   }
-  .packages {
-    .packages-record {
-      border: 1px solid $color33;
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    .table {
+      min-width: 800px;
+    }
+  }
+  .services-offer {
+    .services-offer-record {
+      border: 1px solid rgba($color: $color41, $alpha: 0.08);
       border-radius: 12px;
 
       .box {
@@ -1033,8 +1156,11 @@ button {
         border-radius: 8px;
         color: $color4;
         border: none;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
       }
-      .packages-menu {
+      .services-offer-menu {
         width: 36px;
         height: 36px;
         border-radius: 8px;
@@ -1047,7 +1173,7 @@ button {
   }
   .articles {
     .inventory-record {
-      border: 1px solid $color33;
+      // border: 1px solid $color33;
       border-radius: 12px;
     }
     .inventory-record.checked {
@@ -1064,8 +1190,10 @@ button {
         border-radius: 6px;
       }
       .name {
+        padding-left: 70px;
         .title {
           font-size: 16px;
+          font-weight: 600;
           color: $color34;
         }
         .caption {
@@ -1099,17 +1227,22 @@ button {
       }
     }
     button {
-      border: none;
+      background-color: rgba($color: $color4, $alpha: 0.08);
       border-radius: 8px;
+      color: $color4;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
     }
-    button.is-brake {
-      background-color: rgba($color: $color37, $alpha: 0.08);
-      color: $color6;
-    }
-    button.is-engine {
-      background-color: rgba($color: $color38, $alpha: 0.08);
-      color: $color23;
-    }
+    // button.is-brake {
+    //   background-color: rgba($color: $color37, $alpha: 0.08);
+    //   color: $color6;
+    // }
+    // button.is-engine {
+    //   background-color: rgba($color: $color38, $alpha: 0.08);
+    //   color: $color23;
+    // }
     .inventory-menu {
       width: 36px;
       height: 36px;
