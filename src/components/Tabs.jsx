@@ -38,17 +38,17 @@ const Tabs = ({
           <button
             key={tabGroupName + idx}
             data-target={target}
-            className={`tab d-flex align-items-center ${
-              verticalButtons ? "vertical" : ""
+            className={`tab d-flex align-items-center${
+              verticalButtons ? " vertical" : ""
             }${active ? " active" : ""} ${target} ${
               tabClassName ? tabClassName : ""
             }`}
             onClick={() => changeTab(target)}
           >
             {icon && iconActive && (
-              <div className="icon-container">
-                <img className="me-3 inactive" src={icon} alt={label} />
-                <img className="me-3 active" src={iconActive} alt={label} />
+              <div className="icon-container me-3">
+                <img className="inactive" src={icon} alt={label} />
+                <img className="active" src={iconActive} alt={label} />
               </div>
             )}
             {label}

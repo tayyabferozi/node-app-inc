@@ -124,6 +124,10 @@ button,
   font-size: 12px !important;
 }
 
+.fs-11 {
+  font-size: 11px !important;
+}
+
 .fs-10 {
   font-size: 10px !important;
 }
@@ -304,6 +308,10 @@ button,
   font-size: 14px;
 }
 
+.text-inter {
+  font-family: "inter", sans-serif;
+}
+
 .page-container {
   max-width: 1390px;
   margin-left: auto;
@@ -403,6 +411,16 @@ button,
   background: #3bb2bb;
 }
 
+.btn.btn-light-blue {
+  background-color: rgba(30, 85, 169, 0.08);
+  color: #1e55a9;
+  display: inline-block;
+}
+
+.btn.btn-light-blue:hover {
+  background: rgba(30, 85, 169, 0.2);
+}
+
 .btn.btn-dark {
   background-color: #3e4244;
   color: #fff;
@@ -411,6 +429,14 @@ button,
 }
 
 .btn.btn-vert {
+  background-color: #f2f2f2;
+  color: #504b70;
+  padding: 8px 22px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn.btn-blue {
   background-color: #f2f2f2;
   color: #504b70;
   padding: 8px 22px;
@@ -535,6 +561,7 @@ button,
   overflow-y: auto;
   padding-left: 31px;
   border-left: 14px solid #3e4244;
+  overflow-x: hidden;
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -638,6 +665,12 @@ button,
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-left: -31px;
+  margin-right: -45px;
+  padding-left: 31px;
+  padding-right: 45px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 #main #sidenav .desc .explore .item::after {
@@ -647,6 +680,10 @@ button,
   height: 1px;
   width: 100%;
   border-top: 0.5px solid #9c9c9c;
+}
+
+#main #sidenav .desc .explore .item.active {
+  background: #fff;
 }
 
 #main #sidenav .desc .explore .item.light-border::after {
@@ -849,8 +886,6 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
   margin-bottom: 2rem;
   overflow: hidden;
   padding-top: 0.75rem;
@@ -1073,6 +1108,10 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#main #content > .page-container > .head .info .nav > *:last-child {
+  margin: 0;
 }
 
 @media screen and (max-width: 425px) {
@@ -1805,6 +1844,28 @@ table th {
 }
 
 .short-vertical-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.short-scrollbar {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.short-scrollbar::-webkit-scrollbar {
+  width: 2px;
+}
+
+.short-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.short-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.short-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 /*# sourceMappingURL=utilities.css.map */

@@ -5,17 +5,13 @@ import $ from "jquery";
 import SearchInput from "../components/SearchInput";
 
 const MainLayout = ({
-  subClr,
   children,
   title,
   headVector,
   minimalNavRight,
   exploreTitle,
   exploreSub,
-  exploreContent,
-  lightBorder,
-  itemsControlledWidth,
-  itemVector,
+  exploreComponent,
   progressNum,
 }) => {
   const toggleSideNav = () => {
@@ -49,17 +45,23 @@ const MainLayout = ({
             />
 
             <div className="explore">
-              <div className="round-progress mb-3">
-                <div className="fw-500 fs-20 text">{progressNum}</div>
-                <img src="./assets/vectors/round-progress.svg" alt="progess" />
-              </div>
+              {progressNum && (
+                <div className="round-progress mb-3">
+                  <div className="fw-500 fs-20 text">{progressNum}</div>
+                  <img
+                    src="./assets/vectors/round-progress.svg"
+                    alt="progess"
+                  />
+                </div>
+              )}
               <h2 className="title-side">{exploreTitle}</h2>
               {exploreSub && (
                 <div className="fs-10 text-light-5">{exploreSub}</div>
               )}
 
               <div className="items mt-4">
-                {exploreContent.map((el, idx) => {
+                {exploreComponent}
+                {/* {exploreContent.map((el, idx) => {
                   const { time, title, sub, small } = el;
 
                   return (
@@ -96,7 +98,7 @@ const MainLayout = ({
                       </div>
                     </div>
                   );
-                })}
+                })} */}
               </div>
             </div>
           </div>
@@ -161,7 +163,7 @@ const MainLayout = ({
                   </div>
                   <div className="text">360</div>
                 </Link>
-                <Link to="/360" className="item">
+                <Link to="/conversations" className="item">
                   <div className="img">
                     <img src="./assets/vectors/desk.svg" alt="desk" />
                   </div>

@@ -7,10 +7,18 @@ import {
   LinearScale,
   Title,
   CategoryScale,
+  Tooltip,
 } from "chart.js";
 import MainLayout from "../layouts/MainLayout";
 
-ChartJS.register(CategoryScale, LineElement, PointElement, LinearScale, Title);
+ChartJS.register(
+  Tooltip,
+  CategoryScale,
+  LineElement,
+  PointElement,
+  LinearScale,
+  Title
+);
 
 const Dashboard = () => {
   return (
@@ -18,11 +26,10 @@ const Dashboard = () => {
       headVector="./assets/vectors/360.svg"
       sideNavVector="./assets/vectors/sidenav-right-1.svg"
       title="360"
-      itemVector="./assets/vectors/arrow-right.svg"
       progressNum={5}
       exploreTitle="What’s next ?"
       itemsControlledWidth
-      exploreContent={[
+      exploreComponent={[
         {
           title: "Order Rear Brake Light",
           sub: "Service 8372782392",
@@ -38,7 +45,28 @@ const Dashboard = () => {
           sub: "Client Mathilde Ducharme",
           small: "Due on 23/02/2022",
         },
-      ]}
+      ].map((el, idx) => {
+        const { time, title, sub, small } = el;
+
+        return (
+          <div className={`item`} key={"explore" + idx}>
+            <div className={"title max-width"}>
+              <div className="arrow">
+                <img src="./assets/vectors/arrow-right.svg" alt="arrow-right" />
+              </div>
+              {time && (
+                <div className="time-container">
+                  <div className="circle"></div>
+                  <div className="fs-12 fw-700 font-manrope">{time}</div>
+                </div>
+              )}
+              <div className="fs-14 fw-600">{title}</div>
+              <div className="fs-12 fw-400 sub-title-text">{sub}</div>
+              {small && <div className="mt-1 title-label">{small}</div>}
+            </div>
+          </div>
+        );
+      })}
     >
       <div id="dashboard-main-content">
         <div className="container-fluid px-0">
@@ -227,6 +255,21 @@ const Dashboard = () => {
                           },
                         },
                       },
+                      // plugins: {
+                      //   tooltip: {
+                      //     callbacks: {
+                      //       title: function () {
+                      //         return "my tittle";
+                      //       },
+                      //     },
+                      //   },
+                      //   legend: { display: false },
+                      //   title: {
+                      //     display: true,
+                      //     text: "Test chart",
+                      //     position: "top",
+                      //   },
+                      // },
                     }}
                   />
                 </div>

@@ -17,11 +17,9 @@ const ClientsList = () => {
       minimalNavRight
       exploreTitle="Clients not Noded"
       exploreSub="Take full advantage of the Node experience"
-      itemVector="./assets/vectors/email.svg"
-      subClr="#9C9C9C"
       lightBorder
       progressNum={98}
-      exploreContent={[
+      exploreComponent={[
         {
           title: "Oilvier Sauvé",
           sub: "Send an Invite",
@@ -42,7 +40,33 @@ const ClientsList = () => {
           title: "Marvin Lambert",
           sub: "Send an Invite",
         },
-      ]}
+      ].map((el, idx) => {
+        const { time, title, sub, small } = el;
+
+        return (
+          <div className="item light-border" key={"explore" + idx}>
+            <div className={"title"}>
+              <div className="arrow">
+                <img src="./assets/vectors/email.svg" alt="arrow-right" />
+              </div>
+              {time && (
+                <div className="time-container">
+                  <div className="circle"></div>
+                  <div className="fs-12 fw-700 font-manrope">{time}</div>
+                </div>
+              )}
+              <div className="fs-14 fw-600">{title}</div>
+              <div
+                className="fs-12 fw-400 sub-title-text"
+                style={{ color: "#9C9C9C" }}
+              >
+                {sub}
+              </div>
+              {small && <div className="mt-1 title-label">{small}</div>}
+            </div>
+          </div>
+        );
+      })}
     >
       {clientSelected ? (
         <div id="client-overview-main-content" className="mt-4 mt-sm-0">

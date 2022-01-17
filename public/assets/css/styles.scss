@@ -1132,27 +1132,63 @@ button {
 // ***********************************************************************************************************************************
 
 #conversations-main-content {
+  .container-fluid,
+  .row,
+  .row > * {
+    height: 100%;
+    max-height: calc(100vh - 115px);
+  }
+
+  @media screen and (max-width: 991px) {
+    .row > *:first-child {
+      max-height: 200px;
+      border-bottom: 3px solid $color11;
+    }
+  }
+
+  .row > * {
+    overflow-y: auto;
+  }
+
   .tabs.conversatoins-tabs {
     border-bottom-width: 4.4px;
     justify-content: space-around !important;
 
     .tab {
       padding-bottom: 12px;
+      font-size: 14px;
       font-family: "poppins", sans-serif;
-
-      &.active {
-        font-weight: 600;
-      }
+      font-weight: 600;
+      width: 45%;
 
       &::after {
         height: 4.4px;
         border-radius: 5px;
+        bottom: -4px;
+      }
+    }
+  }
+
+  .feed-container {
+    padding: 0 3rem;
+
+    .tabs.feed-tabs {
+      &::after {
+        height: 3px;
+      }
+    }
+
+    .feed-main {
+      .feed-item {
+        width: 167px;
       }
     }
   }
 
   .left-content {
-    padding-left: 1rem;
+    @media screen and (min-width: 992px) {
+      padding-left: 1rem;
+    }
 
     .custom-form-control {
       flex-grow: 1;
@@ -1163,6 +1199,7 @@ button {
       .chat {
         display: flex;
         padding: 16px 20px;
+        cursor: pointer;
 
         &.active {
           background-color: $color5;
@@ -1224,6 +1261,10 @@ button {
         padding: 20px 0;
         border-bottom: 1px solid $color53;
 
+        @media screen and (min-width: 992px) {
+          padding-right: 3rem;
+        }
+
         .img {
           width: 40px;
           height: 40px;
@@ -1237,6 +1278,10 @@ button {
       }
 
       .chat-main-body {
+        @media screen and (min-width: 992px) {
+          padding-right: 2rem;
+        }
+
         .chat-msg {
           margin: 0.5rem 0;
 
@@ -1245,6 +1290,10 @@ button {
             align-items: flex-end;
             width: 60%;
             margin: 11px 0;
+
+            @media screen and (max-width: 575px) {
+              width: 90%;
+            }
 
             .img {
               margin-right: 0.75rem;
@@ -1313,6 +1362,11 @@ button {
               .img {
                 margin-right: 0;
                 margin-left: 0.75rem;
+                border-radius: 5px;
+
+                img {
+                  border-radius: 5px;
+                }
               }
 
               .text {
@@ -1375,9 +1429,20 @@ button {
     }
 
     .new-msg {
+      position: relative;
+
       .btn {
-        margin-left: auto;
         width: 126px;
+        height: 36px;
+        background: $color4;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        text-align: center;
+        line-height: 2.5;
+        border-radius: 50px;
       }
     }
   }
