@@ -166,7 +166,7 @@ const Inventory = () => {
               />
             </div>
           </div>
-          <div className="row pt-5">
+          <div className="row py-4">
             <div className="col-1 d-flex justify-content-center align-items-center"><img src="./assets/vectors/filter-contained.svg" alt="" /></div>
             <div className="col-11 col-md-4">
               <SearchInput
@@ -179,15 +179,15 @@ const Inventory = () => {
           </div>
           <TabContents tabGroupName="inventory-tabs">
             <TabContentItem target="services-offer">
-              <div className="table-wrapper">
+              <div className="table-wrapper short-vertical-scrollbar">
                 <div className="table">
                   {servicesOfferData.map((data, idx) => {
                     return (
                       <div
                         key={"services-offer-data" + idx}
-                        className="row my-2 align-items-center py-3 services-offer-record"
+                        className="row my-2 align-items-center py-3 gx-0 services-offer-record"
                       >
-                        <div className="col-4 d-flex gap-3 align-items-center">
+                        <div className="col-4 d-flex gap-3 ps-4 align-items-center">
                           <div className="box"></div>
                           <div className="name">{data.name}</div>
                         </div>
@@ -201,7 +201,7 @@ const Inventory = () => {
                         <div className="col-2">
                           <button className="py-2 px-4">{data.isLocation ? "Location" : "Recurring"}</button>
                         </div>
-                        <div className="col-1">
+                        <div className="col-1 d-flex justify-content-center align-items-center">
                           <div className="services-offer-menu">
                             <img
                               src="./assets/vectors/delete.svg"
@@ -221,16 +221,15 @@ const Inventory = () => {
               </div>
             </TabContentItem>
             <TabContentItem target="articles">
-              <div className="table-wrapper">
+              <div className="table-wrapper short-vertical-scrollbar">
                 <div className="table">
                   {inventoryData.map((data, idx) => {
                     return (
                       <div
                         key={"articles" + idx}
-                        className={`row my-2 p-3 align-items-center inventory-record ${data.isChecked ? "checked" : ""
-                          }`}
+                        className={`row my-2 p-3 gx-0 align-items-center inventory-record ${data.isChecked ? "checked" : ""}`}
                       >
-                        <div className="col-5 d-flex align-items-center gap-4 info">
+                        <div className="col-5 d-flex align-items-center ps-2 gap-4 info">
                           <div className="checkbox">
                             <input
                               type="checkbox"
@@ -239,7 +238,7 @@ const Inventory = () => {
                               id=""
                             />
                           </div>
-                          {/* <img src="./assets/img/inventory-1.png" alt="" /> */}
+                          <img src="./assets/img/inventory-1.png" alt="" />
                           <div className="name">
                             <div className="title">{data.name}</div>
                             <div className="caption">{data.number}</div>
@@ -264,7 +263,7 @@ const Inventory = () => {
                             {data.isBrake ? "Brake" : "Engine"}
                           </button>
                         </div>
-                        <div className="col-1">
+                        <div className="col-1 d-flex justify-content-center align-items-center">
                           <div className="inventory-menu">
                             <img
                               src="./assets/vectors/delete.svg"

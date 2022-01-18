@@ -135,7 +135,7 @@ const FinancesIncome = () => {
               <AddBtn blue title="New" />
             </div>
           </div>
-          <div className="table-wrapper">
+          <div className="table-wrapper short-vertical-scrollbar">
             <div className="table">
               <div className="container-fluid px-0 mt-3">
                 <div className="row table-heading">

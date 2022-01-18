@@ -94,7 +94,7 @@ const FinancesExpense = () => {
               <AddBtn blue title="New" />
             </div>
           </div>
-          <div className="table-wrapper">
+          <div className="table-wrapper short-vertical-scrollbar">
             <div className="table">
               <div className="container-fluid px-0 mt-3">
                 <div className="row table-heading gx-0">
@@ -146,7 +146,7 @@ const FinancesExpense = () => {
                       <div className="amount">{data.amount}$</div>
                       <div className="currency">{data.currency}</div>
                     </div>
-                    <div className="col-2 d-flex justify-content-end align-items-center gap-5 more-menu">
+                    <div className="col-2 d-flex justify-content-end align-items-center gap-5 pe-2 more-menu">
                       Open
                       <img src="./assets/vectors/vertical-menu.svg" alt="" />
                     </div>
