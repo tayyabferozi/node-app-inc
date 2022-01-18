@@ -44,7 +44,7 @@ const Converstaions = () => {
         return (
           <Link
             to="/conversations"
-            className={`item light-border d-flex${
+            className={`item no-border d-flex${
               tabName === tabState ? " active" : ""
             }`}
             key={"explore" + idx}

@@ -175,13 +175,13 @@ const MainLayout = ({
                   </div>
                   <div className="text">way</div>
                 </Link>
-                <Link to="/360" className="item">
+                <Link to="/wallet" className="item">
                   <div className="img">
                     <img src="./assets/vectors/wallet.svg" alt="wallet" />
                   </div>
                   <div className="text">wallet</div>
                 </Link>
-                <Link to="/360" className="item">
+                <Link to="/inventory" className="item">
                   <div className="img">
                     <img src="./assets/vectors/inventory.svg" alt="inventory" />
                   </div>

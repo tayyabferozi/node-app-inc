@@ -690,6 +690,10 @@ button,
   border-color: rgba(151, 151, 151, 0.3);
 }
 
+#main #sidenav .desc .explore .item.no-border::after {
+  border-color: transparent;
+}
+
 #main #sidenav .desc .explore .item .title {
   position: relative;
 }

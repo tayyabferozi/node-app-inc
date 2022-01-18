@@ -648,6 +648,12 @@ button,
             }
           }
 
+          &.no-border {
+            &::after {
+              border-color: transparent;
+            }
+          }
+
           .title {
             position: relative;
 
