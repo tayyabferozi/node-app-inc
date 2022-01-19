@@ -40,8 +40,8 @@ const Input = ({
             placeholder={placeholder || ""}
           />
         ) : fileUpload ? (
-          <div class="file-uploader">
-            <label for="file-upload"></label>
+          <div className="file-uploader">
+            <label htmlFor="file-upload"></label>
             <input type="file" name="" id="file-upload" />
 
             <div className="text-center text">
