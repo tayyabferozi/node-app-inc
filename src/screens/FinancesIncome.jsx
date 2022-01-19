@@ -73,7 +73,7 @@ const dummyData = [
 ];
 
 const FinancesIncome = () => {
-  const [incomeConvertedSelected, setIncomeConvertedSelected] = useState(true);
+  const [incomeConvertedSelected, setIncomeConvertedSelected] = useState(false);
   return (
     <MainLayout
       headVector="./assets/vectors/wallet.svg"
@@ -206,7 +206,7 @@ const FinancesIncome = () => {
                           <div className="amount">{data.amount}$</div>
                           <div className="currency">{data.currency}</div>
                         </div>
-                        <div className="col-2 d-flex justify-content-end align-items-center gap-5 pe-2 more-menu">
+                        <div onClick={() => setIncomeConvertedSelected(true)} className="col-2 d-flex justify-content-end align-items-center gap-5 pe-2 more-menu">
                           Open
                           <img src="./assets/vectors/vertical-menu.svg" alt="" />
                         </div>
@@ -310,7 +310,7 @@ const FinancesIncome = () => {
                       <button className={`btn padding btn-add`}>
                         Add & Pay Later
                       </button>
-                      <button onClick={() => {}} className={`btn padding blue`}>
+                      <button onClick={() => { }} className={`btn padding blue`}>
                         Add Payment
                       </button>
                     </div>
