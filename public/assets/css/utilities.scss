@@ -243,6 +243,10 @@ button,
   font-family: "Manrope", sans-serif;
 }
 
+.text-poppins {
+  font-family: "poppins", sans-serif !important;
+}
+
 .text-light-1 {
   color: $color8;
 }
@@ -261,7 +265,11 @@ button,
 }
 
 .text-light-5 {
-  color: $color2;
+  color: $color2 !important;
+}
+
+.text-light-6 {
+  color: $color60 !important;
 }
 
 .text-small,
@@ -493,6 +501,16 @@ button,
     font-weight: bold;
     font-family: "lato", sans-serif;
   }
+
+  &.btn-grey {
+    border-radius: 35px;
+    color: $color4;
+    font-weight: 500;
+    font-family: "inter", sans-serif;
+    background: $color5;
+    padding: 8px 15px;
+    text-align: center;
+  }
 }
 
 #main {
@@ -639,11 +657,14 @@ button,
           position: relative;
           padding-top: 20px;
           padding-bottom: 20px;
-          margin-left: -31px;
-          margin-right: -45px;
-          padding-left: 31px;
-          padding-right: 45px;
           transition: 0.4s ease;
+
+          &:not(.centered) {
+            margin-left: -31px;
+            margin-right: -45px;
+            padding-left: 31px;
+            padding-right: 45px;
+          }
 
           &::after {
             content: "";
@@ -1031,6 +1052,18 @@ button,
 .custom-form-control {
   margin: 2rem 0;
 
+  .options {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    flex-shrink: 0;
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
   .input {
     position: relative;
 
@@ -1043,7 +1076,7 @@ button,
       outline: none;
     }
 
-    img {
+    img.icon {
       position: absolute;
       right: 0;
       top: 50%;
@@ -1089,7 +1122,7 @@ button,
         }
       }
 
-      img {
+      img.icon {
         left: 1rem;
         right: unset;
       }
@@ -1099,8 +1132,58 @@ button,
 
 .with-toggler {
   input.custom-input,
-  textarea.custom-input {
-    width: 92% !important;
+  textarea.custom-input,
+  .file-uploader {
+    flex-grow: 1;
+  }
+}
+
+.file-uploader {
+  position: relative;
+
+  cursor: pointer;
+
+  * {
+    pointer-events: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 86px;
+    border: 1px dashed $color4;
+    background-color: transparent;
+    border-radius: 5px;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   border: 5px dashed #ff0000;
+    //   top: -3px;
+    //   bottom: -3px;
+    //   left: -3px;
+    //   right: -3px;
+    // }
+  }
+
+  .text {
+    padding: 0 0.75rem;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .text-yellow.fw-bold {
+    @media screen and (max-width: 991px) {
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -1359,7 +1442,7 @@ button,
 
 /* On mouse-over, add a grey background color */
 .checkbox-container-2:hover input ~ .checkmark {
-  background-color: #ccc;
+  // background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -1396,6 +1479,10 @@ button,
   @media screen and (max-width: 575px) {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  &.bordered {
+    border: 1px solid $color28;
   }
 
   &.shadowed {
@@ -1739,6 +1826,16 @@ table {
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+}
+
+.performance {
+  @media screen and (min-width: 1400px) {
+    margin-left: 8px;
+  }
+
+  .item {
+    margin-bottom: 25px;
   }
 }
 

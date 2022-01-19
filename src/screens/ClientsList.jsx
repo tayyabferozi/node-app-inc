@@ -44,7 +44,7 @@ const ClientsList = () => {
         const { time, title, sub, small } = el;
 
         return (
-          <div className="item light-border" key={"explore" + idx}>
+          <div className="item light-border centered" key={"explore" + idx}>
             <div className={"title"}>
               <div className="arrow">
                 <img src="./assets/vectors/email.svg" alt="arrow-right" />

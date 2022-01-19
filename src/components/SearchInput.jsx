@@ -6,14 +6,18 @@ const SearchInput = ({ withFilter, icon, placeholder, ...rest }) => {
       <div className="custom-form-control d-flex">
         {withFilter && (
           <button className="btn">
-            <img src="./assets/vectors/search-filter.svg" alt="filter" />
+            <img
+              src="./assets/vectors/search-filter.svg"
+              className="icon"
+              alt="filter"
+            />
           </button>
         )}
         <div className="input">
           <img
             src="./assets/vectors/search.svg"
             alt="search"
-            className="magnifier"
+            className="icon magnifier"
           />
           <input
             className="custom-input"
@@ -24,7 +28,7 @@ const SearchInput = ({ withFilter, icon, placeholder, ...rest }) => {
             readOnly
             {...rest}
           />
-          {icon && <img src={icon} className="qr" alt="qr" />}
+          {icon && <img src={icon} className="icon qr" alt="qr" />}
         </div>
       </div>
     </div>

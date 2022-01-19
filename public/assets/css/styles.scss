@@ -162,9 +162,6 @@ button {
 #dashboard-main-content {
   overflow: hidden;
 
-  .month-performances {
-  }
-
   .row {
     height: 100%;
   }
@@ -184,16 +181,6 @@ button {
       .bottom {
         font-family: "manrope", sans-serif;
         font-size: 12px;
-      }
-    }
-
-    &.performance {
-      @media screen and (min-width: 1400px) {
-        margin-left: 8px;
-      }
-
-      .item {
-        margin-bottom: 25px;
       }
     }
 
@@ -949,28 +936,6 @@ button {
     box-sizing: content-box;
   }
 }
-
-.wallet-explore {
-  .title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-
-    .arrow {
-      position: static !important;
-      transform: translate(0) !important;
-    }
-  }
-}
-.wallet-explore.active {
-  background-color: transparent !important;
-
-  .title {
-    background-color: white;
-  }
-}
-
 .finances-invoice-main-content {
   .table-wrapper {
     width: 100%;
@@ -1054,6 +1019,28 @@ button {
       font-size: 12px;
       font-family: "Inter", sans-serif;
       font-weight: 600;
+    }
+    .chip {
+      padding: 5px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: rgba($color: $color40, $alpha: 0.29);
+      width: min-content;
+
+      .chip-circle {
+        width: 6px;
+        height: 6px;
+        background-color: $color2;
+        border-radius: 50%;
+      }
+      .chip-text {
+        font-size: 12px;
+        font-weight: 600;
+        color: $color2;
+        font-family: "Inter", sans-serif;
+      }
     }
     .chip.is-noded {
       background-color: $color5;
@@ -1317,10 +1304,6 @@ button {
       border: 1px solid rgba($color: $color41, $alpha: 0.08);
       border-radius: 12px;
 
-      // input[type="checkbox"] {
-      //   width: 20px;
-      //   height: 20px;
-      // }
       .box {
         width: 20px;
         height: 20px;
@@ -1381,10 +1364,10 @@ button {
       background-color: rgba($color: $color36, $alpha: 0.4);
     }
     .info {
-      // input[type="checkbox"] {
-      //   width: 20px;
-      //   height: 20px;
-      // }
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+      }
       img {
         width: 48px;
         height: 48px;
@@ -1455,7 +1438,6 @@ button {
       align-items: center;
     }
   }
-
   .service-brake {
     .custom-border {
       border: 1px solid $color5;
@@ -1880,19 +1862,23 @@ button {
       text-align: center;
 
       .checkboxes {
-        margin-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
+        width: 155px;
+        text-align: center;
+
+        & > *:last-child {
+          margin-right: 0;
+        }
       }
     }
 
     .btn {
       margin-top: 3rem;
-      border-radius: 5px;
       padding-left: 15px;
       padding-right: 15px;
-      width: 64px;
-      text-align: left;
-      font-weight: 500;
+      font-weight: 600;
       font-family: "inter", sans-serif;
     }
   }
@@ -1908,7 +1894,7 @@ button {
 
 #form-builder-main-content {
   .form-builder {
-    max-width: 580px;
+    max-width: 616px;
 
     .head {
       display: flex;
@@ -1927,19 +1913,67 @@ button {
     }
 
     .body {
+      margin-top: 75px;
+
       .custom-form-control {
         margin-bottom: 30px;
 
         .input {
-          img {
+          img.icon {
             left: unset;
-            right: 70px;
+            right: 100px;
           }
 
           input {
             &::placeholder {
               color: $color51;
             }
+          }
+        }
+      }
+    }
+
+    .btn.btn-blue {
+      border-radius: 50px;
+      width: 129px;
+    }
+  }
+
+  .composents-container {
+    .card {
+      height: 100%;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .section {
+      padding-top: 10px;
+      padding-bottom: 30px;
+      width: 230px;
+      border-bottom: 1px solid $color5;
+
+      @media screen and (min-width: 575px) {
+        margin-left: 10%;
+      }
+
+      .imgs {
+        margin-top: 14px;
+        display: flex;
+        justify-content: space-between;
+
+        .img {
+          position: relative;
+
+          .text {
+            position: absolute;
+            left: 50%;
+            width: 100%;
+            bottom: 13px;
+            font-size: 12px;
+            font-family: "lato", sans-serif;
+            color: $color2;
+            text-align: center;
+            transform: translateX(-50%);
           }
         }
       }

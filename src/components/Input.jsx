@@ -1,5 +1,6 @@
 const Input = ({
   textArea,
+  fileUpload,
   defaultTogglerClose,
   withToggler,
   id,
@@ -26,7 +27,7 @@ const Input = ({
         </label>
       )}
       <div
-        className={`input d-flex justify-content-between${
+        className={`input d-flex align-items-start justify-content-between${
           subRootClassName ? " " + subRootClassName : ""
         }`}
       >
@@ -38,6 +39,26 @@ const Input = ({
             value={value}
             placeholder={placeholder || ""}
           />
+        ) : fileUpload ? (
+          <div className="file-uploader">
+            <label htmlFor="file-upload"></label>
+            <input type="file" name="" id="file-upload" />
+
+            <div className="text-center text">
+              <div className="d-flex align-items-center justify-content-center">
+                <img
+                  src="./assets/vectors/clip.svg"
+                  className="me-3"
+                  alt="clip"
+                />
+                <div className="text-inter fw-600">
+                  Drop your file here, or{" "}
+                  <span className="text-blue">Browse</span>
+                </div>
+              </div>
+              <div className="text-light-6 text-inter mt-1">Max size 10MB</div>
+            </div>
+          </div>
         ) : (
           <input
             {...rest}
@@ -49,12 +70,18 @@ const Input = ({
           />
         )}
 
-        {icon && <img src={`./assets/${icon}`} alt={alt} />}
+        {icon && <img className="icon" src={`./assets/${icon}`} alt={alt} />}
+
         {withToggler && (
-          <label className="switch">
-            <input type="checkbox" defaultChecked={!defaultTogglerClose} />
-            <span className="slider round"></span>
-          </label>
+          <div className="options">
+            <label className="switch">
+              <input type="checkbox" defaultChecked={!defaultTogglerClose} />
+              <span className="slider round"></span>
+            </label>
+            <button className="btn delete">
+              <img src="./assets/vectors/bin.svg" alt="bin" />
+            </button>
+          </div>
         )}
       </div>
     </div>

@@ -243,6 +243,10 @@ button,
   font-family: "Manrope", sans-serif;
 }
 
+.text-poppins {
+  font-family: "poppins", sans-serif !important;
+}
+
 .text-light-1 {
   color: #dbdbdb;
 }
@@ -261,7 +265,11 @@ button,
 }
 
 .text-light-5 {
-  color: #9c9c9c;
+  color: #9c9c9c !important;
+}
+
+.text-light-6 {
+  color: #a4a7ad !important;
 }
 
 .text-small,
@@ -516,6 +524,16 @@ button,
   font-family: "lato", sans-serif;
 }
 
+.btn.btn-grey {
+  border-radius: 35px;
+  color: #1e55a9;
+  font-weight: 500;
+  font-family: "inter", sans-serif;
+  background: #f2f2f2;
+  padding: 8px 15px;
+  text-align: center;
+}
+
 #main {
   position: relative;
   display: -webkit-box;
@@ -681,12 +699,15 @@ button,
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+#main #sidenav .desc .explore .item:not(.centered) {
   margin-left: -31px;
   margin-right: -45px;
   padding-left: 31px;
   padding-right: 45px;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
 }
 
 #main #sidenav .desc .explore .item::after {
@@ -1161,6 +1182,24 @@ button,
   margin: 2rem 0;
 }
 
+.custom-form-control .options {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 25px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.custom-form-control .options > * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .custom-form-control .input {
   position: relative;
 }
@@ -1174,7 +1213,7 @@ button,
   outline: none;
 }
 
-.custom-form-control .input img {
+.custom-form-control .input img.icon {
   position: absolute;
   right: 0;
   top: 50%;
@@ -1241,14 +1280,56 @@ button,
   font-size: 12px;
 }
 
-.custom-form-control.normalized .input img {
+.custom-form-control.normalized .input img.icon {
   left: 1rem;
   right: unset;
 }
 
 .with-toggler input.custom-input,
-.with-toggler textarea.custom-input {
-  width: 92% !important;
+.with-toggler textarea.custom-input,
+.with-toggler .file-uploader {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.file-uploader {
+  position: relative;
+  cursor: pointer;
+}
+
+.file-uploader * {
+  pointer-events: none;
+}
+
+.file-uploader input {
+  display: none;
+}
+
+.file-uploader label {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 86px;
+  border: 1px dashed #1e55a9;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.file-uploader .text {
+  padding: 0 0.75rem;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 991px) {
+  .file-uploader .text-yellow.fw-bold {
+    text-transform: capitalize;
+  }
 }
 
 .radio-container,
@@ -1516,10 +1597,6 @@ button,
 }
 
 /* On mouse-over, add a grey background color */
-.checkbox-container-2:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
 /* When the radio button is checked, add a blue background */
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkbox-container-2 .checkmark:after {
@@ -1553,6 +1630,10 @@ button,
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+.card.bordered {
+  border: 1px solid #f0f0f3;
 }
 
 .card.shadowed {
@@ -1888,6 +1969,16 @@ table th {
 
 .short-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media screen and (min-width: 1400px) {
+  .performance {
+    margin-left: 8px;
+  }
+}
+
+.performance .item {
+  margin-bottom: 25px;
 }
 
 input[type="checkbox"] {

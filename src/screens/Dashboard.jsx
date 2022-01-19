@@ -10,6 +10,7 @@ import {
   Tooltip,
 } from "chart.js";
 import MainLayout from "../layouts/MainLayout";
+import Performances from "../components/Performances";
 
 ChartJS.register(
   Tooltip,
@@ -49,7 +50,7 @@ const Dashboard = () => {
         const { time, title, sub, small } = el;
 
         return (
-          <div className={`item`} key={"explore" + idx}>
+          <div className={`item centered`} key={"explore" + idx}>
             <div className={"title max-width"}>
               <div className="arrow">
                 <img src="./assets/vectors/arrow-right.svg" alt="arrow-right" />
@@ -81,41 +82,7 @@ const Dashboard = () => {
                       </h3>
                     </div>
 
-                    <div className="performances">
-                      <div className="item">
-                        <h3 className="section-title">47%</h3>
-                        <h4 className="sub-title">Today's work</h4>
-                        <div className="progress-bar">
-                          <div className="bg"></div>
-                          <div
-                            className="progress"
-                            style={{ width: "47%" }}
-                          ></div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <h3 className="section-title">76%</h3>
-                        <h4 className="sub-title">Clients Connected</h4>
-                        <div className="progress-bar">
-                          <div className="bg"></div>
-                          <div
-                            className="progress"
-                            style={{ width: "76%" }}
-                          ></div>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <h3 className="section-title">97%</h3>
-                        <h4 className="sub-title">Satisfaction</h4>
-                        <div className="progress-bar">
-                          <div className="bg"></div>
-                          <div
-                            className="progress"
-                            style={{ width: "97%" }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
+                    <Performances />
                   </div>
                 </div>
                 <div className="col-md-6">

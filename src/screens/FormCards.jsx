@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+
 import AddBtn from "../components/AddBtn";
 import Input from "../components/Input";
-
 import MainLayout from "../layouts/MainLayout";
 import Tabs from "../components/Tabs";
 
@@ -15,38 +15,60 @@ const FormCards = () => {
 
   return (
     <MainLayout
-      headVector="./assets/vectors/nav-9__active.svg"
-      sideNavVector="./assets/vectors/sidenav-right-9.svg"
-      title={cardSelected ? "Form Builder" : "Form Cards"}
+      headVector="./assets/vectors/builder.svg"
+      sideNavVector="./assets/vectors/builder.svg"
+      title={"builder"}
       minimalNavRight
-      exploreSub="Services &amp; Request Assign to you"
-      exploreContent={[
+      exploreTitle="What's next?"
+      progressNum={5}
+      exploreComponent={[
         {
-          time: "11:30",
-          title: "Oil Change",
+          title: "Brake Check",
           sub: "Ford Focus 2021",
+          small: "Manon Légaré",
         },
         {
-          time: "11:45",
-          title: "Engine + AC Check up",
-          sub: "Chevroley Cruze 2020",
+          title: "Inspection",
+          sub: "Cruze Cherolet 2020",
+          small: "Guylaine Tremblay",
         },
         {
-          time: "13:00",
-          title: "Broken Light",
-          sub: "Honda Civic 2021",
+          title: "Inspection",
+          sub: "Honda Civid 2021",
+          small: "Isaac Abbee",
         },
-      ]}
+      ].map((el, idx) => {
+        const { time, title, sub, small } = el;
+
+        return (
+          <div className={`item centered`} key={"explore" + idx}>
+            <div className={"title max-width"}>
+              <div className="arrow">
+                <img src="./assets/vectors/arrow-right.svg" alt="arrow-right" />
+              </div>
+              {time && (
+                <div className="time-container">
+                  <div className="circle"></div>
+                  <div className="fs-12 fw-700 font-manrope">{time}</div>
+                </div>
+              )}
+              <div className="fs-12 fw-700 sub-title-text">{title}</div>
+              <div className="fs-14 fw-600 mt-1">{sub}</div>
+              {small && <div className="title-label text-light-5">{small}</div>}
+            </div>
+          </div>
+        );
+      })}
     >
       {cardSelected ? (
         <div id="form-builder-main-content" className="mt-4 mt-sm-0">
           <div className="container-fluid">
             <div className="row g-4">
-              <div className="col-lg-8">
+              <div className="col-lg-8 col-md-6">
                 <div className="form-builder mt-5">
                   <div className="head">
                     <div className="title">
-                      <h2>Form name</h2>
+                      <h3 className="section-title">Form name</h3>
                       <div className="text-manrope fw-400 mt-2">
                         Brake Inspection
                       </div>
@@ -58,8 +80,8 @@ const FormCards = () => {
                   <div className="body">
                     <Input
                       withToggler
+                      fileUpload
                       label="Picture of Problem"
-                      type="file"
                       id="file"
                       name="file"
                       onChange={inputChangeHandler}
@@ -95,12 +117,70 @@ const FormCards = () => {
                       value={formState.notes}
                       rows="8"
                     />
+
+                    <div className="btn btn-blue">Save &amp; Return</div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
-                <div className="card shadowed">
-                  <h2>Conposents</h2>
+              <div className="col-lg-4 col-md-6 composents-container">
+                <div className="card bordered">
+                  <h3 className="section-title">Composents</h3>
+
+                  <div className="sections">
+                    <div className="section">
+                      <div className="fw-600"></div>
+                      <div className="imgs">
+                        <img
+                          src="./assets/vectors/composents-1.svg"
+                          alt="composents"
+                        />
+                        <img
+                          src="./assets/vectors/composents-2.svg"
+                          alt="composents"
+                        />
+                      </div>
+                    </div>
+                    <div className="section">
+                      <div className="fw-600">CHOICES</div>
+                      <div className="imgs">
+                        <div className="img">
+                          <div className="text">Single Choice</div>
+                          <img
+                            src="./assets/vectors/composents-3.svg"
+                            alt="composents"
+                          />
+                        </div>
+                        <div className="img">
+                          <div className="text">Dropdown</div>
+                          <img
+                            src="./assets/vectors/composents-4.svg"
+                            alt="composents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="section">
+                      <div className="fw-600">MULTIMEDIA</div>
+                      <div className="imgs">
+                        <div className="img">
+                          <div className="text">Photo</div>
+                          <img
+                            src="./assets/vectors/composents-5.svg"
+                            alt="composents"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="section">
+                      <div className="fw-600">DATE</div>
+                      <div className="imgs">
+                        <img
+                          src="./assets/vectors/composents-6.svg"
+                          alt="composents"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -114,20 +194,22 @@ const FormCards = () => {
                 <div className="px-md-5 px-3">
                   <div className="d-flex justify-content-between align-items-center">
                     <Tabs
-                      tabClassName="mb-4 mb-sm-0"
+                      tabClassName="mb-4 mb-sm-0 fw-600 text-poppins fs-14"
                       className="mt-4 "
                       tabGroupName="form-cards-tabs"
                       data={[
                         {
-                          icon: "./assets/vectors/messaging.svg",
-                          label: "Active",
-                          target: "active",
+                          icon: "./assets/vectors/internal.svg",
+                          iconActive: "./assets/vectors/internal.svg",
+                          label: "Internal",
+                          target: "internal",
                           active: true,
                         },
                         {
                           icon: "./assets/vectors/sms.svg",
-                          label: "Inactive",
-                          target: "inactive",
+                          iconActive: "./assets/vectors/sms.svg",
+                          label: "Public",
+                          target: "public",
                         },
                       ]}
                     />
@@ -178,28 +260,30 @@ const FormCards = () => {
 
                         return (
                           <div key={"form-card" + idx} className="col">
-                            <div
-                              className="card shadowed form-card"
-                              onClick={() => setCardSelected(true)}
-                            >
+                            <div className="card bordered form-card">
                               <div className="main">
                                 <div className="d-flex checkboxes">
                                   <label className="checkbox-container-2">
-                                    One
+                                    Product
                                     <input type="checkbox" checked="checked" />
                                     <span className="checkmark"></span>
                                   </label>
                                   <label className="checkbox-container-2">
-                                    Two
+                                    Service
                                     <input type="checkbox" />
                                     <span className="checkmark"></span>
                                   </label>
                                 </div>
-                                <h2>{title}</h2>
+                                <h3 className="section-title">{title}</h3>
                                 <div className="text-manrope mt-1">
                                   {questions} questions
                                 </div>
-                                <button className="btn btn-blue">Edit</button>
+                                <button
+                                  className="btn btn-grey"
+                                  onClick={() => setCardSelected(true)}
+                                >
+                                  Update
+                                </button>
                               </div>
                             </div>
                           </div>
