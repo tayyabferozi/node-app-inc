@@ -78,7 +78,6 @@ const FinancesIncome = () => {
       headVector="./assets/vectors/wallet.svg"
       sideNavVector="./assets/vectors/sidenav-right-2.svg"
       title={"wallet"}
-      minimalNavRight
       exploreTitle="Let’s go to"
       exploreComponent={[
         {
@@ -172,7 +171,7 @@ const FinancesIncome = () => {
                 return (
                   <div key={'li' + idx} className="row align-items-center gx-0 py-2 dummy-data">
                     <div className="col-1 d-flex justify-content-center align-items-center">
-                      <div className="circle" style={{ backgroundColor: data.circleColor }}><img w src="./assets/img/client-vector-8.png" /></div>
+                      <div className="circle" style={{ backgroundColor: data.circleColor }}><img w='true' src="./assets/img/client-vector-8.png" /></div>
                     </div>
                     <div className="col-3 d-flex flex-column gap-1">
                       <div className="name">{data.name}</div>

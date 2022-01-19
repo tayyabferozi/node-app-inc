@@ -123,7 +123,6 @@ const Inventory = () => {
       headVector="./assets/vectors/inventory.svg"
       sideNavVector="./assets/vectors/sidenav-right-8.svg"
       title="inventory"
-      minimalNavRight
       exploreTitle="To review"
       exploreSub="Node's artificial intelligence is constantly evolving based on your data"
       exploreComponent={[
@@ -264,6 +263,7 @@ const Inventory = () => {
                                 <input
                                   type="checkbox"
                                   checked={data.isChecked}
+                                  onChange={() => { }}
                                   name=""
                                   id=""
                                 />
@@ -333,7 +333,7 @@ const Inventory = () => {
                       <div className="custom-form-control my-3">
                         <label className="text-light-5 fs-14" htmlFor="">Default Location</label>
                         <div className="input">
-                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="Select Location" />
+                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="Select Location" onChange={() => { }} />
                         </div>
                       </div>
                     </div>
@@ -343,7 +343,7 @@ const Inventory = () => {
                           <div className="custom-form-control my-3">
                             <label className="text-light-5 fs-14" htmlFor="">Price</label>
                             <div className="input">
-                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="1900" />
+                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="1900" onChange={() => { }} />
                             </div>
                           </div>
                         </div>
@@ -351,7 +351,7 @@ const Inventory = () => {
                           <div className="custom-form-control my-3">
                             <label className="text-light-5 fs-14" htmlFor="">Duration</label>
                             <div className="input">
-                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="19 min." />
+                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="19 min." onChange={() => { }} />
                             </div>
                           </div>
                         </div>
@@ -361,7 +361,7 @@ const Inventory = () => {
                       <div className="custom-form-control my-3">
                         <label className="text-light-5 fs-14" htmlFor="">Category</label>
                         <div className="input">
-                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="Select Category" />
+                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="Select Category" onChange={() => { }} />
                         </div>
                       </div>
                     </div>
@@ -394,7 +394,7 @@ const Inventory = () => {
                       <div className="custom-form-control my-3">
                         <label className="text-light-5 fs-14" htmlFor="">Type Of Service</label>
                         <div className="input">
-                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="Select Category" />
+                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="Select Category" onChange={() => { }} />
                         </div>
                       </div>
                     </div>
@@ -404,7 +404,7 @@ const Inventory = () => {
                           <div className="custom-form-control my-3">
                             <label className="text-light-5 fs-14" htmlFor="">Start & End Date</label>
                             <div className="input">
-                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="20-12-2022 to 22-12-2022" />
+                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="20-12-2022 to 22-12-2022" onChange={() => { }} />
                             </div>
                           </div>
                         </div>
@@ -412,7 +412,7 @@ const Inventory = () => {
                           <div className="custom-form-control my-3">
                             <label className="text-light-5 fs-14" htmlFor="">Capacity</label>
                             <div className="input">
-                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="10" />
+                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="10" onChange={() => { }} />
                             </div>
                           </div>
                         </div>
@@ -425,7 +425,7 @@ const Inventory = () => {
                         <label className="text-light-5 fs-14" htmlFor="">Add Article</label>
                         <div className="input">
                           <img src="./assets/vectors/add-basket.svg" alt="" />
-                          <input className="text-dark-3 fs-14 pt-2 pb-2 ps-5 text-blue" type="text" value="Right Rear Light" />
+                          <input className="text-dark-3 fs-14 pt-2 pb-2 ps-5 text-blue" type="text" value="Right Rear Light" onChange={() => { }} />
                         </div>
                       </div>
                     </div>
@@ -433,7 +433,7 @@ const Inventory = () => {
                       <div className="custom-form-control my-3">
                         <label className="text-light-5 fs-14" htmlFor="">SKU</label>
                         <div className="input">
-                          <input className="text-dark-3 fs-14 pt-2 pb-2" type="text" value="98736446237234-23" />
+                          <input className="text-dark-3 fs-14 pt-2 pb-2" type="text" value="98736446237234-23" onChange={() => { }} />
                         </div>
                       </div>
                     </div>
@@ -443,7 +443,7 @@ const Inventory = () => {
                           <div className="custom-form-control my-3">
                             <label className="text-light-5 fs-14" htmlFor="">Quantity</label>
                             <div className="input">
-                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="2" />
+                              <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="2" onChange={() => { }} />
                             </div>
                           </div>
                         </div>
@@ -461,7 +461,7 @@ const Inventory = () => {
                       <div className="custom-form-control my-3">
                         <label className="text-light-5 fs-14" htmlFor="">Unit Price</label>
                         <div className="input">
-                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="37.00$" />
+                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="37.00$" onChange={() => { }} />
                         </div>
                       </div>
                     </div>
@@ -469,7 +469,7 @@ const Inventory = () => {
                       <div className="custom-form-control my-3">
                         <label className="text-light-5 fs-14" htmlFor="">Categorie</label>
                         <div className="input">
-                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="LIGHT" />
+                          <input className="text-dark-3 fs-14 pt-2 pb-3" type="text" value="LIGHT" onChange={() => { }} />
                         </div>
                       </div>
                     </div>

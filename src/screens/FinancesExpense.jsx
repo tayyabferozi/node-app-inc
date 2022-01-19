@@ -89,12 +89,12 @@ const dummySuppliersData = [
 ]
 
 const FinancesExpense = () => {
+  // const [] = useState(false)
   return (
     <MainLayout
       headVector="./assets/vectors/wallet.svg"
       sideNavVector="./assets/vectors/sidenav-right-2.svg"
       title={"wallet"}
-      minimalNavRight
       exploreTitle="Let’s go to"
       exploreComponent={[
         {
