@@ -1093,9 +1093,9 @@ button {
           align-items: center;
   gap: 5px;
   background-color: rgba(234, 234, 234, 0.29);
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .finances-invoice-main-content .chip.blue {
@@ -1230,6 +1230,39 @@ button {
 .finances-invoice-main-content .dummy-supplier-data .supplier-name {
   color: #25213B;
   font-weight: 600;
+}
+
+.finances-invoice-main-content .upload-btn {
+  width: 120px !important;
+}
+
+.finances-invoice-main-content .btn.padding {
+  width: auto;
+  height: auto;
+  padding: 10px 40px;
+  background-color: rgba(30, 85, 169, 0.08);
+  color: #1e55a9;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.finances-invoice-main-content .btn.blue {
+  background-color: #1e55a9;
+  color: white;
+}
+
+.finances-invoice-main-content .expense-add .add-to-purhase-btn {
+  padding: 8px 22px;
+  border-radius: 25px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.finances-invoice-main-content .expense-add .custom-border-bottom {
+  border-bottom: 1px solid #E9EBF0;
 }
 
 .inventory-sidenav .title {

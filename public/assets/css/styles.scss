@@ -999,7 +999,7 @@ button {
     align-items: center;
     gap: 5px;
     background-color: rgba($color: $color40, $alpha: 0.29);
-    width: min-content;
+    width: max-content;
 
     &.blue {
       background-color: rgba($color: $color4, $alpha: 0.08);
@@ -1113,6 +1113,36 @@ button {
     .supplier-name {
       color: $color39;
       font-weight: 600;
+    }
+  }
+  .upload-btn {
+    width: 120px !important;
+  }
+  .btn.padding {
+    width: auto;
+    height: auto;
+    padding: 10px 40px;
+    background-color: rgba($color: $color4, $alpha: 0.08);
+    color: $color4;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+  .btn.blue {
+    background-color: $color4;
+    color: white;
+  }
+  .expense-add {
+    .add-to-purhase-btn {
+      padding: 8px 22px;
+      border-radius: 25px;
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .custom-border-bottom {
+      border-bottom: 1px solid $color43;
     }
   }
   // input {

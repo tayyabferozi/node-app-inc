@@ -1894,4 +1894,9 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
 }
+
+.small-checkbox {
+  width: 15px !important;
+  height: 15px !important;
+}
 /*# sourceMappingURL=utilities.css.map */
