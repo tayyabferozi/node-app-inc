@@ -848,6 +848,15 @@ button {
 // ***********************************************************************************************************************************
 // ***********************************************************************************************************************************
 #finances-overview {
+  .total-price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
   .calendar-icon {
     background-color: rgba($color: $color3, $alpha: 0.1);
     padding: 10px;
@@ -893,7 +902,7 @@ button {
   .custom-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 25px;
     padding-top: 20px;
 
     .quick-report,
@@ -902,12 +911,15 @@ button {
     .refund {
       border-radius: 6px;
       width: 100%;
+      gap: 20px !important;
+      padding: 20px !important;
     }
     .quick-report {
       background-color: rgba($color: $color4, $alpha: 0.08);
 
       div:last-child {
         line-height: 20px;
+        text-decoration: underline
       }
     }
     .average {

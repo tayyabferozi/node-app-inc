@@ -909,6 +909,17 @@ button {
           flex-grow: 0;
 }
 
+#finances-overview .total-price {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
 #finances-overview .calendar-icon {
   background-color: rgba(62, 66, 68, 0.1);
   padding: 10px;
@@ -966,7 +977,7 @@ button {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 25px;
   padding-top: 20px;
 }
 
@@ -976,6 +987,8 @@ button {
 #finances-overview .custom-grid .refund {
   border-radius: 6px;
   width: 100%;
+  gap: 20px !important;
+  padding: 20px !important;
 }
 
 #finances-overview .custom-grid .quick-report {
@@ -984,6 +997,7 @@ button {
 
 #finances-overview .custom-grid .quick-report div:last-child {
   line-height: 20px;
+  text-decoration: underline;
 }
 
 #finances-overview .custom-grid .average {

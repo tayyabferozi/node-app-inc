@@ -41,7 +41,7 @@ const FinancesOverview = () => {
     >
       <div id='finances-overview' className="container-fluid">
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-lg-6">
             <div className="row">
               <div className="col-12">
                 <div className="overview-chart">
@@ -119,7 +119,7 @@ const FinancesOverview = () => {
               </div>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-lg-6">
             <div className="row gy-4">
               <div className="col-12">
                 <div className="row">
@@ -130,7 +130,8 @@ const FinancesOverview = () => {
                       <img src="./assets/vectors/calendar.svg" alt="" />
                     </div>
                   </div>
-                  <div className="col-12 d-flex justify-content-center align-items-center">
+                  <div className="col-12 d-flex justify-content-center align-items-center position-relative">
+                    <div className="total-price">5102$</div>
                     <svg width="278" height="239" viewBox="0 0 278 239" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clipPath="url(#clip0_29033_4215)">
                         <path fillRule="evenodd" clipRule="evenodd" d="M137.809 201.082C192.803 201.082 237.741 156.145 237.741 101.15C237.741 45.2786 192.803 0.341232 137.809 0.341232C81.9373 0.341232 37 45.2786 37 101.15C37 156.145 81.9373 201.082 137.809 201.082Z" fill="#4B40D1" />
@@ -194,7 +195,8 @@ const FinancesOverview = () => {
                       <img src="./assets/vectors/calendar.svg" alt="" />
                     </div>
                   </div>
-                  <div className="col-12 d-flex justify-content-center align-items-center">
+                  <div className="col-12 d-flex justify-content-center align-items-center position-relative">
+                    <div className="total-price">4102$</div>
                     <svg width="278" height="239" viewBox="0 0 278 239" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clipPath="url(#clip0_29033_4170)">
                         <path fillRule="evenodd" clipRule="evenodd" d="M137.809 201.082C192.803 201.082 237.741 156.145 237.741 101.15C237.741 45.2786 192.803 0.341248 137.809 0.341248C81.9373 0.341248 37 45.2786 37 101.15C37 156.145 81.9373 201.082 137.809 201.082Z" fill="#4ACBD3" />

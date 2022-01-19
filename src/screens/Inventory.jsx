@@ -318,7 +318,7 @@ const Inventory = () => {
           ) : (
             <div className="container-fluid service-brake">
               <div className="row pt-5 gx-5">
-                <div className="col-7 pt-2 pe-3">
+                <div className="col-12 col-lg-7 pt-2 pe-3">
                   <div className="row gx-0">
                     <div className="col-12 d-flex justify-content-between align-items-center py-3 title">
                       <div className="service-brake-text">Service Brake</div>
@@ -485,8 +485,8 @@ const Inventory = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-1"></div>
-                <div className="col-4 custom-border custom-rounded service-details">
+                <div className="col-0 col-lg-1"></div>
+                <div className="col-12 col-lg-4 custom-border custom-rounded service-details">
                   <div className="row g-3 py-4 gap-3">
                     <div className="col-12">
                       <div className="service-details-text pt-4 pb-2 text-dark-3 text-manrope text-bold fs-18">Service Details</div>
