@@ -88,6 +88,10 @@ button,
   font-size: 32px !important;
 }
 
+.fs-34 {
+  font-size: 34px !important;
+}
+
 .fs-28 {
   font-size: 28px !important;
 }
@@ -120,6 +124,10 @@ button,
   font-size: 14px !important;
 }
 
+.fs-13 {
+  font-size: 13px !important;
+}
+
 .fs-12 {
   font-size: 12px !important;
 }
@@ -130,6 +138,10 @@ button,
 
 .fs-10 {
   font-size: 10px !important;
+}
+
+.fs-8 {
+  font-size: 8px !important;
 }
 
 .fs-7 {
@@ -217,6 +229,10 @@ button,
   font-size: 12px;
   font-weight: 700;
   font-family: "manrope", sans-serif;
+}
+
+.text-poppins {
+  font-family: "Poppins", sans-serif;
 }
 
 .text-light-1,
@@ -1194,6 +1210,7 @@ button,
   border: 0;
   border-bottom: 1px solid #f2f2f2;
   width: 100%;
+  outline: none;
 }
 
 .custom-form-control .input img.icon {
@@ -1954,6 +1971,7 @@ table th {
   background: #555;
 }
 
+<<<<<<< HEAD
 @media screen and (min-width: 1400px) {
   .performance {
     margin-left: 8px;
@@ -1962,5 +1980,10 @@ table th {
 
 .performance .item {
   margin-bottom: 25px;
+=======
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+>>>>>>> b92f5410c2a24ce685d446a30a6ed6849643d410
 }
 /*# sourceMappingURL=utilities.css.map */

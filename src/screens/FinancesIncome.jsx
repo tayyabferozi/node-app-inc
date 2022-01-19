@@ -1,5 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import AddBtn from "../components/AddBtn";
+import ExploreNavItemWithIcon from "../components/ExploreNavItemWithIcon";
 import SearchInput from "../components/SearchInput";
 import Tabs from "../components/Tabs";
 import MainLayout from "../layouts/MainLayout";
@@ -76,22 +78,33 @@ const FinancesIncome = () => {
       headVector="./assets/vectors/wallet.svg"
       sideNavVector="./assets/vectors/sidenav-right-2.svg"
       title={"wallet"}
-      minimalNavRight
-      exploreSub="Services &amp; Request Assign to you"
-      exploreContent={[
+      exploreTitle="Let’s go to"
+      exploreComponent={[
         {
           title: "Overview",
           sub: "Charts & Reports",
+          iconName: 'finances-overview',
+          sideNavLink: 'finances-overview'
         },
         {
           title: "Incomes",
           sub: "Invoices",
+          iconName: 'finances-income',
+          sideNavLink: 'finances-income'
         },
         {
           title: "Expenses",
           sub: "Suppliers & Purchases",
+          iconName: 'finances-expense',
+          sideNavLink: 'finances-expense'
         },
-      ]}
+      ].map((el, idx) => {
+        const { title, sub, small, iconName, sideNavLink } = el;
+
+        return (
+          <ExploreNavItemWithIcon title={title} sub={sub} iconName={iconName} sideNavLink={sideNavLink} small={small} key={"explore" + idx} />
+        );
+      })}
     >
       <div className="finances-invoice-main-content">
         <div className="container-fluid">
@@ -138,7 +151,7 @@ const FinancesIncome = () => {
           <div className="table-wrapper short-vertical-scrollbar">
             <div className="table">
               <div className="container-fluid px-0 mt-3">
-                <div className="row table-heading">
+                <div className="row gx-0 table-heading">
                   <div className="col-1"></div>
                   <div className="col-3">
                     <div className="label">Name</div>
@@ -156,9 +169,9 @@ const FinancesIncome = () => {
               </div>
               {dummyData.map((data, idx) => {
                 return (
-                  <div key={'li' + idx} className="row align-items-center py-2 dummy-data">
+                  <div key={'li' + idx} className="row align-items-center gx-0 py-2 dummy-data">
                     <div className="col-1 d-flex justify-content-center align-items-center">
-                      <div className="circle" style={{ backgroundColor: data.circleColor }}></div>
+                      <div className="circle" style={{ backgroundColor: data.circleColor }}><img w='true' src="./assets/img/client-vector-8.png" /></div>
                     </div>
                     <div className="col-3 d-flex flex-column gap-1">
                       <div className="name">{data.name}</div>
@@ -190,7 +203,7 @@ const FinancesIncome = () => {
                       <div className="amount">{data.amount}$</div>
                       <div className="currency">{data.currency}</div>
                     </div>
-                    <div className="col-2 d-flex justify-content-end align-items-center gap-5 more-menu">
+                    <div className="col-2 d-flex justify-content-end align-items-center gap-5 pe-2 more-menu">
                       Open
                       <img src="./assets/vectors/vertical-menu.svg" alt="" />
                     </div>

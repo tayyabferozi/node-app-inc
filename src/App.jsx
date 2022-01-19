@@ -9,9 +9,7 @@ import FinancesIncome from "./screens/FinancesIncome";
 import FinancesExpense from "./screens/FinancesExpense";
 import Inventory from "./screens/Inventory";
 import FormCards from "./screens/FormCards";
-// import FinancesIncome from "./screens/FinancesIncome";
-// import Inventory from "./screens/Inventory";
-
+import FinancesOverview from "./screens/FinancesOverview";
 function App() {
   return (
     <>
@@ -24,7 +22,9 @@ function App() {
           <Route path="/way" element={<ClientsList />} />
           <Route path="/finances-income" element={<FinancesIncome />} />
           <Route path="/conversations" element={<Conversations />} />
-          <Route path="/finances-expense" element={<FinancesExpense />} />
+          <Route path="finances-overview" element={<FinancesOverview />} />
+          <Route path="finances-income" element={<FinancesIncome />} />
+          <Route path="finances-expense" element={<FinancesExpense />} />
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/form-cards" element={<FormCards />} />
           {/* <Route path="/wallet" element={<FinancesIncome />} */}

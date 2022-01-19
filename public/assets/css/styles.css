@@ -899,38 +899,131 @@ button {
           flex-grow: 0;
 }
 
-.finances-invoice-main-content .table-wrapper {
-  width: 100%;
-  overflow-x: auto;
+#finances-overview .total-price {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.finances-invoice-main-content .table-wrapper .table {
-  min-width: 800px;
+#finances-overview .calendar-icon {
+  background-color: rgba(62, 66, 68, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  margin-right: 20px;
 }
 
-.finances-invoice-main-content .table-heading {
+#finances-overview .month-overview {
+  padding: 5px 10px;
+}
+
+#finances-overview .overview-chart {
   background-color: rgba(234, 234, 234, 0.29);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
-.finances-invoice-main-content .label {
-  position: relative;
-  padding: 15px 0px;
-  font-size: 14px;
-  font-weight: normal;
+#finances-overview .overview-chart .overview-title {
   color: #3e4244;
   font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 20px 0px 0px 20px;
 }
 
-.finances-invoice-main-content .dummy-data {
-  border-bottom: 1px solid #f2f2f2;
+#finances-overview .overview-chart .profit-loss-overview {
+  left: 20px;
+  top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.finances-invoice-main-content .dummy-data .circle {
-  width: 36px;
-  height: 36px;
+#finances-overview .overview-chart .year-overview {
+  background-color: white;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+#finances-overview .custom-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding-top: 20px;
+}
+
+#finances-overview .custom-grid .quick-report,
+#finances-overview .custom-grid .average,
+#finances-overview .custom-grid .upcomming,
+#finances-overview .custom-grid .refund {
+  border-radius: 6px;
+  width: 100%;
+  gap: 20px !important;
+  padding: 20px !important;
+}
+
+#finances-overview .custom-grid .quick-report {
+  background-color: rgba(30, 85, 169, 0.08);
+}
+
+#finances-overview .custom-grid .quick-report div:last-child {
+  line-height: 20px;
+  text-decoration: underline;
+}
+
+#finances-overview .custom-grid .average {
+  background-color: #1e55a9;
+}
+
+#finances-overview .custom-grid .average * {
+  color: white;
+}
+
+#finances-overview .custom-grid .upcomming {
+  background-color: #4acbd3;
+}
+
+#finances-overview .custom-grid .upcomming * {
+  color: white;
+}
+
+#finances-overview .custom-grid .refund {
+  background-color: #eca0a0;
+}
+
+#finances-overview .custom-grid .refund * {
+  color: white;
+}
+
+#finances-overview .circle {
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
+  border: 5px solid #3e4244;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
+<<<<<<< HEAD
 .finances-invoice-main-content .dummy-data .name,
 .finances-invoice-main-content .dummy-data .invoice-number {
   color: #25213b;
@@ -952,9 +1045,58 @@ button {
   font-size: 12px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
+=======
+.wallet-explore .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
 }
 
-.finances-invoice-main-content .dummy-data .chip {
+.wallet-explore .title .arrow {
+  position: static !important;
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+}
+
+.wallet-explore.active {
+  background-color: transparent !important;
+}
+
+.wallet-explore.active .title {
+  background-color: white;
+}
+
+.finances-invoice-main-content .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.finances-invoice-main-content .table-wrapper .table {
+  min-width: 800px;
+>>>>>>> b92f5410c2a24ce685d446a30a6ed6849643d410
+}
+
+.finances-invoice-main-content .table-heading {
+  background-color: rgba(234, 234, 234, 0.29);
+}
+
+.finances-invoice-main-content .label {
+  position: relative;
+  padding: 15px 0px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #3e4244;
+  font-family: "Manrope", sans-serif;
+}
+
+.finances-invoice-main-content .chip {
   padding: 5px;
   border-radius: 20px;
   display: -webkit-box;
@@ -970,18 +1112,72 @@ button {
   width: min-content;
 }
 
-.finances-invoice-main-content .dummy-data .chip .chip-circle {
+.finances-invoice-main-content .chip.blue {
+  background-color: rgba(30, 85, 169, 0.08);
+}
+
+.finances-invoice-main-content .chip.blue .chip-text {
+  color: #1e55a9;
+}
+
+.finances-invoice-main-content .chip .chip-circle {
   width: 6px;
   height: 6px;
   background-color: #9c9c9c;
   border-radius: 50%;
 }
 
-.finances-invoice-main-content .dummy-data .chip .chip-text {
+.finances-invoice-main-content .chip .chip-text {
   font-size: 12px;
   font-weight: 600;
   color: #9c9c9c;
   font-family: "Inter", sans-serif;
+}
+
+.finances-invoice-main-content .dummy-data {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.finances-invoice-main-content .dummy-data .circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.finances-invoice-main-content .dummy-data .circle img {
+  width: 100%;
+}
+
+.finances-invoice-main-content .dummy-data .name,
+.finances-invoice-main-content .dummy-data .invoice-number {
+  color: #25213B;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.finances-invoice-main-content .dummy-data .email,
+.finances-invoice-main-content .dummy-data .username {
+  color: #9c9c9c;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.finances-invoice-main-content .dummy-data .created-at,
+.finances-invoice-main-content .dummy-data .due-on {
+  color: #9c9c9c;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }
 
 .finances-invoice-main-content .dummy-data .chip.is-noded {
@@ -1043,6 +1239,41 @@ button {
   font-size: 14px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
+}
+
+.finances-invoice-main-content .dummy-supplier-data .supplier-name {
+  color: #25213B;
+  font-weight: 600;
+}
+
+.inventory-sidenav .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inventory-sidenav .title .title {
+  font-weight: normal !important;
+}
+
+.inventory-sidenav .title b {
+  font-weight: 600;
+}
+
+.inventory-sidenav .title .sub-title-text > b {
+  color: #9c9c9c;
+  font-weight: 600;
+}
+
+.inventory-sidenav .title .arrow {
+  position: static !important;
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+  padding: 0px 40px;
+  gap: 20px;
 }
 
 #inventory-main-content .search {
@@ -1137,11 +1368,6 @@ button {
   background-color: rgba(245, 245, 250, 0.4);
 }
 
-#inventory-main-content .articles .info input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-}
-
 #inventory-main-content .articles .info img {
   width: 48px;
   height: 48px;
@@ -1201,6 +1427,73 @@ button {
   border-radius: 8px;
   border: 1px solid #ececf2;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#inventory-main-content .service-brake .custom-border {
+  border: 1px solid #f2f2f2;
+}
+
+#inventory-main-content .service-brake .custom-border.custom-rounded {
+  border-radius: 12px;
+}
+
+#inventory-main-content .service-brake .title {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#inventory-main-content .service-brake .service-brake-text {
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 27px;
+  color: #1e55a9;
+}
+
+#inventory-main-content .service-brake .box {
+  width: 45px;
+  height: 40px;
+  border: 1px solid rgba(125, 133, 154, 0.08);
+}
+
+#inventory-main-content .service-brake .input img {
+  left: 0;
+}
+
+#inventory-main-content .service-brake .btn {
+  width: auto;
+  height: auto;
+  padding: 10px 40px;
+  background-color: rgba(30, 85, 169, 0.08);
+  color: #1e55a9;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+#inventory-main-content .service-brake .btn.blue {
+  background-color: #1e55a9;
+  color: white;
+}
+
+#inventory-main-content .service-brake .service-details .title {
+  border: none;
+}
+
+#inventory-main-content .service-brake .service-details .box {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background-color: rgba(30, 85, 169, 0.08);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
