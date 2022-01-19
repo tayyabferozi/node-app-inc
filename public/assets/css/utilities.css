@@ -1971,7 +1971,6 @@ table th {
   background: #555;
 }
 
-<<<<<<< HEAD
 @media screen and (min-width: 1400px) {
   .performance {
     margin-left: 8px;
@@ -1980,10 +1979,10 @@ table th {
 
 .performance .item {
   margin-bottom: 25px;
-=======
+}
+
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
->>>>>>> b92f5410c2a24ce685d446a30a6ed6849643d410
 }
 /*# sourceMappingURL=utilities.css.map */

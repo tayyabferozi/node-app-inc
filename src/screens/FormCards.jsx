@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+
 import AddBtn from "../components/AddBtn";
 import Input from "../components/Input";
-
 import MainLayout from "../layouts/MainLayout";
 import Tabs from "../components/Tabs";
 
@@ -143,23 +143,32 @@ const FormCards = () => {
                     <div className="section">
                       <div className="fw-600">CHOICES</div>
                       <div className="imgs">
-                        <img
-                          src="./assets/vectors/composents-3.svg"
-                          alt="composents"
-                        />
-                        <img
-                          src="./assets/vectors/composents-4.svg"
-                          alt="composents"
-                        />
+                        <div className="img">
+                          <div className="text">Single Choice</div>
+                          <img
+                            src="./assets/vectors/composents-3.svg"
+                            alt="composents"
+                          />
+                        </div>
+                        <div className="img">
+                          <div className="text">Dropdown</div>
+                          <img
+                            src="./assets/vectors/composents-4.svg"
+                            alt="composents"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="section">
                       <div className="fw-600">MULTIMEDIA</div>
                       <div className="imgs">
-                        <img
-                          src="./assets/vectors/composents-5.svg"
-                          alt="composents"
-                        />
+                        <div className="img">
+                          <div className="text">Photo</div>
+                          <img
+                            src="./assets/vectors/composents-5.svg"
+                            alt="composents"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="section">

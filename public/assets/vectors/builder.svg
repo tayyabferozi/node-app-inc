@@ -1,14 +1,28 @@
-<svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<g clip-path="url(#clip0_0_2236)">
-		<path d="M0 19.54C0 17.3308 1.79086 15.54 4 15.54H25.8103C28.0194 15.54 29.8103 17.3308 29.8103 19.54V34.693C29.8103 35.3049 29.3839 35.8916 28.6251 36.3243C27.8662 36.7569 26.8369 37 25.7637 37H4.04654C2.97333 37 1.94408 36.7569 1.1852 36.3243C0.42633 35.8916 0 35.3049 0 34.693L0 19.54Z" fill="#4ACBD3" />
-		<g style="mix-blend-mode:multiply">
-			<path d="M30.0017 27.1437C32.2108 27.1437 34.0017 28.9345 34.0017 31.1437V33.0225C34.0017 34.0774 33.5796 35.0891 32.8284 35.835C32.0772 36.581 31.0583 37 29.9959 37H3.77734C4.83974 37 5.85861 36.581 6.60984 35.835C7.36106 35.0891 7.78309 34.0774 7.78309 33.0225V31.1437C7.78309 28.9345 9.57396 27.1437 11.7831 27.1437H30.0017Z" fill="#1E55A9" />
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 34 26" style="enable-background:new 0 0 34 26;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#4ACBD3;}
+	.st2{fill:#1E55A9;}
+	.st3{fill:#4B40D1;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" y="-11" width="34" height="37"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<path class="st1" d="M0,8.5c0-2.2,1.8-4,4-4h21.8c2.2,0,4,1.8,4,4v15.2c0,0.6-0.4,1.2-1.2,1.6c-0.8,0.4-1.8,0.7-2.9,0.7H4
+			c-1.1,0-2.1-0.2-2.9-0.7c-0.8-0.4-1.2-1-1.2-1.6V8.5z"/>
+		<g>
+			<path class="st2" d="M30,16.1c2.2,0,4,1.8,4,4V22c0,1.1-0.4,2.1-1.2,2.8C32.1,25.6,31.1,26,30,26H3.8c1.1,0,2.1-0.4,2.8-1.2
+				c0.8-0.7,1.2-1.8,1.2-2.8v-1.9c0-2.2,1.8-4,4-4H30z"/>
 		</g>
 	</g>
-	<path d="M20 11H10C7.79086 11 6 12.7909 6 15C6 17.2091 7.79086 19 10 19H20C22.2091 19 24 17.2091 24 15C24 12.7909 22.2091 11 20 11Z" fill="#4B40D1" />
-	<defs>
-		<clipPath id="clip0_0_2236">
-			<rect width="34" height="37" fill="white" />
-		</clipPath>
-	</defs>
+</g>
+<path class="st3" d="M20,0H10C7.8,0,6,1.8,6,4s1.8,4,4,4h10c2.2,0,4-1.8,4-4S22.2,0,20,0z"/>
 </svg>
