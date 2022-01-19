@@ -190,16 +190,6 @@ button {
   font-size: 12px;
 }
 
-@media screen and (min-width: 1400px) {
-  #dashboard-main-content .card.performance {
-    margin-left: 8px;
-  }
-}
-
-#dashboard-main-content .card.performance .item {
-  margin-bottom: 25px;
-}
-
 #dashboard-main-content .card.node-coin {
   margin-left: 7px;
 }
@@ -941,20 +931,23 @@ button {
   border-radius: 50%;
 }
 
-.finances-invoice-main-content .dummy-data .name, .finances-invoice-main-content .dummy-data .invoice-number {
-  color: #25213B;
+.finances-invoice-main-content .dummy-data .name,
+.finances-invoice-main-content .dummy-data .invoice-number {
+  color: #25213b;
   font-size: 14px;
   font-weight: 600;
   font-family: "Inter", sans-serif;
 }
 
-.finances-invoice-main-content .dummy-data .email, .finances-invoice-main-content .dummy-data .username {
+.finances-invoice-main-content .dummy-data .email,
+.finances-invoice-main-content .dummy-data .username {
   color: #9c9c9c;
   font-size: 14px;
   font-family: "Inter", sans-serif;
 }
 
-.finances-invoice-main-content .dummy-data .created-at, .finances-invoice-main-content .dummy-data .due-on {
+.finances-invoice-main-content .dummy-data .created-at,
+.finances-invoice-main-content .dummy-data .due-on {
   color: #9c9c9c;
   font-size: 12px;
   font-family: "Inter", sans-serif;
@@ -1021,12 +1014,12 @@ button {
 .finances-invoice-main-content .dummy-data .paid-date {
   font-size: 12px;
   font-weight: 600;
-  color: #25213B;
+  color: #25213b;
   font-family: "Inter", sans-serif;
 }
 
 .finances-invoice-main-content .dummy-data .amount {
-  color: #25213B;
+  color: #25213b;
   font-size: 14px;
   font-weight: 600;
   font-family: "Inter", sans-serif;
@@ -1591,23 +1584,27 @@ button {
 }
 
 #form-cards-main-content .card.form-card .main .checkboxes {
-  margin-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  width: 155px;
+  text-align: center;
+}
+
+#form-cards-main-content .card.form-card .main .checkboxes > *:last-child {
+  margin-right: 0;
 }
 
 #form-cards-main-content .card.form-card .btn {
   margin-top: 3rem;
-  border-radius: 5px;
   padding-left: 15px;
   padding-right: 15px;
-  width: 64px;
-  text-align: left;
-  font-weight: 500;
+  font-weight: 600;
   font-family: "inter", sans-serif;
 }
 
 #form-builder-main-content .form-builder {
-  max-width: 580px;
+  max-width: 616px;
 }
 
 #form-builder-main-content .form-builder .head {
@@ -1630,13 +1627,17 @@ button {
   width: 76px;
 }
 
+#form-builder-main-content .form-builder .body {
+  margin-top: 75px;
+}
+
 #form-builder-main-content .form-builder .body .custom-form-control {
   margin-bottom: 30px;
 }
 
-#form-builder-main-content .form-builder .body .custom-form-control .input img {
+#form-builder-main-content .form-builder .body .custom-form-control .input img.icon {
   left: unset;
-  right: 70px;
+  right: 100px;
 }
 
 #form-builder-main-content .form-builder .body .custom-form-control .input input::-webkit-input-placeholder {
@@ -1653,5 +1654,39 @@ button {
 
 #form-builder-main-content .form-builder .body .custom-form-control .input input::placeholder {
   color: #8d9198;
+}
+
+#form-builder-main-content .form-builder .btn.btn-blue {
+  border-radius: 50px;
+  width: 129px;
+}
+
+#form-builder-main-content .composents-container .card {
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+#form-builder-main-content .composents-container .section {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  width: 230px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+@media screen and (min-width: 575px) {
+  #form-builder-main-content .composents-container .section {
+    margin-left: 10%;
+  }
+}
+
+#form-builder-main-content .composents-container .section .imgs {
+  margin-top: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=styles.css.map */

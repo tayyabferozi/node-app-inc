@@ -23,7 +23,7 @@ const SignupInput = ({
           placeholder={placeholder || ""}
         />
 
-        {icon && <img src={`./assets/${icon}`} alt={alt} />}
+        {icon && <img className="icon" src={`./assets/${icon}`} alt={alt} />}
       </div>
     </div>
   );

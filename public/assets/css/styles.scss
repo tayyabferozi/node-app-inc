@@ -162,9 +162,6 @@ button {
 #dashboard-main-content {
   overflow: hidden;
 
-  .month-performances {
-  }
-
   .row {
     height: 100%;
   }
@@ -184,16 +181,6 @@ button {
       .bottom {
         font-family: "manrope", sans-serif;
         font-size: 12px;
-      }
-    }
-
-    &.performance {
-      @media screen and (min-width: 1400px) {
-        margin-left: 8px;
-      }
-
-      .item {
-        margin-bottom: 25px;
       }
     }
 
@@ -860,7 +847,7 @@ button {
   .table-heading {
     background-color: $color17;
   }
-  
+
   .label {
     position: relative;
     padding: 15px 0px;
@@ -876,18 +863,21 @@ button {
       height: 36px;
       border-radius: 50%;
     }
-    .name, .invoice-number {
+    .name,
+    .invoice-number {
       color: $color39;
       font-size: 14px;
       font-weight: 600;
       font-family: "Inter", sans-serif;
     }
-    .email, .username {
+    .email,
+    .username {
       color: $color2;
       font-size: 14px;
       font-family: "Inter", sans-serif;
     }
-    .created-at, .due-on {
+    .created-at,
+    .due-on {
       color: $color2;
       font-size: 12px;
       font-family: "Inter", sans-serif;
@@ -950,13 +940,11 @@ button {
       font-size: 14px;
       font-weight: 600;
       font-family: "Inter", sans-serif;
-
     }
     .currency {
       color: $color2;
       font-size: 12px;
       font-family: "Inter", sans-serif;
-
     }
     .more-menu {
       color: $color4;
@@ -970,7 +958,6 @@ button {
     font-size: 14px;
     font-weight: 700;
     font-family: "Poppins", sans-serif;
-    
   }
   // input {
   //   padding: 10px;
@@ -1003,7 +990,7 @@ button {
   //     border-radius: 8px;
   //   }
   // }
-  
+
   // .dummy-data {
   //   border: 1px solid $color33;
   //   border-radius: 10px;
@@ -1612,19 +1599,23 @@ button {
       text-align: center;
 
       .checkboxes {
-        margin-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
+        width: 155px;
+        text-align: center;
+
+        & > *:last-child {
+          margin-right: 0;
+        }
       }
     }
 
     .btn {
       margin-top: 3rem;
-      border-radius: 5px;
       padding-left: 15px;
       padding-right: 15px;
-      width: 64px;
-      text-align: left;
-      font-weight: 500;
+      font-weight: 600;
       font-family: "inter", sans-serif;
     }
   }
@@ -1640,7 +1631,7 @@ button {
 
 #form-builder-main-content {
   .form-builder {
-    max-width: 580px;
+    max-width: 616px;
 
     .head {
       display: flex;
@@ -1659,13 +1650,15 @@ button {
     }
 
     .body {
+      margin-top: 75px;
+
       .custom-form-control {
         margin-bottom: 30px;
 
         .input {
-          img {
+          img.icon {
             left: unset;
-            right: 70px;
+            right: 100px;
           }
 
           input {
@@ -1674,6 +1667,36 @@ button {
             }
           }
         }
+      }
+    }
+
+    .btn.btn-blue {
+      border-radius: 50px;
+      width: 129px;
+    }
+  }
+
+  .composents-container {
+    .card {
+      height: 100%;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .section {
+      padding-top: 10px;
+      padding-bottom: 30px;
+      width: 230px;
+      border-bottom: 1px solid $color5;
+
+      @media screen and (min-width: 575px) {
+        margin-left: 10%;
+      }
+
+      .imgs {
+        margin-top: 14px;
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
