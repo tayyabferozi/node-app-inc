@@ -175,7 +175,7 @@ const MainLayout = ({
                   </div>
                   <div className="text">way</div>
                 </Link>
-                <Link to="/wallet" className="item">
+                <Link to="/finances-overview" className="item">
                   <div className="img">
                     <img src="./assets/vectors/wallet.svg" alt="wallet" />
                   </div>

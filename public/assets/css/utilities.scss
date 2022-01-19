@@ -88,6 +88,10 @@ button,
   font-size: 32px !important;
 }
 
+.fs-34 {
+  font-size: 34px !important;
+}
+
 .fs-28 {
   font-size: 28px !important;
 }
@@ -217,6 +221,10 @@ button,
   font-size: 12px;
   font-weight: 700;
   font-family: "manrope", sans-serif;
+}
+
+.text-poppins {
+  font-family: "Poppins", sans-serif;
 }
 
 .text-light-1,
@@ -1024,6 +1032,7 @@ button,
       border: 0;
       border-bottom: 1px solid $color5;
       width: 100%;
+      outline: none;
     }
 
     img {
@@ -1723,4 +1732,9 @@ table {
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
 }

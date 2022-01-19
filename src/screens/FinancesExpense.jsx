@@ -1,6 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import AddBtn from "../components/AddBtn";
+import ExploreNavItemWithIcon from "../components/ExploreNavItemWithIcon";
 import SearchInput from "../components/SearchInput";
+import TabContentItem from "../components/TabContentItem";
+import TabContents from "../components/TabContents";
 import Tabs from "../components/Tabs";
 import MainLayout from "../layouts/MainLayout";
 
@@ -36,29 +40,88 @@ const dummyData = [
     currency: "CAD"
   },
 ];
+const dummySuppliersData = [
+  {
+    imgUrl: './assets/img/suppliers-1.png',
+    name: 'Napa Pièce Auto',
+    phoneNo: '(450) 322-2134',
+    contact: 'Manon Latulippe',
+    poste: 23,
+    lastOne: '15/APR/2020',
+    balance: 1200
+  },
+  {
+    imgUrl: './assets/img/suppliers-1.png',
+    name: 'Napa Pièce Auto',
+    phoneNo: '(450) 322-2134',
+    contact: 'Manon Latulippe',
+    poste: 0,
+    lastOne: '',
+    balance: 1200
+  },
+  {
+    imgUrl: './assets/img/suppliers-1.png',
+    name: 'Napa Pièce Auto',
+    phoneNo: '(450) 322-2134',
+    contact: 'Manon Latulippe',
+    poste: 23,
+    lastOne: '15/APR/2020',
+    balance: 1200
+  },
+  {
+    imgUrl: './assets/img/suppliers-1.png',
+    name: 'Napa Pièce Auto',
+    phoneNo: '(450) 322-2134',
+    contact: 'Manon Latulippe',
+    poste: 23,
+    lastOne: '15/APR/2020',
+    balance: 1200
+  },
+  {
+    imgUrl: './assets/img/suppliers-1.png',
+    name: 'Napa Pièce Auto',
+    phoneNo: '(450) 322-2134',
+    contact: 'Manon Latulippe',
+    poste: 23,
+    lastOne: '15/APR/2020',
+    balance: 1200
+  },
+]
 
 const FinancesExpense = () => {
   return (
     <MainLayout
-      headVector="./assets/vectors/nav-7__active.svg"
+      headVector="./assets/vectors/wallet.svg"
       sideNavVector="./assets/vectors/sidenav-right-2.svg"
-      title={"Purchases List"}
+      title={"wallet"}
       minimalNavRight
-      exploreSub="Services &amp; Request Assign to you"
-      exploreContent={[
+      exploreTitle="Let’s go to"
+      exploreComponent={[
         {
           title: "Overview",
           sub: "Charts & Reports",
+          iconName: 'finances-overview',
+          sideNavLink: 'finances-overview'
         },
         {
           title: "Incomes",
           sub: "Invoices",
+          iconName: 'finances-income',
+          sideNavLink: 'finances-income'
         },
         {
           title: "Expenses",
           sub: "Suppliers & Purchases",
+          iconName: 'finances-expense',
+          sideNavLink: 'finances-expense'
         },
-      ]}
+      ].map((el, idx) => {
+        const { title, sub, small, iconName, sideNavLink } = el;
+
+        return (
+          <ExploreNavItemWithIcon title={title} sub={sub} iconName={iconName} sideNavLink={sideNavLink} small={small} key={"explore" + idx} />
+        );
+      })}
     >
       <div className="finances-invoice-main-content">
         <div className="container-fluid">
@@ -68,16 +131,17 @@ const FinancesExpense = () => {
                 verticalButtons
                 tabClassName="mb-4 mb-sm-0"
                 className="mt-4 flex-column flex-sm-row w-100"
-                tabGroupName="client-overview-tabs"
+                tabGroupName="finance-expense-tabs"
                 data={[
                   {
                     label: "Purchases",
                     target: "purchases",
-                    active: true
+                    // active: true
                   },
                   {
                     label: "Suppliers",
                     target: "suppliers",
+                    active: true
                   },
                 ]}
               />
@@ -94,73 +158,131 @@ const FinancesExpense = () => {
               <AddBtn blue title="New" />
             </div>
           </div>
-          <div className="table-wrapper short-vertical-scrollbar">
-            <div className="table">
-              <div className="container-fluid px-0 mt-3">
-                <div className="row table-heading gx-0">
-                  <div className="col-1"></div>
-                  <div className="col-3">
-                    <div className="label">Name</div>
-                  </div>
-                  <div className="col-3">
-                    <div className="label">Dates</div>
-                  </div>
-                  <div className="col-2">
-                    <div className="label">Payment Status</div>
-                  </div>
-                  <div className="col-1 text-end">
-                    <div className="label">Amount</div>
-                  </div>
-                </div>
-              </div>
-              {dummyData.map((data, idx) => {
-                return (
-                  <div key={'li' + idx} className="row align-items-center py-2 gx-0 dummy-data">
-                    <div className="col-1 d-flex justify-content-center align-items-center">
-                      <div className="circle" style={{ backgroundColor: data.circleColor }}></div>
-                    </div>
-                    <div className="col-3 d-flex flex-column gap-1">
-                      <div className="invoice-number">{data.invoiceNumber}</div>
-                      <div className="username">{data.username}</div>
-                    </div>
-                    <div className="col-3 d-flex flex-column gap-1">
-                      <div className="created-at">
-                        Created: {data.createdAt}
+          <TabContents tabGroupName="finance-expense-tabs">
+            <TabContentItem target="purchases">
+              <div className="table-wrapper short-vertical-scrollbar">
+                <div className="table">
+                  <div className="container-fluid px-0 mt-3">
+                    <div className="row table-heading gx-0">
+                      <div className="col-1"></div>
+                      <div className="col-3">
+                        <div className="label">Name</div>
                       </div>
-                      <div className="due-on">
-                        Due On: {data.dueOn}
+                      <div className="col-3">
+                        <div className="label">Dates</div>
+                      </div>
+                      <div className="col-2">
+                        <div className="label">Payment Status</div>
+                      </div>
+                      <div className="col-1 text-end">
+                        <div className="label">Amount</div>
                       </div>
                     </div>
-                    <div className="col-2 d-flex flex-column gap-1">
-                      <div className={`chip ${data.paidDate ? "" : 'unpaid'}`}>
-                        <div className="chip-circle"></div>
-                        <div className="chip-text">
-                          {data.paidDate ? "Paid" : "Unpaid"}
+                  </div>
+                  {dummyData.map((data, idx) => {
+                    return (
+                      <div key={'li' + idx} className="row align-items-center py-2 gx-0 dummy-data">
+                        <div className="col-1 d-flex justify-content-center align-items-center">
+                          <div className="circle" style={{ backgroundColor: data.circleColor }}></div>
+                        </div>
+                        <div className="col-3 d-flex flex-column gap-1">
+                          <div className="invoice-number">{data.invoiceNumber}</div>
+                          <div className="username">{data.username}</div>
+                        </div>
+                        <div className="col-3 d-flex flex-column gap-1">
+                          <div className="created-at">
+                            Created: {data.createdAt}
+                          </div>
+                          <div className="due-on">
+                            Due On: {data.dueOn}
+                          </div>
+                        </div>
+                        <div className="col-2 d-flex flex-column gap-1">
+                          <div className={`chip ${data.paidDate ? "" : 'unpaid'}`}>
+                            <div className="chip-circle"></div>
+                            <div className="chip-text">
+                              {data.paidDate ? "Paid" : "Unpaid"}
+                            </div>
+                          </div>
+                          <div className="paid-date">
+                            {data.paidDate ? `Paid on ${data.paidDate}` : " "}
+                          </div>
+                        </div>
+                        <div className="col-1 d-flex flex-column gap-1 text-end">
+                          <div className="amount">{data.amount}$</div>
+                          <div className="currency">{data.currency}</div>
+                        </div>
+                        <div className="col-2 d-flex justify-content-end align-items-center gap-5 pe-2 more-menu">
+                          Open
+                          <img src="./assets/vectors/vertical-menu.svg" alt="" />
                         </div>
                       </div>
-                      <div className="paid-date">
-                        {data.paidDate ? `Paid on ${data.paidDate}` : " "}
+                    )
+                  })}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12 d-flex flex-column align-items-center load-more py-3">
+                  Scroll To Load More
+                  <img width={10} src="./assets/vectors/scroll-down-arrow.svg" alt="" />
+                </div>
+              </div>
+            </TabContentItem>
+            <TabContentItem target="suppliers">
+              <div className="table-wrapper short-vertical-scrollbar">
+                <div className="table">
+                  <div className="container-fluid px-0 mt-3">
+                    <div className="row table-heading gx-0">
+                      <div className="col-1"></div>
+                      <div className="col-3">
+                        <div className="label">Supplier</div>
+                      </div>
+                      <div className="col-3">
+                        <div className="label">Contact</div>
+                      </div>
+                      <div className="col-2">
+                        <div className="label">Categorie</div>
+                      </div>
+                      <div className="col-1 text-end">
+                        <div className="label">Balance</div>
                       </div>
                     </div>
-                    <div className="col-1 d-flex flex-column gap-1 text-end">
-                      <div className="amount">{data.amount}$</div>
-                      <div className="currency">{data.currency}</div>
-                    </div>
-                    <div className="col-2 d-flex justify-content-end align-items-center gap-5 pe-2 more-menu">
-                      Open
-                      <img src="./assets/vectors/vertical-menu.svg" alt="" />
-                    </div>
                   </div>
-                )
-              })}
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12 d-flex flex-column align-items-center load-more py-3">
-              Scroll To Load More
-              <img width={10} src="./assets/vectors/scroll-down-arrow.svg" alt="" />
-            </div>
-          </div>
+                  {dummySuppliersData.map((data, idx) => {
+                    return (
+                      <div key={'supplier' + idx} className="row align-items-center py-2 gx-0 dummy-supplier-data">
+                        <div className="col-1 d-flex justify-content-center align-items-center">
+                          <img src={data.imgUrl} alt="" />
+                        </div>
+                        <div className="col-3 d-flex flex-column gap-1">
+                          <div className="text-inter fs-14 supplier-name">{data.name}</div>
+                          <div className="text-inter text-light-5 fs-14">{data.phoneNo}</div>
+                        </div>
+                        <div className="col-3 d-flex flex-column gap-1">
+                          <div className="text-inter text-dark-3 text-bold fs-12">{data.contact}</div>
+                          <div className="text-inter text-light-5 fs-12">{data.poste ? `poste ${data.poste}` : "N/A"}</div>
+                        </div>
+                        <div className="col-2 d-flex flex-column gap-1">
+                          <div className="chip blue">
+                            <div className="chip-text">Parts</div>
+                          </div>
+                          <div className="text-inter text-bold fs-12">{data.lastOne ? `Last One ${data.lastOne}` : ''}</div>
+                        </div>
+                        <div className="col-1 d-flex flex-column align-items-end gap-1">
+                          <div className="text-inter text-dark-3 fs-14 text-bold">{data.balance}$</div>
+                          <div className="text-inter text-light-5 fs-12">CAD</div>
+                        </div>
+                        <div className="col-2 d-flex justify-content-end align-items-center pe-3">
+                          <img src="./assets/vectors/vertical-menu.svg" alt="" />
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </TabContentItem>
+          </TabContents>
+
         </div>
       </div>
     </MainLayout>

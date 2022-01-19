@@ -847,6 +847,117 @@ button {
 
 // ***********************************************************************************************************************************
 // ***********************************************************************************************************************************
+#finances-overview {
+  .calendar-icon {
+    background-color: rgba($color: $color3, $alpha: 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 20px;
+  }
+  .month-overview {
+    padding: 5px 10px;
+  }
+  .overview-chart {
+    background-color: rgba($color: $color40, $alpha: 0.29);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    .overview-title {
+      color: $color3;
+      font-family: "Manrope", sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 32px;
+      padding: 20px 0px 0px 20px;
+      // position: absolute;
+      // top: 20px;
+      // left: 20px;
+    }
+    .profit-loss-overview {
+      // position: absolute;
+      left: 20px;
+      top: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .year-overview {
+      background-color: white;
+      border: 1px solid $color5;
+      border-radius: 8px;
+      padding: 5px 10px;
+    }
+  }
+  .custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-top: 20px;
+
+    .quick-report,
+    .average,
+    .upcomming,
+    .refund {
+      border-radius: 6px;
+      width: 100%;
+    }
+    .quick-report {
+      background-color: rgba($color: $color4, $alpha: 0.08);
+
+      div:last-child {
+        line-height: 20px;
+      }
+    }
+    .average {
+      background-color: $color4;
+      * {
+        color: white;
+      }
+    }
+    .upcomming {
+      background-color: $color6;
+      * {
+        color: white;
+      }
+    }
+    .refund {
+      background-color: $color23;
+      * {
+        color: white;
+      }
+    }
+  }
+  .circle {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 5px solid $color3;
+    box-sizing: content-box;
+  }
+}
+
+.wallet-explore {
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    .arrow {
+      position: static !important;
+      transform: translate(0) !important;
+    }
+  }
+}
+.wallet-explore.active {
+  background-color: transparent !important;
+
+  .title {
+    background-color: white;
+  }
+}
 
 .finances-invoice-main-content {
   .table-wrapper {
@@ -860,7 +971,7 @@ button {
   .table-heading {
     background-color: $color17;
   }
-  
+
   .label {
     position: relative;
     padding: 15px 0px;
@@ -869,51 +980,68 @@ button {
     color: $color3;
     font-family: "Manrope", sans-serif;
   }
+  .chip {
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba($color: $color40, $alpha: 0.29);
+    width: min-content;
+
+    &.blue {
+      background-color: rgba($color: $color4, $alpha: 0.08);
+      .chip-text {
+        color: $color4;
+      }
+    }
+
+    .chip-circle {
+      width: 6px;
+      height: 6px;
+      background-color: $color2;
+      border-radius: 50%;
+    }
+    .chip-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: $color2;
+      font-family: "Inter", sans-serif;
+    }
+  }
   .dummy-data {
     border-bottom: 1px solid $color5;
     .circle {
       width: 36px;
       height: 36px;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
     }
-    .name, .invoice-number {
+    .name,
+    .invoice-number {
       color: $color39;
       font-size: 14px;
       font-weight: 600;
       font-family: "Inter", sans-serif;
     }
-    .email, .username {
+    .email,
+    .username {
       color: $color2;
       font-size: 14px;
       font-family: "Inter", sans-serif;
     }
-    .created-at, .due-on {
+    .created-at,
+    .due-on {
       color: $color2;
       font-size: 12px;
       font-family: "Inter", sans-serif;
       font-weight: 600;
-    }
-    .chip {
-      padding: 5px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background-color: rgba($color: $color40, $alpha: 0.29);
-      width: min-content;
-
-      .chip-circle {
-        width: 6px;
-        height: 6px;
-        background-color: $color2;
-        border-radius: 50%;
-      }
-      .chip-text {
-        font-size: 12px;
-        font-weight: 600;
-        color: $color2;
-        font-family: "Inter", sans-serif;
-      }
     }
     .chip.is-noded {
       background-color: $color5;
@@ -950,13 +1078,11 @@ button {
       font-size: 14px;
       font-weight: 600;
       font-family: "Inter", sans-serif;
-
     }
     .currency {
       color: $color2;
       font-size: 12px;
       font-family: "Inter", sans-serif;
-
     }
     .more-menu {
       color: $color4;
@@ -970,7 +1096,12 @@ button {
     font-size: 14px;
     font-weight: 700;
     font-family: "Poppins", sans-serif;
-    
+  }
+  .dummy-supplier-data {
+    .supplier-name {
+      color: $color39;
+      font-weight: 600;
+    }
   }
   // input {
   //   padding: 10px;
@@ -1003,7 +1134,7 @@ button {
   //     border-radius: 8px;
   //   }
   // }
-  
+
   // .dummy-data {
   //   border: 1px solid $color33;
   //   border-radius: 10px;
@@ -1098,6 +1229,30 @@ button {
 // ***********************************************************************************************************************************
 // ***********************************************************************************************************************************
 
+.inventory-sidenav {
+  .title {
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-weight: normal !important;
+    }
+    b {
+      font-weight: 600;
+    }
+    .sub-title-text > b {
+      color: $color2;
+      font-weight: 600;
+    }
+    .arrow {
+      position: static !important;
+      transform: translate(0) !important;
+      padding: 0px 40px;
+      gap: 20px;
+    }
+  }
+}
+
 #inventory-main-content {
   .search {
     padding: 10px;
@@ -1120,6 +1275,10 @@ button {
       border: 1px solid rgba($color: $color41, $alpha: 0.08);
       border-radius: 12px;
 
+      // input[type="checkbox"] {
+      //   width: 20px;
+      //   height: 20px;
+      // }
       .box {
         width: 20px;
         height: 20px;
@@ -1180,10 +1339,10 @@ button {
       background-color: rgba($color: $color36, $alpha: 0.4);
     }
     .info {
-      input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-      }
+      // input[type="checkbox"] {
+      //   width: 20px;
+      //   height: 20px;
+      // }
       img {
         width: 48px;
         height: 48px;
@@ -1252,6 +1411,73 @@ button {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+
+  .service-brake {
+    .custom-border {
+      border: 1px solid $color5;
+
+      &.custom-rounded {
+        border-radius: 12px;
+      }
+    }
+    .title {
+      border-bottom: 1px solid $color5;
+    }
+    .service-brake-text {
+      font-size: 22px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      line-height: 27px;
+      color: $color4;
+    }
+    .box {
+      width: 45px;
+      height: 40px;
+      border: 1px solid rgba($color: $color41, $alpha: 0.08);
+    }
+    .input {
+      img {
+        left: 0;
+      }
+
+      // input::placeholder {
+      //   font-size: 14px;
+      //   color: $color3;
+      // }
+      // input.text-blue::placeholder {
+      //   color: $color4;
+      // }
+    }
+    .btn {
+      width: auto;
+      height: auto;
+      padding: 10px 40px;
+      background-color: rgba($color: $color4, $alpha: 0.08);
+      color: $color4;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+    }
+    .btn.blue {
+      background-color: $color4;
+      color: white;
+    }
+    .service-details {
+      .title {
+        border: none;
+      }
+      .box {
+        width: 52px;
+        height: 52px;
+        border-radius: 8px;
+        background-color: rgba($color: $color4, $alpha: 0.08);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
