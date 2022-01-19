@@ -234,6 +234,9 @@ button,
 .text-poppins {
   font-family: "Poppins", sans-serif;
 }
+.text-lato {
+  font-family: "Lato", sans-serif;
+}
 
 .text-light-1,
 .text-light-2,
@@ -1265,6 +1268,10 @@ button,
 
     &::placeholder {
       color: $color2;
+    }
+
+    &:disabled {
+      background-color: transparent;
     }
   }
 }

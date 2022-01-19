@@ -141,7 +141,7 @@ const purchases = [
 ]
 
 const FinancesExpense = () => {
-  const [purchaseAddSelected, setPurchaseAddSelected] = useState(true)
+  const [purchaseAddSelected, setPurchaseAddSelected] = useState(false)
   return (
     <MainLayout
       headVector="./assets/vectors/wallet.svg"
@@ -207,7 +207,7 @@ const FinancesExpense = () => {
               />
             </div>
             <div className="col-12 col-md-7 py-md-0 py-3 d-flex justify-content-end align-items-center">
-              <AddBtn blue className={purchaseAddSelected && "upload-btn"} title={purchaseAddSelected ? "UPLOAD" : 'New'} />
+              <AddBtn blue onClick={() => setPurchaseAddSelected(prevState => !prevState)} className={purchaseAddSelected && "upload-btn"} title={purchaseAddSelected ? "UPLOAD" : 'New'} />
             </div>
           </div>
           <TabContents tabGroupName="finance-expense-tabs">
@@ -318,7 +318,7 @@ const FinancesExpense = () => {
                           })
                         }
                         <div className="row py-4 gx-0">
-                          <div className="col-12 d-flex justify-content-end align-items center">
+                          <div className="col-12 d-flex justify-content-end align-items-center">
                             <button className="btn btn-dark add-to-purhase-btn">
                               Add to Purchase
                             </button>

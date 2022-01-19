@@ -1,8 +1,8 @@
 import React from "react";
 
-const AddBtn = ({ blue, title, className }) => {
+const AddBtn = ({ blue, title, className, onClick }) => {
   return (
-    <button className={`btn btn-add${blue ? " blue" : ""} ${className ? className : ''}`}>
+    <button onClick={onClick} className={`btn btn-add${blue ? " blue" : ""} ${className && className}`}>
       {blue ? (
         <img src="./assets/vectors/add-blue.svg" alt="add" className="add" />
       ) : (

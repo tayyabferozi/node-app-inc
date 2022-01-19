@@ -235,6 +235,10 @@ button,
   font-family: "Poppins", sans-serif;
 }
 
+.text-lato {
+  font-family: "Lato", sans-serif;
+}
+
 .text-light-1,
 .text-light-2,
 .text-light-3,
@@ -1423,6 +1427,11 @@ button,
 .custom-form-control input.custom-input::placeholder,
 .custom-form-control textarea.custom-input::placeholder {
   color: #9c9c9c;
+}
+
+.custom-form-control input.custom-input:disabled,
+.custom-form-control textarea.custom-input:disabled {
+  background-color: transparent;
 }
 
 .custom-radio {
