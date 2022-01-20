@@ -219,6 +219,10 @@ button,
   color: $color1;
 }
 
+.text-dark-5 {
+  color: $color61;
+}
+
 .text-bold,
 .text-x-bold {
   color: $color1;
@@ -241,6 +245,10 @@ button,
 .text-light-4,
 .text-manrope {
   font-family: "Manrope", sans-serif;
+}
+
+.text-lato {
+  font-family: "lato", sans-serif !important;
 }
 
 .text-poppins {
@@ -297,6 +305,11 @@ button,
   font-weight: 300;
   font-size: 12px;
   text-align: right;
+  z-index: 5;
+
+  @media screen and (max-width: 767px) {
+    position: static;
+  }
 }
 
 .title-label {
@@ -1087,6 +1100,12 @@ button,
   &.normalized {
     margin: 1rem 0;
 
+    &.light-label {
+      label {
+        color: $color2;
+      }
+    }
+
     .input-label {
       color: $color50;
       font-weight: 600;
@@ -1097,8 +1116,20 @@ button,
     .input {
       width: 100%;
 
+      select.custom-input {
+        -moz-appearance: none; /* Firefox */
+        -webkit-appearance: none; /* Safari and Chrome */
+        outline: none !important;
+        background: transparent;
+        background-image: url(../vectors/select-arrow-1.svg);
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: 12px;
+      }
+
       input,
-      textarea.custom-input {
+      textarea.custom-input,
+      .custom-input {
         // flex-grow: 1;
         width: 100%;
         border: 1px solid $color5;
@@ -1258,7 +1289,10 @@ button,
 
 .custom-form-control {
   input.custom-input,
-  textarea.custom-input {
+  textarea.custom-input,
+  select.cusom-input {
+    appearance: none;
+
     &:focus {
       outline: none;
     }
@@ -1349,9 +1383,6 @@ button,
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1470,6 +1501,78 @@ button,
   height: 8px;
   border-radius: 50%;
   background: $color4;
+}
+
+.checkbox-container-3 {
+  font-family: "inter", sans-serif;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin: 12px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container-3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-container-3 .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 2px solid $color62;
+  border-radius: 4px;
+  transition: 0.4s ease;
+  transform: translateY(-50%);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container-3:hover input ~ .checkmark {
+  // background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container-3 input:checked ~ .checkmark {
+  background-color: $color4;
+  border-color: $color4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container-3 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container-3 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container-3 .checkmark:after {
+  left: 4px;
+  top: -1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .card {
@@ -1717,7 +1820,9 @@ table {
   table-layout: fixed;
 
   thead {
-    background-color: $color17;
+    &:not(.no-bg) {
+      background-color: $color17;
+    }
 
     th {
       font-weight: normal;
@@ -1833,13 +1938,23 @@ table {
   @media screen and (min-width: 1400px) {
     margin-left: 8px;
   }
+}
 
-  .item {
+.performances {
+  .performance-item {
     margin-bottom: 25px;
+
+    &::after {
+      border: none !important;
+    }
   }
 }
 
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
+}
+
+.table-container {
+  overflow-y: auto;
 }

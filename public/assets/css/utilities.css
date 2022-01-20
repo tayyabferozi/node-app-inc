@@ -219,6 +219,10 @@ button,
   color: #1c1d21;
 }
 
+.text-dark-5 {
+  color: #111827;
+}
+
 .text-bold,
 .text-x-bold {
   color: #1c1d21;
@@ -241,6 +245,10 @@ button,
 .text-light-4,
 .text-manrope {
   font-family: "Manrope", sans-serif;
+}
+
+.text-lato {
+  font-family: "lato", sans-serif !important;
 }
 
 .text-poppins {
@@ -297,6 +305,13 @@ button,
   font-weight: 300;
   font-size: 12px;
   text-align: right;
+  z-index: 5;
+}
+
+@media screen and (max-width: 767px) {
+  .copyright {
+    position: static;
+  }
 }
 
 .title-label {
@@ -1225,6 +1240,10 @@ button,
   margin: 1rem 0;
 }
 
+.custom-form-control.normalized.light-label label {
+  color: #9c9c9c;
+}
+
 .custom-form-control.normalized .input-label {
   color: #323a46;
   font-weight: 600;
@@ -1236,8 +1255,22 @@ button,
   width: 100%;
 }
 
+.custom-form-control.normalized .input select.custom-input {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  outline: none !important;
+  background: transparent;
+  background-image: url(../vectors/select-arrow-1.svg);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 12px;
+}
+
 .custom-form-control.normalized .input input,
-.custom-form-control.normalized .input textarea.custom-input {
+.custom-form-control.normalized .input textarea.custom-input,
+.custom-form-control.normalized .input .custom-input {
   width: 100%;
   border: 1px solid #f2f2f2;
   border-radius: 6px;
@@ -1247,31 +1280,36 @@ button,
 }
 
 .custom-form-control.normalized .input input::-webkit-input-placeholder,
-.custom-form-control.normalized .input textarea.custom-input::-webkit-input-placeholder {
+.custom-form-control.normalized .input textarea.custom-input::-webkit-input-placeholder,
+.custom-form-control.normalized .input .custom-input::-webkit-input-placeholder {
   color: #3e4244;
   font-weight: 400;
 }
 
 .custom-form-control.normalized .input input:-ms-input-placeholder,
-.custom-form-control.normalized .input textarea.custom-input:-ms-input-placeholder {
+.custom-form-control.normalized .input textarea.custom-input:-ms-input-placeholder,
+.custom-form-control.normalized .input .custom-input:-ms-input-placeholder {
   color: #3e4244;
   font-weight: 400;
 }
 
 .custom-form-control.normalized .input input::-ms-input-placeholder,
-.custom-form-control.normalized .input textarea.custom-input::-ms-input-placeholder {
+.custom-form-control.normalized .input textarea.custom-input::-ms-input-placeholder,
+.custom-form-control.normalized .input .custom-input::-ms-input-placeholder {
   color: #3e4244;
   font-weight: 400;
 }
 
 .custom-form-control.normalized .input input::placeholder,
-.custom-form-control.normalized .input textarea.custom-input::placeholder {
+.custom-form-control.normalized .input textarea.custom-input::placeholder,
+.custom-form-control.normalized .input .custom-input::placeholder {
   color: #3e4244;
   font-weight: 400;
 }
 
 .custom-form-control.normalized .input input.chat-search,
-.custom-form-control.normalized .input textarea.custom-input.chat-search {
+.custom-form-control.normalized .input textarea.custom-input.chat-search,
+.custom-form-control.normalized .input .custom-input.chat-search {
   line-height: 1;
   font-family: "inter", serif;
   font-weight: 400;
@@ -1400,28 +1438,41 @@ button,
   border-radius: 50%;
 }
 
+.custom-form-control input.custom-input,
+.custom-form-control textarea.custom-input,
+.custom-form-control select.cusom-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .custom-form-control input.custom-input:focus,
-.custom-form-control textarea.custom-input:focus {
+.custom-form-control textarea.custom-input:focus,
+.custom-form-control select.cusom-input:focus {
   outline: none;
 }
 
 .custom-form-control input.custom-input::-webkit-input-placeholder,
-.custom-form-control textarea.custom-input::-webkit-input-placeholder {
+.custom-form-control textarea.custom-input::-webkit-input-placeholder,
+.custom-form-control select.cusom-input::-webkit-input-placeholder {
   color: #9c9c9c;
 }
 
 .custom-form-control input.custom-input:-ms-input-placeholder,
-.custom-form-control textarea.custom-input:-ms-input-placeholder {
+.custom-form-control textarea.custom-input:-ms-input-placeholder,
+.custom-form-control select.cusom-input:-ms-input-placeholder {
   color: #9c9c9c;
 }
 
 .custom-form-control input.custom-input::-ms-input-placeholder,
-.custom-form-control textarea.custom-input::-ms-input-placeholder {
+.custom-form-control textarea.custom-input::-ms-input-placeholder,
+.custom-form-control select.cusom-input::-ms-input-placeholder {
   color: #9c9c9c;
 }
 
 .custom-form-control input.custom-input::placeholder,
-.custom-form-control textarea.custom-input::placeholder {
+.custom-form-control textarea.custom-input::placeholder,
+.custom-form-control select.cusom-input::placeholder {
   color: #9c9c9c;
 }
 
@@ -1504,9 +1555,9 @@ button,
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* Hide the browser's default checkbox */
@@ -1618,6 +1669,75 @@ button,
   height: 8px;
   border-radius: 50%;
   background: #1e55a9;
+}
+
+.checkbox-container-3 {
+  font-family: "inter", sans-serif;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin: 12px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container-3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-container-3 .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 2px solid #6b7280;
+  border-radius: 4px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* On mouse-over, add a grey background color */
+/* When the checkbox is checked, add a blue background */
+.checkbox-container-3 input:checked ~ .checkmark {
+  background-color: #1e55a9;
+  border-color: #1e55a9;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container-3 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container-3 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container-3 .checkmark:after {
+  left: 4px;
+  top: -1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .card {
@@ -1858,7 +1978,7 @@ table {
   table-layout: fixed;
 }
 
-table thead {
+table thead:not(.no-bg) {
   background-color: rgba(234, 234, 234, 0.29);
 }
 
@@ -1977,12 +2097,20 @@ table th {
   }
 }
 
-.performance .item {
+.performances .performance-item {
   margin-bottom: 25px;
+}
+
+.performances .performance-item::after {
+  border: none !important;
 }
 
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
+}
+
+.table-container {
+  overflow-y: auto;
 }
 /*# sourceMappingURL=utilities.css.map */
