@@ -224,7 +224,7 @@ const FinancesIncome = () => {
           ) : (
             <div className="container-fluid">
               <div className="row gx-0 py-5">
-                <div className="col-7">
+                <div className="col-12 col-lg-7">
                   <div className="collapse">
                     <div className="collapse-header">
                       <div className="text-dark-3 text-lato fw-800 fs-12">Service: Front Back Change</div>
@@ -316,8 +316,8 @@ const FinancesIncome = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-1"></div>
-                <div className="col-4 px-5">
+                <div className="col-0 col-lg-1"></div>
+                <div className="col-12 col-lg-4 py-5 py-lg-0 px-5">
                   <div className="row px-5">
                     <div className="col-12">
                       <div className="circle circle-large" style={{ backgroundColor: '#ECA0A0' }}>
