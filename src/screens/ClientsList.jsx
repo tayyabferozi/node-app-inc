@@ -14,7 +14,6 @@ const ClientsList = () => {
     <MainLayout
       headVector="./assets/vectors/way-connect.svg"
       title="way connect"
-      minimalNavRight
       exploreTitle="Clients not Noded"
       exploreSub="Take full advantage of the Node experience"
       lightBorder

@@ -1,9 +1,14 @@
 const Input = ({
+  checkbox,
+  radio,
+  select,
+  options,
   textArea,
   fileUpload,
   defaultTogglerClose,
   withToggler,
   id,
+  name,
   label,
   value,
   icon,
@@ -31,13 +36,64 @@ const Input = ({
           subRootClassName ? " " + subRootClassName : ""
         }`}
       >
-        {textArea ? (
-          <textarea
-            {...rest}
+        {checkbox ? (
+          <>
+            {options &&
+              options.map((el) => {
+                const { text } = el;
+
+                return (
+                  <label className="checkbox-container-3">
+                    {text}
+                    <input name={name} type="checkbox" />
+                    <span className="checkmark"></span>
+                  </label>
+                );
+              })}
+          </>
+        ) : radio ? (
+          <div className="d-flex checkboxes mt-2">
+            {options &&
+              options.map((el, idx) => {
+                const { text, ...rest } = el;
+
+                return (
+                  <label key={name + idx} className="checkbox-container-2">
+                    {text}
+                    <input name={name} type="radio" {...rest} />
+                    <span className="checkmark"></span>
+                  </label>
+                );
+              })}
+          </div>
+        ) : select ? (
+          <select
             className={`custom-input${className ? " " + className : ""}`}
             id={id}
+            name={name}
             value={value}
             placeholder={placeholder || ""}
+            {...rest}
+          >
+            {options &&
+              options.map((el, idx) => {
+                const { text, value } = el;
+
+                return (
+                  <option key={"op" + Math.random() + idx} value={value}>
+                    {text}
+                  </option>
+                );
+              })}
+          </select>
+        ) : textArea ? (
+          <textarea
+            className={`custom-input${className ? " " + className : ""}`}
+            id={id}
+            name={name}
+            value={value}
+            placeholder={placeholder || ""}
+            {...rest}
           />
         ) : fileUpload ? (
           <div className="file-uploader">
@@ -65,6 +121,7 @@ const Input = ({
             className={`custom-input${className ? " " + className : ""}`}
             type={type || "text"}
             id={id}
+            name={name}
             value={value}
             placeholder={placeholder || ""}
           />

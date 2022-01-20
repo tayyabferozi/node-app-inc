@@ -9,7 +9,8 @@ import SearchInput from "../components/SearchInput";
 
 const Converstaions = () => {
   const [searchState, setSearchState] = useState("");
-  const [tabState, setTabState] = useState("feed");
+  const [tabState, setTabState] = useState("conversations");
+  const [videoCallActiveState, setVideoCallActiveState] = useState(true);
 
   const searchChangeHandler = (e) => {
     setSearchState(e.target.value);
@@ -199,6 +200,14 @@ const Converstaions = () => {
               <div className="col-lg-8 short-scrollbar">
                 <div className="right-content">
                   <div className="main-chat">
+                    {videoCallActiveState && (
+                      <div className="video-call-container">
+                        <img
+                          src="./assets/vectors/video-call.svg"
+                          alt="video-call"
+                        />
+                      </div>
+                    )}
                     <div className="chat-header d-flex justify-content-between align-items-center">
                       <div className="d-flex align-items-center">
                         <div className="img">
@@ -216,15 +225,26 @@ const Converstaions = () => {
                       </div>
                       <div>
                         <div className="menu">
-                          <img
-                            className="me-3"
-                            src="./assets/vectors/call-voice.svg"
-                            alt="call-voice"
-                          />
-                          <img
-                            src="./assets/vectors/call-video.svg"
-                            alt="call-video"
-                          />
+                          {videoCallActiveState ? (
+                            <img
+                              src="./assets/vectors/horizontal-menu.svg"
+                              alt="menu"
+                              onClick={() => setVideoCallActiveState(false)}
+                            />
+                          ) : (
+                            <>
+                              <img
+                                className="me-3"
+                                src="./assets/vectors/call-voice.svg"
+                                alt="call-voice"
+                              />
+                              <img
+                                src="./assets/vectors/call-video.svg"
+                                alt="call-video"
+                                onClick={() => setVideoCallActiveState(true)}
+                              />
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>

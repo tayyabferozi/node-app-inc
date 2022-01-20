@@ -7,8 +7,10 @@ import SearchInput from "../components/SearchInput";
 const MainLayout = ({
   children,
   title,
+  titleClassName,
   headVector,
   minimalNavRight,
+  exploreHeadComponent,
   exploreTitle,
   exploreSub,
   exploreComponent,
@@ -54,52 +56,13 @@ const MainLayout = ({
                   />
                 </div>
               )}
-              <h2 className="title-side">{exploreTitle}</h2>
+              {exploreHeadComponent}
+              <h2 className={`title-side`}>{exploreTitle}</h2>
               {exploreSub && (
                 <div className="fs-10 text-light-5">{exploreSub}</div>
               )}
 
-              <div className="items mt-4">
-                {exploreComponent}
-                {/* {exploreContent.map((el, idx) => {
-                  const { time, title, sub, small } = el;
-
-                  return (
-                    <div
-                      className={`item${lightBorder ? " light-border" : ""}`}
-                      key={"explore" + idx}
-                    >
-                      <div
-                        className={`title${
-                          itemsControlledWidth ? " max-width" : ""
-                        }`}
-                      >
-                        <div className="arrow">
-                          <img src={itemVector} alt="arrow-right" />
-                        </div>
-                        {time && (
-                          <div className="time-container">
-                            <div className="circle"></div>
-                            <div className="fs-12 fw-700 font-manrope">
-                              {time}
-                            </div>
-                          </div>
-                        )}
-                        <div className="fs-14 fw-600">{title}</div>
-                        <div
-                          className="fs-12 fw-400 sub-title-text"
-                          style={{ color: subClr }}
-                        >
-                          {sub}
-                        </div>
-                        {small && (
-                          <div className="mt-1 title-label">{small}</div>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })} */}
-              </div>
+              <div className="items mt-4">{exploreComponent}</div>
             </div>
           </div>
           <div className="bottom py-5">
@@ -149,9 +112,6 @@ const MainLayout = ({
         </div>
       </div>
       <div id="content">
-        <div className="copyright">
-          © Node Technologies 2022 | All Rights Reserved
-        </div>
         <div className="page-container">
           <div className="head">
             <div className="sidemenu">
@@ -218,8 +178,16 @@ const MainLayout = ({
                 alt="hamburger"
                 onClick={toggleSideNav}
               />
-              <img className="me-3 indicator" src={headVector} alt="dasboard" />
-              <h1>{title}</h1>
+              {headVector && (
+                <img
+                  className="me-3 indicator"
+                  src={headVector}
+                  alt="dasboard"
+                />
+              )}
+              <h1 className={`${titleClassName ? " " + titleClassName : ""}`}>
+                {title}
+              </h1>
             </div>
             <div className="info">
               <SearchInput
@@ -247,6 +215,9 @@ const MainLayout = ({
           </div>
 
           <div className="body">{children}</div>
+        </div>
+        <div className="copyright">
+          © Node Technologies 2022 | All Rights Reserved
         </div>
       </div>
     </div>

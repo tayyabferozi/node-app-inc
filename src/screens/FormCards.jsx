@@ -6,7 +6,7 @@ import MainLayout from "../layouts/MainLayout";
 import Tabs from "../components/Tabs";
 
 const FormCards = () => {
-  const [cardSelected, setCardSelected] = useState(true);
+  const [cardSelected, setCardSelected] = useState(false);
   const [formState] = useState({
     label: "",
   });
@@ -17,8 +17,7 @@ const FormCards = () => {
     <MainLayout
       headVector="./assets/vectors/builder.svg"
       sideNavVector="./assets/vectors/builder.svg"
-      title={"builder"}
-      minimalNavRight
+      title="builder"
       exploreTitle="What's next?"
       progressNum={5}
       exploreComponent={[
@@ -265,12 +264,12 @@ const FormCards = () => {
                                 <div className="d-flex checkboxes">
                                   <label className="checkbox-container-2">
                                     Product
-                                    <input type="checkbox" checked="checked" />
+                                    <input name="rd" type="radio" />
                                     <span className="checkmark"></span>
                                   </label>
                                   <label className="checkbox-container-2">
                                     Service
-                                    <input type="checkbox" />
+                                    <input name="rd" type="radio" />
                                     <span className="checkmark"></span>
                                   </label>
                                 </div>
