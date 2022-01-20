@@ -6,6 +6,7 @@ const SignupInput = ({
   alt,
   type,
   placeholder,
+  inputClassName,
   ...rest
 }) => {
   return (
@@ -16,7 +17,7 @@ const SignupInput = ({
       <div className="input">
         <input
           {...rest}
-          className="custom-input"
+          className={`custom-input ${inputClassName && inputClassName}`}
           type={type || "text"}
           id={id}
           value={value}

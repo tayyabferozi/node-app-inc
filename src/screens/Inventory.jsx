@@ -424,7 +424,7 @@ const Inventory = () => {
                       <div className="custom-form-control my-3">
                         <label className="text-light-5 fs-14" htmlFor="">Add Article</label>
                         <div className="input">
-                          <img src="./assets/vectors/add-basket.svg" alt="" />
+                          <img className="icon" src="./assets/vectors/add-basket.svg" alt="" />
                           <input className="text-dark-3 fs-14 pt-2 pb-2 ps-5 text-blue" type="text" value="Right Rear Light" onChange={() => { }} />
                         </div>
                       </div>
