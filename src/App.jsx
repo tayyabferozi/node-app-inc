@@ -14,6 +14,7 @@ import Settings1 from "./screens/Settings1";
 import Settings2 from "./screens/Settings2";
 import Settings3 from "./screens/Settings3";
 import Settings4 from "./screens/Settings4";
+import WorkshopRealtime from "./screens/WorkshopRealtime";
 
 function App() {
   return (
@@ -28,7 +29,6 @@ function App() {
           <Route path="/finances-income" element={<FinancesIncome />} />
           <Route path="/conversations" element={<Conversations />} />
           <Route path="finances-overview" element={<FinancesOverview />} />
-          <Route path="finances-income" element={<FinancesIncome />} />
           <Route path="finances-expense" element={<FinancesExpense />} />
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/form-cards" element={<FormCards />} />
@@ -36,7 +36,7 @@ function App() {
           <Route path="/business-settings" element={<Settings2 />} />
           <Route path="/users" element={<Settings3 />} />
           <Route path="/billing" element={<Settings4 />} />
-          {/* <Route path="/wallet" element={<FinancesIncome />} */}
+          <Route path="/workshop-realtime" element={<WorkshopRealtime />} />
           <Route path="/" element={<Navigate to="/signup-1" />} />
         </Routes>
       </BrowserRouter>

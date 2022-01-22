@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 
-import SettingsLayout from "../layouts/SettingsLayout";
+import WorkshopLayout from "../layouts/WorkshopLayout";
 import Input from "../components/Input";
 import SettingsUserImg from "../components/SettingsUserImg";
 
-const Settings1 = () => {
+const WorkshopRealtime = () => {
   const [formState, setFormState] = useState({
-    name: "",
-    title: "",
-    phone: "",
-    email: "",
     about:
       "Clay is a new type of tool that brings together the best parts of spreadsheets,\nmjchiu34h9uierhf98347rch9w3efhvbnw4v5g8fwernugfjni\nvggdfggdfgfddgffgdgdf",
   });
@@ -23,7 +19,7 @@ const Settings1 = () => {
   };
 
   return (
-    <SettingsLayout>
+    <WorkshopLayout>
       <SettingsUserImg />
 
       <div className="form">
@@ -180,8 +176,8 @@ const Settings1 = () => {
           </div>
         </div>
       </div>
-    </SettingsLayout>
+    </WorkshopLayout>
   );
 };
 
-export default Settings1;
+export default WorkshopRealtime;

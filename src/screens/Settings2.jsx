@@ -10,6 +10,8 @@ const Settings1 = () => {
     about:
       "Clay is a new type of tool that brings together the best parts of spreadsheets automation. Quickly connect your apps and d workflows, build useful tools, enr.",
     invoicePrefix: "GL",
+    ibeaconId: "",
+    apiKey: "",
   });
 
   const inputChangeHandler = (e) => {
@@ -62,7 +64,7 @@ const Settings1 = () => {
                 lightLabel: true,
                 select: true,
                 label: "Default Bank Account",
-                id: "reservations",
+                id: "bank",
                 options: [
                   {
                     text: "Please select ...",

@@ -39,11 +39,11 @@ const Input = ({
         {checkbox ? (
           <>
             {options &&
-              options.map((el) => {
+              options.map((el, idx) => {
                 const { text } = el;
 
                 return (
-                  <label className="checkbox-container-3">
+                  <label key={name + idx} className="checkbox-container-3">
                     {text}
                     <input name={name} type="checkbox" />
                     <span className="checkmark"></span>

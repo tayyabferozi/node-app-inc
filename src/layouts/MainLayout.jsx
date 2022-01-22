@@ -117,42 +117,48 @@ const MainLayout = ({
             <div className="sidemenu">
               <h3>menu</h3>
               <div className="sidemenu-nav">
-                <Link to="/360" className="item">
-                  <div className="img">
-                    <img src="./assets/vectors/360.svg" alt="360" />
-                  </div>
-                  <div className="text">360</div>
-                </Link>
-                <Link to="/conversations" className="item">
-                  <div className="img">
-                    <img src="./assets/vectors/desk.svg" alt="desk" />
-                  </div>
-                  <div className="text">desk</div>
-                </Link>
-                <Link to="/way" className="item">
-                  <div className="img">
-                    <img src="./assets/vectors/way.svg" alt="way" />
-                  </div>
-                  <div className="text">way</div>
-                </Link>
-                <Link to="/finances-overview" className="item">
-                  <div className="img">
-                    <img src="./assets/vectors/wallet.svg" alt="wallet" />
-                  </div>
-                  <div className="text">wallet</div>
-                </Link>
-                <Link to="/inventory" className="item">
-                  <div className="img">
-                    <img src="./assets/vectors/inventory.svg" alt="inventory" />
-                  </div>
-                  <div className="text">inventory</div>
-                </Link>
-                <Link to="/360" className="item">
-                  <div className="img">
-                    <img src="./assets/vectors/workshop.svg" alt="workshop" />
-                  </div>
-                  <div className="text">workshop</div>
-                </Link>
+                {[
+                  {
+                    link: "/360",
+                    title: "360",
+                    vector: "./assets/vectors/360.svg",
+                  },
+                  {
+                    link: "/conversations",
+                    title: "desk",
+                    vector: "./assets/vectors/desk.svg",
+                  },
+                  {
+                    link: "/way",
+                    title: "way",
+                    vector: "./assets/vectors/way.svg",
+                  },
+                  {
+                    link: "/finances-overview",
+                    title: "wallet",
+                    vector: "./assets/vectors/wallet.svg",
+                  },
+                  {
+                    link: "/inventory",
+                    title: "inventory",
+                    vector: "./assets/vectors/inventory.svg",
+                  },
+                  {
+                    link: "/workshop-realtime",
+                    title: "workshop",
+                    vector: "./assets/vectors/workshop.svg",
+                  },
+                ].map((el, idx) => {
+                  const { link, title, vector } = el;
+                  return (
+                    <Link key={"nav-item" + idx} to={link} className="item">
+                      <div className="img">
+                        <img src={vector} alt={title} />
+                      </div>
+                      <div className="text">{title}</div>
+                    </Link>
+                  );
+                })}
               </div>
               <div className="options">
                 <div className="d-flex flex-column justify-content-center me-2 me-sm-4">
