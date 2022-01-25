@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import $ from "jquery";
 
 const Tabs = ({
@@ -7,7 +8,14 @@ const Tabs = ({
   className,
   tabClassName,
   verticalButtons,
+  tabLinks,
 }) => {
+  let Comp = ButtonComp;
+
+  if (tabLinks) {
+    Comp = LinkComp;
+  }
+
   const changeTab = (target) => {
     $(`.tabs.${tabGroupName} .tab`).removeClass("active");
     $(`.tabs.${tabGroupName} .tab.${target}`).addClass("active");
@@ -32,11 +40,12 @@ const Tabs = ({
       } ${className}`}
     >
       {data.map((el, idx) => {
-        const { active, icon, iconActive, label, target } = el;
+        const { active, icon, iconActive, label, target, to, badgeText } = el;
 
         return (
-          <button
+          <Comp
             key={tabGroupName + idx}
+            to={to}
             data-target={target}
             className={`tab d-flex align-items-center${
               verticalButtons ? " vertical" : ""
@@ -52,11 +61,20 @@ const Tabs = ({
               </div>
             )}
             {label}
-          </button>
+            {badgeText && <div className="badge">{badgeText}</div>}
+          </Comp>
         );
       })}
     </div>
   );
+};
+
+const ButtonComp = ({ children, ...rest }) => {
+  return <button {...rest}>{children}</button>;
+};
+
+const LinkComp = ({ children, ...rest }) => {
+  return <NavLink {...rest}>{children}</NavLink>;
 };
 
 export default Tabs;

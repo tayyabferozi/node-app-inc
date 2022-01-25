@@ -8,7 +8,7 @@ import AddBtn from "../components/AddBtn";
 import SearchInput from "../components/SearchInput";
 
 const ClientsList = () => {
-  const [clientSelected, setClientSelected] = useState(true);
+  const [clientSelected, setClientSelected] = useState(false);
 
   return (
     <MainLayout

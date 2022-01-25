@@ -16,8 +16,8 @@ h1 {
 }
 
 h2.title-side {
-  font-weight: 500;
-  font-size: 26px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 h3.section-title,
@@ -28,7 +28,7 @@ h3.section-title,
 }
 
 h4.sub-title {
-  font-family: "manrope";
+  font-family: "manrope", sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
@@ -198,6 +198,18 @@ button,
   font-weight: 900 !important;
 }
 
+.text-cyan {
+  color: $color13;
+}
+
+.text-violet {
+  color: $color24;
+}
+
+.text-pink {
+  color: $color23;
+}
+
 .text-black {
   color: #000;
 }
@@ -237,9 +249,6 @@ button,
 
 .text-poppins {
   font-family: "Poppins", sans-serif;
-}
-.text-lato {
-  font-family: "Lato", sans-serif;
 }
 
 .text-light-1,
@@ -283,6 +292,10 @@ button,
   color: $color60 !important;
 }
 
+.text-light-7 {
+  color: $color69 !important;
+}
+
 .text-small,
 .text-x-small,
 .text-xx-small {
@@ -312,6 +325,7 @@ button,
 
   @media screen and (max-width: 767px) {
     position: static;
+    margin-top: 2rem;
   }
 }
 
@@ -327,7 +341,7 @@ button,
 }
 
 .text-blue {
-  color: $color4;
+  color: $color4 !important;
 }
 
 .text-cyan {
@@ -350,6 +364,18 @@ button,
 
 .text-inter {
   font-family: "inter", sans-serif;
+}
+
+.text-red {
+  color: $color32;
+}
+
+.text-pale-1 {
+  color: $color31;
+}
+
+.text-pale-2 {
+  color: $color63;
 }
 
 .page-container {
@@ -425,6 +451,11 @@ button,
     padding: 8px 18px;
     line-height: 1;
     font-weight: bold;
+    transition: 0.4s ease;
+
+    // &:hover {
+    //   transform: scale(1.2);
+    // }
   }
 
   &.btn-primary {
@@ -452,6 +483,9 @@ button,
     color: #fff;
     padding: 14px 30px;
     display: inline-block;
+
+    &.btn-update {
+    }
   }
 
   &.btn-vert {
@@ -468,19 +502,33 @@ button,
     padding: 8px 22px;
     border-radius: 4px;
     font-weight: 600;
+
+    &.btn-rounded {
+      border-radius: 50px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
   }
 
-  &.btn-add {
-    color: $color3;
+  &.btn-add,
+  &.btn-update {
     font-size: 12px;
-    font-weight: 900;
-    font-family: "Lato", sans-serif;
     display: flex;
     align-items: center;
 
     .add {
       margin-right: 5px;
     }
+
+    .update {
+      margin-right: 10px;
+    }
+  }
+
+  &.btn-add {
+    color: $color3;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
 
     &.blue {
       color: #fff;
@@ -495,6 +543,18 @@ button,
       display: flex;
       align-items: center;
     }
+  }
+
+  &.btn-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 26px;
+    border-radius: 25px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   &.btn-blue-high {
@@ -673,6 +733,7 @@ button,
           position: relative;
           padding-top: 20px;
           padding-bottom: 20px;
+          cursor: pointer;
           transition: 0.4s ease;
 
           &:not(.centered) {
@@ -1608,6 +1669,30 @@ button,
     }
   }
 
+  &.violet-gradient {
+    background: linear-gradient(to right, $color24, $color71);
+
+    * {
+      color: #fff;
+    }
+  }
+
+  &.blue-gradient {
+    background: linear-gradient(to right, $color4, $color72);
+
+    * {
+      color: #fff;
+    }
+  }
+
+  &.grey-gradient {
+    background: linear-gradient(to right, $color73, $color74);
+
+    .title {
+      color: $color4;
+    }
+  }
+
   &.dark-blue {
     background-color: $color4;
 
@@ -1751,6 +1836,7 @@ button,
     background-color: transparent;
     border: none;
     font-weight: bold;
+    color: $color3;
     transition: 0.25s ease;
 
     &::after {
@@ -1787,6 +1873,17 @@ button,
       }
     }
 
+    .badge {
+      font-family: "inter", sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      color: $color2;
+      padding: 4px 6px;
+      border-radius: 20px;
+      margin-left: 0.5rem;
+      background: $color5;
+    }
+
     &.vertical {
       flex-direction: column;
 
@@ -1817,6 +1914,11 @@ button,
           }
         }
       }
+
+      .badge {
+        background: $color15;
+        color: $color4;
+      }
     }
   }
 }
@@ -1834,6 +1936,15 @@ table {
     th {
       font-weight: normal;
       padding: 15px 28px;
+
+      .sort {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.5rem;
+        transform: translateY(-4px);
+      }
     }
   }
 
@@ -1969,4 +2080,8 @@ input[type="checkbox"] {
 .small-checkbox {
   width: 15px !important;
   height: 15px !important;
+}
+
+textarea {
+  resize: none;
 }

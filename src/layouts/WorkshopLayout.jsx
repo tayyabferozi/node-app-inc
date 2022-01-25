@@ -1,81 +1,79 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-import Performances from "../components/Performances";
+import WorkshopTabs from "../components/WorkshopTabs";
 import MainLayout from "../layouts/MainLayout";
 
 const WorkshopLayout = ({ children }) => {
   return (
     <MainLayout
-      title="Settings"
+      headVector="./assets/vectors/workshop.svg"
+      title="workshop"
       titleClassName="ms-2"
-      exploreHeadComponent={
-        <div className="mt-5 pt-5">
-          <h3 className="section-title">Garage Levalaval</h3>
-          <div className="text-manrope fs-12 fw-400 mt-2">
-            1770 Boul. de Lacoste, Montreal (QC) H3K 8D3
-          </div>
-          <div className="text-manrope fs-12 fw-400">
-            <span className="fw-700 text-manrope fs-12"> Module</span> :
-            Workshop - Automotive
-          </div>
-          <div className="text-manrope fs-12 fw-700 text-light-5">
-            <span className="fw-600 text-manrope fs-12 text-light-5">
-              Noded partner
-            </span>
-            : 9878-3232 Québec inc.
-          </div>
-        </div>
-      }
-      exploreComponent={<Performances withHead />}
-    >
-      <div id="settings-main-content" className="mt-4 mt-sm-0">
-        <div className="container-fluid right">
-          <div className="row">
-            <div className="col-lg-8">{children}</div>
-            <div className="col-lg-4">
-              <div className="card">
-                {[
-                  {
-                    title: "General Information",
-                    subTitle: "Specs foto, name & language",
-                    link: "/settings",
-                  },
-                  {
-                    title: "Business Settings",
-                    subTitle: "Connected tools & services",
-                    link: "/business-settings",
-                  },
-                  {
-                    title: "Users",
-                    subTitle: "Manage Employees & Admin",
-                    link: "/users",
-                  },
-                  {
-                    title: "Billing",
-                    subTitle: "Invoices & Plans",
-                    link: "/billing",
-                  },
-                  {
-                    title: "Reports",
-                    subTitle: "View & Export your Data",
-                    link: "/reports",
-                  },
-                ].map((el, idx) => {
-                  const { title, subTitle, link } = el;
+      progressNum="12"
+      exploreTitle="What's Next?"
+      exploreComponent={[
+        {
+          title: "Oil Change",
+          sub: "2020 Ford Focus",
+          small: "Damien Latour",
+          time: "11:45",
+          timeClr: "",
+        },
+        {
+          title: "Tires + Oil Change",
+          sub: "2019 Toyota Corolla",
+          small: "Georges Cratow",
+          time: "11:45",
+          timeClr: "",
+        },
+        {
+          title: "Noise rear Right",
+          sub: "2007 Volkswagen Jetta",
+          small: "Evegunia Manito",
+          time: "11:45",
+          timeClr: "",
+        },
+        {
+          title: "Brake Rear Check Up",
+          sub: "2010 Hyandai Elandra",
+          small: "Vanessa Duba",
+          time: "11:45",
+          timeClr: "#D9CC9E",
+        },
+      ].map((el, idx) => {
+        const { time, title, sub, small, timeClr } = el;
 
-                  return (
-                    <NavLink key={"sidelink" + idx} to={link}>
-                      <div className="text-lato fw-700">{title}</div>
-                      <div className="text-lato fw-400 fs-12 text-light-5 mt-1">
-                        {subTitle}
-                      </div>
-                    </NavLink>
-                  );
-                })}
+        return (
+          <div className={`item centered light-border`} key={"explore" + idx}>
+            <div className={"title max-width"}>
+              <div className="arrow">
+                <img src="./assets/vectors/arrow-right.svg" alt="arrow-right" />
               </div>
+
+              <div className="fs-14 fw-600 d-flex">
+                {title}
+                {time && (
+                  <span className="ms-3 time-container">
+                    <div
+                      className="circle"
+                      style={{ backgroundColor: timeClr || "#C26666" }}
+                    ></div>
+                    <div className="fs-12 fw-700 font-manrope">{time}</div>
+                  </span>
+                )}
+              </div>
+              <div className="fs-12 fw-400 sub-title-text">{sub}</div>
+              {small && <div className="mt-1 title-label">{small}</div>}
             </div>
           </div>
+        );
+      })}
+    >
+      <div id="workshop-main-content" className="mt-4 mt-sm-0">
+        <div className="container-fluid px-0">
+          <WorkshopTabs />
+
+          {children}
         </div>
       </div>
     </MainLayout>

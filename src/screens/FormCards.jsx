@@ -18,8 +18,7 @@ const FormCards = () => {
       headVector="./assets/vectors/builder.svg"
       sideNavVector="./assets/vectors/builder.svg"
       title="builder"
-      exploreTitle="What's next?"
-      progressNum={5}
+      exploreTitle="Last entries"
       exploreComponent={[
         {
           title: "Brake Check",
@@ -127,7 +126,6 @@ const FormCards = () => {
 
                   <div className="sections">
                     <div className="section">
-                      <div className="fw-600"></div>
                       <div className="imgs">
                         <img
                           src="./assets/vectors/composents-1.svg"
@@ -206,7 +204,7 @@ const FormCards = () => {
                         },
                         {
                           icon: "./assets/vectors/sms.svg",
-                          iconActive: "./assets/vectors/sms.svg",
+                          iconActive: "./assets/vectors/sms-active.svg",
                           label: "Public",
                           target: "public",
                         },
@@ -258,7 +256,10 @@ const FormCards = () => {
                         const { title, questions } = el;
 
                         return (
-                          <div key={"form-card" + idx} className="col">
+                          <div
+                            key={"form-card" + idx}
+                            className="col-lg-3 col-md-4 col-sm-6"
+                          >
                             <div className="card bordered form-card">
                               <div className="main">
                                 <div className="d-flex checkboxes">

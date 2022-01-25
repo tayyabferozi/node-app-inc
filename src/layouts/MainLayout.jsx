@@ -5,6 +5,7 @@ import $ from "jquery";
 import SearchInput from "../components/SearchInput";
 
 const MainLayout = ({
+  contentClassName,
   children,
   title,
   titleClassName,
@@ -15,6 +16,7 @@ const MainLayout = ({
   exploreSub,
   exploreComponent,
   progressNum,
+  subLg,
 }) => {
   const toggleSideNav = () => {
     $("#sidenav").toggleClass("active");
@@ -34,11 +36,13 @@ const MainLayout = ({
       <div id="sidenav">
         <div className={`desc${minimalNavRight ? " minimal" : ""}`}>
           <div className="main">
-            <img
-              className="logo"
-              src="./assets/vectors/logo-lg.svg"
-              alt="logo"
-            />
+            <Link to="/360">
+              <img
+                className="logo"
+                src="./assets/img/logo-new.png"
+                alt="logo"
+              />
+            </Link>
             <img
               className="hamburger d-1300-none"
               src="./assets/vectors/hamburger.svg"
@@ -59,7 +63,9 @@ const MainLayout = ({
               {exploreHeadComponent}
               <h2 className={`title-side`}>{exploreTitle}</h2>
               {exploreSub && (
-                <div className="fs-10 text-light-5">{exploreSub}</div>
+                <div className={`${subLg ? "" : "fs-10"} text-light-5`}>
+                  {exploreSub}
+                </div>
               )}
 
               <div className="items mt-4">{exploreComponent}</div>
@@ -111,11 +117,18 @@ const MainLayout = ({
           </div>
         </div>
       </div>
-      <div id="content">
+      <div id="content" className={contentClassName ? contentClassName : ""}>
         <div className="page-container">
           <div className="head">
             <div className="sidemenu">
-              <h3>menu</h3>
+              <h3 className="d-flex">
+                <img
+                  src="./assets/vectors/menu-outline.svg"
+                  className="me-3"
+                  alt="menu"
+                />
+                menu
+              </h3>
               <div className="sidemenu-nav">
                 {[
                   {
@@ -162,12 +175,12 @@ const MainLayout = ({
               </div>
               <div className="options">
                 <div className="d-flex flex-column justify-content-center me-2 me-sm-4">
-                  <a href="#0" className="text">
+                  <Link to="/settings" className="text">
                     Logout
-                  </a>
-                  <a href="#0" className="text">
+                  </Link>
+                  <Link to="/settings" className="text">
                     Settings
-                  </a>
+                  </Link>
                 </div>
                 <button
                   className="btn d-flex align-items-center"
@@ -214,7 +227,7 @@ const MainLayout = ({
                   <img src="./assets/vectors/nav-user.svg" alt="user" />
                 </div>
                 <div className="dark-menu" onClick={toggleTopMenu}>
-                  <img src="./assets/vectors/dark-qr.svg" alt="dark-qr" />
+                  <img src="./assets/vectors/dark-bg-menu.svg" alt="menu" />
                 </div>
               </div>
             </div>

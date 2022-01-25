@@ -3,6 +3,7 @@ import SignUp from "./screens/SignUp";
 import SignUp2 from "./screens/SignUp2";
 import Signin from "./screens/Signin";
 import Dashboard from "./screens/Dashboard";
+import Business360 from "./screens/Business360";
 import ClientsList from "./screens/ClientsList";
 import Conversations from "./screens/Conversations";
 import FinancesIncome from "./screens/FinancesIncome";
@@ -15,6 +16,10 @@ import Settings2 from "./screens/Settings2";
 import Settings3 from "./screens/Settings3";
 import Settings4 from "./screens/Settings4";
 import WorkshopRealtime from "./screens/WorkshopRealtime";
+import WorkshopRequests from "./screens/WorkshopRequests";
+import WorkshopStorage from "./screens/WorkshopStorage";
+import WorkshopArticles from "./screens/WorkshopArticles";
+import WorkshopNoded from "./screens/WorkshopNoded";
 
 function App() {
   return (
@@ -25,6 +30,7 @@ function App() {
           <Route path="/signup-2" element={<SignUp2 />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/360" element={<Dashboard />} />
+          <Route path="/business-360" element={<Business360 />} />
           <Route path="/way" element={<ClientsList />} />
           <Route path="/finances-income" element={<FinancesIncome />} />
           <Route path="/conversations" element={<Conversations />} />
@@ -37,6 +43,10 @@ function App() {
           <Route path="/users" element={<Settings3 />} />
           <Route path="/billing" element={<Settings4 />} />
           <Route path="/workshop-realtime" element={<WorkshopRealtime />} />
+          <Route path="/workshop-requests" element={<WorkshopRequests />} />
+          <Route path="/workshop-storage" element={<WorkshopStorage />} />
+          <Route path="/workshop-articles" element={<WorkshopArticles />} />
+          <Route path="/workshop-noded" element={<WorkshopNoded />} />
           <Route path="/" element={<Navigate to="/signup-1" />} />
         </Routes>
       </BrowserRouter>

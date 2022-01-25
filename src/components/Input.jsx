@@ -1,3 +1,5 @@
+import Switch from "./Switch";
+
 const Input = ({
   checkbox,
   radio,
@@ -131,10 +133,7 @@ const Input = ({
 
         {withToggler && (
           <div className="options">
-            <label className="switch">
-              <input type="checkbox" defaultChecked={!defaultTogglerClose} />
-              <span className="slider round"></span>
-            </label>
+            <Switch defaultChecked={!defaultTogglerClose} />
             <button className="btn delete">
               <img src="./assets/vectors/bin.svg" alt="bin" />
             </button>

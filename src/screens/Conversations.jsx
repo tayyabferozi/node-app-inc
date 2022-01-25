@@ -10,7 +10,7 @@ import SearchInput from "../components/SearchInput";
 const Converstaions = () => {
   const [searchState, setSearchState] = useState("");
   const [tabState, setTabState] = useState("conversations");
-  const [videoCallActiveState, setVideoCallActiveState] = useState(true);
+  const [videoCallActiveState, setVideoCallActiveState] = useState(false);
 
   const searchChangeHandler = (e) => {
     setSearchState(e.target.value);
@@ -26,6 +26,7 @@ const Converstaions = () => {
       sideNavVector="./assets/vectors/sidenav-right-6.svg"
       title="desk"
       exploreTitle="Let's go to"
+      contentClassName="pb-0"
       exploreComponent={[
         {
           title: "Conversations",
@@ -83,7 +84,7 @@ const Converstaions = () => {
                     },
                     {
                       icon: "./assets/vectors/emails.svg",
-                      iconActive: "./assets/vectors/emails.svg",
+                      iconActive: "./assets/vectors/emails-active.svg",
                       label: "Emails",
                       target: "sms",
                     },
@@ -203,7 +204,7 @@ const Converstaions = () => {
                     {videoCallActiveState && (
                       <div className="video-call-container">
                         <img
-                          src="./assets/vectors/video-call.svg"
+                          src="./assets/img/video-call.png"
                           alt="video-call"
                         />
                       </div>
@@ -226,11 +227,15 @@ const Converstaions = () => {
                       <div>
                         <div className="menu">
                           {videoCallActiveState ? (
-                            <img
-                              src="./assets/vectors/horizontal-menu.svg"
-                              alt="menu"
+                            <div
+                              className="menu-container"
                               onClick={() => setVideoCallActiveState(false)}
-                            />
+                            >
+                              <img
+                                src="./assets/vectors/horizontal-menu.svg"
+                                alt="menu"
+                              />
+                            </div>
                           ) : (
                             <>
                               <img
