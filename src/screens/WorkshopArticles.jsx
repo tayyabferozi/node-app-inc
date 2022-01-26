@@ -1,5 +1,6 @@
 import React from "react";
 
+import FancyInput from "../components/FancyInput";
 import AddBtn from "../components/AddBtn";
 import Input from "../components/Input";
 import TabContents from "../components/TabContents";
@@ -146,11 +147,17 @@ const WorkshopArticles = () => {
           <div className="d-flex justify-content-end mt-4 mb-3">
             <AddBtn blue />
           </div>
-          <div className="articles-container">
-            <div className="article">
+          <div className="collapses-container">
+            <div className="collapse">
               <div className="head">
-                <div className="text">Service : Front Brake Change</div>
+                <div className="text-dark-3 text-lato fw-800 fs-12">
+                  Service: Front Back Change
+                </div>
+
                 <div className="options">
+                  <div className="btn p-0">
+                    <img src="./assets/vectors/bin-1.svg" alt="bin" />
+                  </div>
                   <div className="btn p-0">
                     <img
                       src="./assets/vectors/arrow-down-1.svg"
@@ -160,90 +167,182 @@ const WorkshopArticles = () => {
                 </div>
               </div>
               <div className="body">
-                <div className="article-section">
+                <div className="collapse-section">
                   <div className="container-fluid px-0">
                     <div className="row">
                       <div className="col-6">
-                        <div className="article-item title">
-                          <div className="head-text">
-                            <img src="./assets/vectors/cart.svg" alt="cart" />
-                            Front Pad
-                          </div>
-                        </div>
+                        <FancyInput
+                          icon="./assets/vectors/cart.svg"
+                          prominantBlue
+                          mdPaddingBottom
+                          sMargin
+                          label="&nbsp;"
+                          id="pad"
+                          name="pad"
+                          placeholder="Start typing..."
+                          value="Front Pad"
+                        />
                       </div>
                       <div className="col-6">
-                        <div className="article-item">
-                          <div className="title">SKU</div>
-                          <div className="text">873244424343-32</div>
-                        </div>
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="sku"
+                          name="sku"
+                          label="SKU"
+                          placeholder="Start typing..."
+                          value="873244424343-32"
+                        />
                       </div>
                       <div className="col-6 col-sm-3">
-                        <div className="article-item">
-                          <div className="title">Quantity</div>
-                          <div className="text">2</div>
-                        </div>
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="quantity"
+                          name="quantity"
+                          label="Quantity"
+                          placeholder="Start typing..."
+                          value="2"
+                        />
                       </div>
                       <div className="col-6 col-sm-3">
-                        <div className="article-item">
-                          <div className="title">Availability</div>
-                          <div className="text text-light-5">76</div>
-                        </div>
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="availability"
+                          name="availability"
+                          label="Availability"
+                          placeholder="Start typing..."
+                          value="76"
+                          disabled
+                        />
                       </div>
                       <div className="col-6 col-sm-3">
-                        <div className="article-item">
-                          <div className="title">Unit Price</div>
-                          <div className="text">20.00%</div>
-                        </div>
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="price"
+                          name="price"
+                          label="Unit Price"
+                          placeholder="Start typing..."
+                          value="20.00%"
+                        />
                       </div>
                       <div className="col-6 col-sm-3">
-                        <div className="article-item">
-                          <div className="title">Categorie</div>
-                          <div className="text">BRAKE</div>
-                        </div>
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="price"
+                          name="price"
+                          label="Categorie"
+                          placeholder="Start typing..."
+                          value="BRAKE"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="article-section">
+                <div className="collapse-section">
                   <div className="container-fluid px-0">
                     <div className="row">
                       <div className="col-6">
-                        <div className="article-item title">
-                          <div className="head-text">
-                            <img src="./assets/vectors/cart.svg" alt="cart" />
-                            Front Brake Change with OP
-                          </div>
-                        </div>
+                        <FancyInput
+                          icon="./assets/vectors/cart.svg"
+                          prominantBlue
+                          mdPaddingBottom
+                          sMargin
+                          label="&nbsp;"
+                          id="pad"
+                          name="pad"
+                          placeholder="Start typing..."
+                          value="Front Brake Change with OP"
+                        />
                       </div>
                       <div className="col-6">
-                        <div className="article-item">
-                          <div className="title">SKU</div>
-                          <div className="text">L-FBC-OP</div>
-                        </div>
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="sku"
+                          name="sku"
+                          label="SKU"
+                          placeholder="Start typing..."
+                          value="L-FBC-OP"
+                        />
                       </div>
-                      <div className="col-sm-3 col-6">
-                        <div className="article-item">
-                          <div className="title">Quantity</div>
-                          <div className="text">1</div>
-                        </div>
+                      <div className="col-6 col-sm-3">
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="quantity"
+                          name="quantity"
+                          label="Quantity"
+                          placeholder="Start typing..."
+                          value="1"
+                        />
                       </div>
-                      <div className="col-sm-3 col-6">
-                        <div className="article-item">
-                          <div className="title">Availability</div>
-                          <div className="text text-light-5">NA</div>
-                        </div>
+                      <div className="col-6 col-sm-3">
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="availability"
+                          name="availability"
+                          label="Availability"
+                          placeholder="Start typing..."
+                          value="NA"
+                          disabled
+                        />
                       </div>
-                      <div className="col-sm-3 col-6">
-                        <div className="article-item">
-                          <div className="title">Unit Price</div>
-                          <div className="text">47.00$</div>
-                        </div>
+                      <div className="col-6 col-sm-3">
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="price"
+                          name="price"
+                          label="Unit Price"
+                          placeholder="Start typing..."
+                          value="47.00$"
+                        />
                       </div>
-                      <div className="col-sm-3 col-6">
-                        <div className="article-item">
-                          <div className="title">Categorie</div>
-                          <div className="text">LABOUR</div>
-                        </div>
+                      <div className="col-6 col-sm-3">
+                        <FancyInput
+                          prominant
+                          lightLabel
+                          thinlabel
+                          mdPaddingBottom
+                          sMargin
+                          id="price"
+                          name="price"
+                          label="Categorie"
+                          placeholder="Start typing..."
+                          value="LABOR"
+                        />
                       </div>
                     </div>
                   </div>
@@ -262,10 +361,13 @@ const WorkshopArticles = () => {
                 </div>
               </div>
             </div>
-            <div className="article">
+            <div className="collapse closed">
               <div className="head">
                 <div className="text">Service : Front Brake Change</div>
                 <div className="options">
+                  <div className="btn p-0">
+                    <img src="./assets/vectors/bin-1.svg" alt="bin" />
+                  </div>
                   <div className="btn p-0">
                     <img
                       src="./assets/vectors/arrow-down-1.svg"
@@ -275,10 +377,13 @@ const WorkshopArticles = () => {
                 </div>
               </div>
             </div>
-            <div className="article">
+            <div className="collapse closed">
               <div className="head">
                 <div className="text">Service : Front Brake Change</div>
                 <div className="options">
+                  <div className="btn p-0">
+                    <img src="./assets/vectors/bin-1.svg" alt="bin" />
+                  </div>
                   <div className="btn p-0">
                     <img
                       src="./assets/vectors/arrow-down-1.svg"

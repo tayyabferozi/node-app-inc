@@ -1346,50 +1346,6 @@ button {
   border-bottom: 1px solid #e9ebf0;
 }
 
-.finances-invoice-main-content .collapse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 15px;
-}
-
-.finances-invoice-main-content .collapse .collapse-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px 18px;
-  background-color: rgba(125, 133, 154, 0.04);
-  border-radius: 8px;
-}
-
-.finances-invoice-main-content .collapse .update-btn {
-  padding: 8px 22px;
-  border-radius: 25px;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .finances-invoice-main-content .user-address {
   max-width: 176px;
   padding-bottom: 21px;
@@ -2960,55 +2916,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#workshop-forms-main-content .articles-container .article {
-  margin-bottom: 30px;
-}
-
-#workshop-forms-main-content .articles-container .article .head {
-  background: rgba(49, 66, 109, 0.04);
-  padding: 10px 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-family: "lato", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-#workshop-forms-main-content .articles-container .article .body .article-section .article-item {
-  padding: 10px 0 14px;
-  margin-bottom: 6px;
-  border-bottom: 1px solid #f2f2f2;
-  height: 100%;
-}
-
-#workshop-forms-main-content .articles-container .article .body .article-section .article-item.title .head-text {
-  color: #1e55a9;
-  font-weight: 600;
-  margin-top: 26px;
-}
-
-#workshop-forms-main-content .articles-container .article .body .article-section .article-item.title .head-text img {
-  margin-right: 1rem;
-}
-
-#workshop-forms-main-content .articles-container .article .body .article-section .article-item .title {
-  font-family: "manrope", sans-serif;
-  color: #9c9c9c;
-  margin-bottom: 0.5rem;
-}
-
-#workshop-forms-main-content .articles-container .article .body .article-section .article-item .text {
-  font-weight: 600;
-}
-
-#workshop-forms-main-content .articles-container .article .foot {
-  margin-top: 20px;
 }
 
 #workshop-forms-main-content .noded-container .noded-item {

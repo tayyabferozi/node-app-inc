@@ -256,148 +256,247 @@ const FinancesIncome = () => {
           <div className="container-fluid">
             <div className="row gx-0 py-5">
               <div className="col-12 col-lg-7">
-                <div className="collapse">
-                  <div className="collapse-header">
-                    <div className="text-dark-3 text-lato fw-800 fs-12">
-                      Service: Front Back Change
+                <div className="collapses-container">
+                  <div className="collapse">
+                    <div className="head">
+                      <div className="text-dark-3 text-lato fw-800 fs-12">
+                        Service: Front Back Change
+                      </div>
+
+                      <div className="options">
+                        <div className="btn p-0">
+                          <img
+                            src="./assets/vectors/arrow-down-1.svg"
+                            alt="arrow-down"
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <img src="./assets/vectors/arrow-down.svg" alt="arrow" />
-                  </div>
-                  <div className="collapse-body">
-                    <div className="row">
-                      <div className="col-6 d-flex align-items-end">
-                        <FancyInput
-                          label=" "
-                          value="Front Pad"
-                          disabled
-                          inputClassName="text-blue"
-                          onChange={() => {}}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <FancyInput
-                          label="SKU"
-                          value="873244424343-32"
-                          onChange={() => {}}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <div className="row">
-                          <div className="col-6">
-                            <FancyInput
-                              label="Quantity"
-                              value="2"
-                              onChange={() => {}}
-                            />
-                          </div>
-                          <div className="col-6">
-                            <FancyInput
-                              label="Amount"
-                              value="76"
-                              inputClassName="text-light-5"
-                              disabled
-                              onChange={() => {}}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div className="row">
-                          <div className="col-6">
-                            <FancyInput
-                              label="Unit Price"
-                              value="20.00$"
-                              onChange={() => {}}
-                            />
-                          </div>
-                          <div className="col-6">
-                            <FancyInput
-                              label="Categorie"
-                              value="BRAKE"
-                              onChange={() => {}}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-6 d-flex-align-items-end">
-                        <FancyInput
-                          label=""
-                          value="Front Brake Change with OP"
-                          disabled
-                          inputClassName="text-blue"
-                          onChange={() => {}}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <FancyInput
-                          label="SKU"
-                          value="L-FBC-OP"
-                          onChange={() => {}}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <div className="row">
-                          <div className="col-6">
-                            <FancyInput
-                              label="Quantity"
-                              value="1"
-                              onChange={() => {}}
-                            />
-                          </div>
-                          <div className="col-6">
-                            <FancyInput
-                              label="Amount"
-                              value="N/A"
-                              inputClassName="text-light-5"
-                              disabled
-                              onChange={() => {}}
-                            />
+                    <div className="body">
+                      <div className="collapse-section">
+                        <div className="container-fluid px-0">
+                          <div className="row">
+                            <div className="col-6">
+                              <FancyInput
+                                vector="./assets/vectors/cart.svg"
+                                prominantBlue
+                                mdPaddingBottom
+                                sMargin
+                                label="&nbsp;"
+                                id="pad"
+                                name="pad"
+                                placeholder="Start typing..."
+                                value="Front Pad"
+                              />
+                            </div>
+                            <div className="col-6">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="sku"
+                                name="sku"
+                                label="SKU"
+                                placeholder="Start typing..."
+                                value="873244424343-32"
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="quantity"
+                                name="quantity"
+                                label="Quantity"
+                                placeholder="Start typing..."
+                                value="2"
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="availability"
+                                name="availability"
+                                label="Availability"
+                                placeholder="Start typing..."
+                                value="76"
+                                disabled
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="price"
+                                name="price"
+                                label="Unit Price"
+                                placeholder="Start typing..."
+                                value="20.00%"
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="price"
+                                name="price"
+                                label="Categorie"
+                                placeholder="Start typing..."
+                                value="BRAKE"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div className="col-6">
-                        <div className="row">
-                          <div className="col-6">
-                            <FancyInput
-                              label="Unit Price"
-                              value="47.00$"
-                              onChange={() => {}}
-                            />
-                          </div>
-                          <div className="col-6">
-                            <FancyInput
-                              label="Categorie"
-                              value="LABOR"
-                              onChange={() => {}}
-                            />
+                      <div className="collapse-section">
+                        <div className="container-fluid px-0">
+                          <div className="row">
+                            <div className="col-6">
+                              <FancyInput
+                                vector="./assets/vectors/cart.svg"
+                                prominantBlue
+                                mdPaddingBottom
+                                sMargin
+                                label="&nbsp;"
+                                id="pad"
+                                name="pad"
+                                placeholder="Start typing..."
+                                value="Front Brake Change with OP"
+                              />
+                            </div>
+                            <div className="col-6">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="sku"
+                                name="sku"
+                                label="SKU"
+                                placeholder="Start typing..."
+                                value="L-FBC-OP"
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="quantity"
+                                name="quantity"
+                                label="Quantity"
+                                placeholder="Start typing..."
+                                value="1"
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="availability"
+                                name="availability"
+                                label="Availability"
+                                placeholder="Start typing..."
+                                value="NA"
+                                disabled
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="price"
+                                name="price"
+                                label="Unit Price"
+                                placeholder="Start typing..."
+                                value="47.00$"
+                              />
+                            </div>
+                            <div className="col-6 col-sm-3">
+                              <FancyInput
+                                prominant
+                                lightLabel
+                                thinlabel
+                                mdPaddingBottom
+                                sMargin
+                                id="price"
+                                name="price"
+                                label="Categorie"
+                                placeholder="Start typing..."
+                                value="LABOR"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div className="col-12 d-flex justify-content-end align-items-center">
-                        <button className="btn btn-dark update-btn">
-                          <img src="./assets/vectors/update.svg" alt="update" />
+                    </div>
+                    <div className="foot">
+                      <div className="d-flex justify-content-end">
+                        <div className="btn btn-dark btn-update">
+                          <img
+                            className="update"
+                            src="./assets/vectors/update-2.svg"
+                            alt="update"
+                          />
                           Update
-                        </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="collapse closed">
+                    <div className="head">
+                      <div className="text">Unit : Oil - (1L) 5W30 Syn.</div>
+
+                      <div className="options">
+                        <div className="btn p-0">
+                          <img
+                            src="./assets/vectors/arrow-down-1.svg"
+                            alt="arrow-down"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="collapse closed">
+                    <div className="head">
+                      <div className="text">Unit : 7C Battery</div>
+
+                      <div className="options">
+                        <div className="btn p-0">
+                          <img
+                            src="./assets/vectors/arrow-down-1.svg"
+                            alt="arrow-down"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="collapse">
-                  <div className="collapse-header">
-                    <div className="text-dark-3 text-lato fw-800 fs-12">
-                      Unit : Oil - (1L) 5W30 Syn.
-                    </div>
-                    <img src="./assets/vectors/arrow-right.svg" alt="arrow" />
-                  </div>
-                </div>
-                <div className="collapse">
-                  <div className="collapse-header">
-                    <div className="text-dark-3 text-lato fw-800 fs-12">
-                      Unit : 7C Battery
-                    </div>
-                    <img src="./assets/vectors/arrow-right.svg" alt="arrow" />
-                  </div>
-                </div>
+
                 <div className="row pt-5 gx-0">
                   <div className="col-12 d-flex gap-3">
                     <button className={`btn padding btn-add`}>

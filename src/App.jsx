@@ -16,6 +16,7 @@ import Settings2 from "./screens/Settings2";
 import Settings3 from "./screens/Settings3";
 import Settings4 from "./screens/Settings4";
 import WorkshopRealtime from "./screens/WorkshopRealtime";
+import WorkshopAppointment from "./screens/WorkshopAppointment";
 import WorkshopRequests from "./screens/WorkshopRequests";
 import WorkshopStorage from "./screens/WorkshopStorage";
 import WorkshopArticles from "./screens/WorkshopArticles";
@@ -56,6 +57,10 @@ function App() {
           <Route path="/users" element={<Settings3 />} />
           <Route path="/billing" element={<Settings4 />} />
           <Route path="/workshop-realtime" element={<WorkshopRealtime />} />
+          <Route
+            path="/workshop-appointment"
+            element={<WorkshopAppointment />}
+          />
           <Route path="/workshop-requests" element={<WorkshopRequests />} />
           <Route path="/workshop-storage" element={<WorkshopStorage />} />
           <Route path="/workshop-articles" element={<WorkshopArticles />} />

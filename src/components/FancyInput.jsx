@@ -1,7 +1,9 @@
 const FancyInput = ({
   id,
+  vector,
   label,
   lightLabel,
+  thinlabel,
   value,
   icon,
   alt,
@@ -30,7 +32,12 @@ const FancyInput = ({
         rootClassName ? " " + rootClassName : ""
       }`}
     >
-      <label className={lightLabel ? `text-light-5` : ""} htmlFor={id}>
+      <label
+        className={`${lightLabel ? " text-light-5" : ""}${
+          thinlabel ? " fw-400 text-manrope" : ""
+        }`}
+        htmlFor={id}
+      >
         {label}
       </label>
       <div className="input">
@@ -62,16 +69,18 @@ const FancyInput = ({
             alt="add"
           />
         ) : (
-          <input
-            {...rest}
-            className={`custom-input${
-              inputClassName ? " " + inputClassName : ""
-            }`}
-            type={type || "text"}
-            id={id}
-            value={value}
-            placeholder={placeholder || ""}
-          />
+          <>
+            <input
+              {...rest}
+              className={`custom-input${
+                inputClassName ? " " + inputClassName : ""
+              }`}
+              type={type || "text"}
+              id={id}
+              value={value}
+              placeholder={placeholder || ""}
+            />
+          </>
         )}
         {icon && <img className="icon" src={`./assets/${icon}`} alt={alt} />}
       </div>
