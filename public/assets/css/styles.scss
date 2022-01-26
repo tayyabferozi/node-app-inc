@@ -2384,12 +2384,13 @@ button {
       margin-top: 30px;
 
       .card-wrap {
+        margin-bottom: 5px;
+
         .card {
           background: #fff;
           padding: 18px 20px;
           border-radius: 12px;
           border: 1px solid $color65;
-          margin-bottom: 5px;
           box-shadow: 0 3px 2px rgba(0, 0, 0, 0.05);
 
           .card-head {
@@ -2482,6 +2483,10 @@ button {
 
           .card {
             transform: translate(8rem, -0.5rem);
+
+            @media screen and (max-width: 767px) {
+              transform: translate(0.5rem, -0.75rem);
+            }
           }
         }
       }
@@ -2519,7 +2524,7 @@ button {
       }
     }
 
-    .in-progress {
+    .done {
       .section-title {
         color: $color31;
       }
@@ -2551,7 +2556,7 @@ button {
       }
     }
 
-    .done {
+    .in-progress {
       .section-title {
         color: $color63;
       }

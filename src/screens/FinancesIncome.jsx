@@ -410,8 +410,8 @@ const FinancesIncome = () => {
                 </div>
               </div>
               <div className="col-0 col-lg-1"></div>
-              <div className="col-12 col-lg-4 py-5 py-lg-0 px-5">
-                <div className="row px-5">
+              <div className="col-12 col-lg-4 py-5 py-lg-0 px-xxl-5">
+                <div className="row px-xxl-4">
                   <div className="col-12">
                     <div
                       className="circle circle-large"
@@ -501,7 +501,7 @@ const FinancesIncome = () => {
                       <div className="col-6 pb-3 text-dark-4 text-manrope fw-800 fs-14">
                         Total
                       </div>
-                      <div className="col-6 pb-3 text-dark-4 text-manrope fs-14 d-flex justify-content-end">
+                      <div className="col-6 pb-3 text-dark-4 text-manrope fw-800 fs-14 d-flex justify-content-end">
                         114.98$
                       </div>
                     </div>

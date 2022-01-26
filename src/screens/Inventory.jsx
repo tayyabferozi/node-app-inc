@@ -282,7 +282,9 @@ const Inventory = () => {
                             <img src="./assets/img/inventory-1.png" alt="" />
                             <div className="name">
                               <div className="title">{data.name}</div>
-                              <div className="caption">{data.number}</div>
+                              <div className="caption text-light-5">
+                                {data.number}
+                              </div>
                             </div>
                           </div>
                           <div className="col-3">

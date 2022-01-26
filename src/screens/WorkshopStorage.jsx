@@ -85,7 +85,7 @@ const WorkshopStorage = () => {
                     },
                   ].map((el, idx) => {
                     return (
-                      <div className="col-4">
+                      <div className="col-sm-4">
                         <Link to="/workshop-articles" className="location-card">
                           <div className="qr-container">
                             <img

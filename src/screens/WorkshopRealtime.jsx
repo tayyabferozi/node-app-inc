@@ -25,7 +25,7 @@ const WorkshopRealtime = () => {
               />
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-6 col-lg-4">
             <div className="next-up">
               <h3 className="section-title">Next Up</h3>
               <RealtimeCards
@@ -69,7 +69,7 @@ const WorkshopRealtime = () => {
               />
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-6 col-lg-4">
             <div className="in-progress">
               <h3 className="section-title">In Progress</h3>
               <RealtimeCards
@@ -102,7 +102,7 @@ const WorkshopRealtime = () => {
               />
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-6 col-lg-4">
             <div className="done">
               <h3 className="section-title">Done</h3>
               <RealtimeCards
