@@ -44,6 +44,12 @@ h5.sub-title {
   font-weight: 400;
 }
 
+h5.sus-evidence-word {
+  font-weight: 200;
+  font-family: "manrope", sans-serif;
+  font-size: 20px;
+}
+
 .progress-sub {
   margin-bottom: 14px;
 }
@@ -228,7 +234,7 @@ button,
 }
 
 .text-dark-4 {
-  color: #1c1d21;
+  color: #1c1d21 !important;
 }
 
 .text-dark-5 {
@@ -299,7 +305,7 @@ button,
 .text-small,
 .text-x-small,
 .text-xx-small {
-  font-family: "Manrope", sans-serif;
+  font-family: "manrope", sans-serif;
   font-size: 12px;
   color: #9c9c9c;
   font-weight: 400;
@@ -307,6 +313,10 @@ button,
 
 .text-x-small {
   font-size: 10px;
+}
+
+.text-x-small.dark {
+  color: #3e4244;
 }
 
 .text-xx-small {
@@ -544,9 +554,8 @@ button,
   font-weight: 900;
 }
 
-.btn.btn-add.blue {
+.btn.btn-add.black, .btn.btn-add.blue {
   color: #fff;
-  background-color: #1e55a9;
   font-family: "poppins", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -560,6 +569,14 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.btn.btn-add.black {
+  background-color: #3e4244;
+}
+
+.btn.btn-add.blue {
+  background-color: #1e55a9;
 }
 
 .btn.btn-update {
@@ -1282,13 +1299,25 @@ button,
   position: relative;
 }
 
-.custom-form-control .input input {
+.custom-form-control .input input,
+.custom-form-control .input select {
   font-weight: 600;
   padding: 0.25rem 0 0.5rem;
   border: 0;
   border-bottom: 1px solid #f2f2f2;
   width: 100%;
   outline: none;
+}
+
+.custom-form-control .input select {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background: url(../vectors/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: 100% center;
 }
 
 .custom-form-control .input img.icon {
@@ -1384,6 +1413,76 @@ button,
 .custom-form-control.normalized .input img.icon {
   left: 1rem;
   right: unset;
+}
+
+.custom-form-control.prominant label {
+  font-weight: 600;
+}
+
+.custom-form-control.prominant .custom-input {
+  font-family: "manrope", sans-serif;
+  font-size: 14px;
+}
+
+.custom-form-control.prominant .custom-input::-webkit-input-placeholder {
+  font-weight: 300;
+}
+
+.custom-form-control.prominant .custom-input:-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.custom-form-control.prominant .custom-input::-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.custom-form-control.prominant .custom-input::placeholder {
+  font-weight: 300;
+}
+
+.custom-form-control.prominant .add-placeholder {
+  margin-top: 0.5rem;
+}
+
+.custom-form-control.prominant-blue label {
+  font-weight: 400;
+  font-family: "manrope", sans-serif;
+  font-size: 10px;
+}
+
+.custom-form-control.prominant-blue .custom-input {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e55a9;
+}
+
+.custom-form-control.prominant-blue select {
+  background-image: url(../vectors/arrow-down-blue.svg);
+}
+
+.custom-form-control.md-padding-bottom .custom-input, .custom-form-control.large-padding-bottom .custom-input {
+  padding-top: 4px;
+}
+
+.custom-form-control.large-padding-bottom .custom-input {
+  padding-bottom: 30px;
+}
+
+.custom-form-control.md-padding-bottom .custom-input {
+  padding-bottom: 18px;
+}
+
+.custom-form-control.s-margin {
+  margin: 0.5rem 0;
+}
+
+.custom-form-control.small label {
+  font-size: 12px;
+}
+
+.custom-form-control.small .add-placeholder {
+  width: 40px;
+  height: 40px;
 }
 
 .with-toggler input.custom-input,
@@ -1807,6 +1906,82 @@ button,
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.checkbox-container-4 .text {
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container-4 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-container-4 .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #bdbdbd;
+  border-radius: 2px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* On mouse-over, add a grey background color */
+/* When the checkbox is checked, add a blue background */
+.checkbox-container-4 input:checked ~ .checkmark {
+  background-color: #00ca72;
+  border-color: #00ca72;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container-4 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.checkbox-container-4 input:checked ~ .text {
+  text-decoration: line-through;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container-4 input:checked ~ .checkmark:after {
+  border-color: #fff;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container-4 .checkmark:after {
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 6px;
+  border: solid #bdbdbd;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: translate(-50%, 0) rotate(45deg);
+          transform: translate(-50%, 0) rotate(45deg);
 }
 
 .card {
@@ -2253,5 +2428,114 @@ input[type="checkbox"] {
 
 textarea {
   resize: none;
+}
+
+.custom-modal {
+  max-width: 622px;
+  max-height: 100%;
+  position: fixed;
+  background: #fff;
+  -webkit-box-shadow: 0 6px 16px rgba(153, 155, 168, 0.1);
+          box-shadow: 0 6px 16px rgba(153, 155, 168, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+.custom-modal > * {
+  padding: 35px 30px 0;
+}
+
+.custom-modal .modal-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 575px) {
+  .custom-modal .modal-head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.custom-modal .modal-head .custom-form-control {
+  margin: 0;
+}
+
+.custom-modal .modal-head .title,
+.custom-modal .main-title {
+  font-size: 26px;
+  color: #1e55a9;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.custom-modal .modal-body {
+  min-height: 261px;
+  padding-bottom: 35px;
+}
+
+.custom-modal .modal-foot {
+  padding: 16px 28px;
+  background: rgba(30, 85, 169, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.custom-modal .modal-foot .btn {
+  line-height: 1;
+}
+
+.tag {
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.tag.pink {
+  background: rgba(255, 128, 139, 0.08);
+  color: #eca0a0;
+}
+
+.vector-img-container {
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  background: rgba(30, 85, 169, 0.08);
+}
+
+input {
+  outline: none;
 }
 /*# sourceMappingURL=utilities.css.map */

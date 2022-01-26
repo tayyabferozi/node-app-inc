@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddBtn from "../components/AddBtn";
 import ExploreNavItemWithIcon from "../components/ExploreNavItemWithIcon";
 import SearchInput from "../components/SearchInput";
-import SignupInput from "../components/SignupInput";
+import FancyInput from "../components/FancyInput";
 import Tabs from "../components/Tabs";
 import MainLayout from "../layouts/MainLayout";
 
@@ -266,7 +266,7 @@ const FinancesIncome = () => {
                   <div className="collapse-body">
                     <div className="row">
                       <div className="col-6 d-flex align-items-end">
-                        <SignupInput
+                        <FancyInput
                           label=" "
                           value="Front Pad"
                           disabled
@@ -275,7 +275,7 @@ const FinancesIncome = () => {
                         />
                       </div>
                       <div className="col-6">
-                        <SignupInput
+                        <FancyInput
                           label="SKU"
                           value="873244424343-32"
                           onChange={() => {}}
@@ -284,14 +284,14 @@ const FinancesIncome = () => {
                       <div className="col-6">
                         <div className="row">
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Quantity"
                               value="2"
                               onChange={() => {}}
                             />
                           </div>
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Amount"
                               value="76"
                               inputClassName="text-light-5"
@@ -304,14 +304,14 @@ const FinancesIncome = () => {
                       <div className="col-6">
                         <div className="row">
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Unit Price"
                               value="20.00$"
                               onChange={() => {}}
                             />
                           </div>
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Categorie"
                               value="BRAKE"
                               onChange={() => {}}
@@ -320,7 +320,7 @@ const FinancesIncome = () => {
                         </div>
                       </div>
                       <div className="col-6 d-flex-align-items-end">
-                        <SignupInput
+                        <FancyInput
                           label=""
                           value="Front Brake Change with OP"
                           disabled
@@ -329,7 +329,7 @@ const FinancesIncome = () => {
                         />
                       </div>
                       <div className="col-6">
-                        <SignupInput
+                        <FancyInput
                           label="SKU"
                           value="L-FBC-OP"
                           onChange={() => {}}
@@ -338,14 +338,14 @@ const FinancesIncome = () => {
                       <div className="col-6">
                         <div className="row">
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Quantity"
                               value="1"
                               onChange={() => {}}
                             />
                           </div>
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Amount"
                               value="N/A"
                               inputClassName="text-light-5"
@@ -358,14 +358,14 @@ const FinancesIncome = () => {
                       <div className="col-6">
                         <div className="row">
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Unit Price"
                               value="47.00$"
                               onChange={() => {}}
                             />
                           </div>
                           <div className="col-6">
-                            <SignupInput
+                            <FancyInput
                               label="Categorie"
                               value="LABOR"
                               onChange={() => {}}

@@ -10,7 +10,6 @@ import React from "react";
 //   Tooltip,
 // } from "chart.js";
 import MainLayout from "../layouts/MainLayout";
-import Performances from "../components/Performances";
 
 // ChartJS.register(
 //   Tooltip,

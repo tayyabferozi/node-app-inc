@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AuthLayout from "../layouts/AuthLayout";
-import SignupInput from "../components/SignupInput";
+import FancyInput from "../components/FancyInput";
 
 const SignUp = () => {
   const [formState, setFormState] = useState({
@@ -26,7 +26,8 @@ const SignUp = () => {
       <p className="text-light-1 mt-3">Enter your details to proceed further</p>
 
       <form action="" className="form">
-        <SignupInput
+        <FancyInput
+          lightLabel
           icon="vectors/mail.svg"
           id="email"
           name="email"
@@ -35,7 +36,8 @@ const SignUp = () => {
           value={formState.email}
           onChange={inputChangeHandler}
         />
-        <SignupInput
+        <FancyInput
+          lightLabel
           icon="vectors/lock.svg"
           id="password"
           name="password"

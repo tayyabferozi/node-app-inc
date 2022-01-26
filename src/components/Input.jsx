@@ -2,8 +2,10 @@ import Switch from "./Switch";
 
 const Input = ({
   checkbox,
+  greenCheckbox,
   radio,
   select,
+  defaultChecked,
   options,
   textArea,
   fileUpload,
@@ -45,9 +47,24 @@ const Input = ({
                 const { text } = el;
 
                 return (
-                  <label key={name + idx} className="checkbox-container-3">
-                    {text}
-                    <input name={name} type="checkbox" />
+                  <label
+                    key={name + idx}
+                    className={
+                      greenCheckbox
+                        ? "checkbox-container-4"
+                        : "checkbox-container-3"
+                    }
+                  >
+                    {greenCheckbox ? (
+                      <span className="text">{text}</span>
+                    ) : (
+                      { text }
+                    )}
+                    <input
+                      name={name}
+                      type="checkbox"
+                      defaultChecked={defaultChecked}
+                    />
                     <span className="checkmark"></span>
                   </label>
                 );

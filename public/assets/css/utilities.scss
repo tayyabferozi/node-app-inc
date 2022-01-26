@@ -44,6 +44,12 @@ h5.sub-title {
   font-weight: 400;
 }
 
+h5.sus-evidence-word {
+  font-weight: 200;
+  font-family: "manrope", sans-serif;
+  font-size: 20px;
+}
+
 .progress-sub {
   &,
   * {
@@ -228,7 +234,7 @@ button,
 }
 
 .text-dark-4 {
-  color: $color1;
+  color: $color1 !important;
 }
 
 .text-dark-5 {
@@ -299,7 +305,7 @@ button,
 .text-small,
 .text-x-small,
 .text-xx-small {
-  font-family: "Manrope", sans-serif;
+  font-family: "manrope", sans-serif;
   font-size: 12px;
   color: $color2;
   font-weight: 400;
@@ -307,6 +313,10 @@ button,
 
 .text-x-small {
   font-size: 10px;
+
+  &.dark {
+    color: $color3;
+  }
 }
 
 .text-xx-small {
@@ -530,9 +540,9 @@ button,
     font-family: "Lato", sans-serif;
     font-weight: 900;
 
+    &.black,
     &.blue {
       color: #fff;
-      background-color: $color4;
       font-family: "poppins", sans-serif;
       font-weight: 600;
       font-size: 14px;
@@ -542,6 +552,14 @@ button,
       height: 26px;
       display: flex;
       align-items: center;
+    }
+
+    &.black {
+      background-color: $color3;
+    }
+
+    &.blue {
+      background-color: $color4;
     }
   }
 
@@ -1144,13 +1162,23 @@ button,
   .input {
     position: relative;
 
-    input {
+    input,
+    select {
       font-weight: 600;
       padding: 0.25rem 0 0.5rem;
       border: 0;
       border-bottom: 1px solid $color5;
       width: 100%;
       outline: none;
+    }
+
+    select {
+      -moz-appearance: none; /* Firefox */
+      -webkit-appearance: none; /* Safari and Chrome */
+      appearance: none;
+      background: url(../vectors/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-position: 100% center;
     }
 
     img.icon {
@@ -1221,6 +1249,80 @@ button,
         left: 1rem;
         right: unset;
       }
+    }
+  }
+
+  &.prominant {
+    label {
+      font-weight: 600;
+    }
+
+    .custom-input {
+      font-family: "manrope", sans-serif;
+      font-size: 14px;
+
+      &::placeholder {
+        font-weight: 300;
+      }
+    }
+
+    .add-placeholder {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &.prominant-blue {
+    label {
+      font-weight: 400;
+      font-family: "manrope", sans-serif;
+      font-size: 10px;
+    }
+
+    .custom-input {
+      font-weight: 600;
+      font-size: 14px;
+      color: $color4;
+
+      &::placeholder {
+      }
+    }
+
+    select {
+      background-image: url(../vectors/arrow-down-blue.svg);
+    }
+  }
+
+  &.md-padding-bottom,
+  &.large-padding-bottom {
+    .custom-input {
+      padding-top: 4px;
+    }
+  }
+
+  &.large-padding-bottom {
+    .custom-input {
+      padding-bottom: 30px;
+    }
+  }
+
+  &.md-padding-bottom {
+    .custom-input {
+      padding-bottom: 18px;
+    }
+  }
+
+  &.s-margin {
+    margin: 0.5rem 0;
+  }
+
+  &.small {
+    label {
+      font-size: 12px;
+    }
+
+    .add-placeholder {
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -1641,6 +1743,84 @@ button,
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.checkbox-container-4 .text {
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container-4 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-container-4 .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  border: 2px solid $color81;
+  border-radius: 2px;
+  transition: 0.4s ease;
+  transform: translateY(-50%);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container-4:hover input ~ .checkmark {
+  // background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.checkbox-container-4 input:checked ~ .checkmark {
+  background-color: $color82;
+  border-color: $color82;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container-4 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.checkbox-container-4 input:checked ~ .text {
+  text-decoration: line-through;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container-4 input:checked ~ .checkmark:after {
+  border-color: #fff;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container-4 .checkmark:after {
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 6px;
+  border: solid $color81;
+  border-width: 0 1px 1px 0;
+  transform: translate(-50%, 0) rotate(45deg);
 }
 
 .card {
@@ -2084,4 +2264,88 @@ input[type="checkbox"] {
 
 textarea {
   resize: none;
+}
+
+.custom-modal {
+  max-width: 622px;
+  max-height: 100%;
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 6px 16px $color75;
+  border-radius: 4px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+
+  & > * {
+    padding: 35px 30px 0;
+  }
+
+  .modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .custom-form-control {
+      margin: 0;
+    }
+  }
+
+  .modal-head .title,
+  .main-title {
+    font-size: 26px;
+    color: $color4;
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .modal-body {
+    min-height: 261px;
+    padding-bottom: 35px;
+  }
+
+  .modal-foot {
+    padding: 16px 28px;
+    background: $color15;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      line-height: 1;
+    }
+  }
+}
+
+.tag {
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: inline-block;
+  font-weight: 600;
+
+  &.pink {
+    background: $color78;
+    color: $color23;
+  }
+}
+
+.vector-img-container {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: $color15;
+}
+
+input {
+  outline: none;
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AuthLayout from "../layouts/AuthLayout";
-import SignupInput from "../components/SignupInput";
+import FancyInput from "../components/FancyInput";
 
 const SignUp = () => {
   const [formState, setFormState] = useState({
@@ -28,14 +28,16 @@ const SignUp = () => {
       <p className="text-light-1 mt-3">Enter your details to proceed further</p>
 
       <form action="" className="form">
-        <SignupInput
+        <FancyInput
+          lightLabel
           id="company"
           name="company"
           label="Company name"
           value={formState.company}
           onChange={inputChangeHandler}
         />
-        <SignupInput
+        <FancyInput
+          lightLabel
           id="employees"
           name="employees"
           label="Employees"
@@ -43,7 +45,8 @@ const SignUp = () => {
           value={formState.employees}
           onChange={inputChangeHandler}
         />
-        <SignupInput
+        <FancyInput
+          lightLabel
           id="enterprise"
           name="enterprise"
           label="Enterprise type"
@@ -51,7 +54,8 @@ const SignUp = () => {
           value={formState.enterprise}
           onChange={inputChangeHandler}
         />
-        <SignupInput
+        <FancyInput
+          lightLabel
           id="phone"
           name="phone"
           label="Phone"
