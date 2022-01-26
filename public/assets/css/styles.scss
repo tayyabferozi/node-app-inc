@@ -187,9 +187,6 @@ button {
     &.node-coin {
       margin-left: 7px;
 
-      .top-info {
-      }
-
       .tabs .tab {
         margin-left: 10px;
         margin-right: 10px;
@@ -344,15 +341,6 @@ button {
       .card {
         width: 157px;
         margin-bottom: 18px;
-      }
-    }
-
-    table {
-      td {
-        // @media screen and (max-width: 991px) {
-        //   padding-left: 0;
-        //   padding-right: 0;
-        // }
       }
     }
 
@@ -723,10 +711,6 @@ button {
       .item {
         padding: 12px 20px;
 
-        &.active {
-          // background-color: $color15;
-        }
-
         .img {
           width: 38px;
           height: 38px;
@@ -803,9 +787,6 @@ button {
         padding-left: 0;
       }
     }
-  }
-
-  .invoices-wrapper {
   }
 
   .invoices-main {
@@ -2775,9 +2756,6 @@ button {
                 border-radius: 4px;
               }
             }
-
-            &:nth-child(7) {
-            }
           }
         }
       }
@@ -3051,9 +3029,6 @@ button {
                 transform: translateY(-50%);
               }
             }
-
-            .time {
-            }
           }
 
           .right {
@@ -3289,9 +3264,6 @@ button {
         margin-top: 18px;
         display: flex;
         justify-content: space-between;
-
-        .head-left {
-        }
       }
 
       .bill-to {
@@ -3537,10 +3509,6 @@ button {
         }
 
         &.checked {
-          .checkbox-container-4 {
-            // text-decoration: line-through;
-          }
-
           .day {
             color: $color83;
           }
