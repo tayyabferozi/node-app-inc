@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
@@ -139,6 +139,37 @@ const WorkshopFormLayout = ({ children }) => {
                           B-7C-9762
                         </div>
                         <div className="fw-600 text-blue">x1</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="details-foot">
+                  <div className="col-12">
+                    <div className="row px-3 pt-4">
+                      <div className="col-6 pb-3 text-dark-4 text-manrope fw-800 fs-12">
+                        Subtotal
+                      </div>
+                      <div className="col-6 pb-3 text-dark-4 text-manrope fs-12 d-flex justify-content-end">
+                        100.00$
+                      </div>
+                      <div className="col-6 text-dark-4 text-manrope fw-800 fs-12">
+                        TPS
+                      </div>
+                      <div className="col-6 text-dark-4 text-manrope fs-12 d-flex justify-content-end">
+                        5.00$
+                      </div>
+                      <div className="col-6 pb-3 text-dark-4 text-manrope fw-800 fs-12">
+                        TVQ
+                      </div>
+                      <div className="col-6 pb-3 text-dark-4 text-manrope fs-12 d-flex justify-content-end">
+                        9.98$
+                      </div>
+                      <div className="col-6 pb-3 text-dark-4 text-manrope fw-800 fs-14">
+                        Total
+                      </div>
+                      <div className="col-6 pb-3 text-dark-4 text-manrope fw-800 fs-14 d-flex justify-content-end">
+                        114.98$
                       </div>
                     </div>
                   </div>

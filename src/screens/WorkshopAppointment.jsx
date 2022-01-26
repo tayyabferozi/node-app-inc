@@ -18,9 +18,76 @@ const WorkshopAppointment = () => {
         </div>
 
         <div className="week-load">
-          <h3 className="section-title">Week Load</h3>
-          <div className="text-label fs-10 text-light-5 lh-1 mt-1">
-            Click on the employee to see <br /> the details over a week
+          <div className="left">
+            <div className="ps-3">
+              <h3 className="section-title">Week Load</h3>
+              <div className="text-label fs-10 text-light-5 lh-1 mt-1">
+                Click on the employee to see <br /> the details over a week
+              </div>
+            </div>
+            <div className="selector">
+              <div className="d-flex align-items-center">
+                <div className="btn center-content p-0">
+                  <img src="./assets/vectors/arrow-left-blue.svg" alt="arrow" />
+                </div>
+                <div className="tag light-blue text-lato fw-700 mx-1">
+                  09-01 to 15-01
+                </div>
+                <div className="btn center-content p-0">
+                  <img
+                    src="./assets/vectors/arrow-right-blue.svg"
+                    alt="arrow"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="right">
+            <div className="load-main">
+              {[
+                {
+                  size: "two",
+                  number: 2,
+                  userImg: "./assets/img/chat-me.png",
+                },
+                {
+                  size: "two",
+                  number: 2,
+                  userImg: "./assets/img/chat-me.png",
+                },
+                {
+                  size: "four",
+                  number: 4,
+                  userImg: "./assets/img/chat-me.png",
+                },
+                {
+                  size: "two",
+                  number: 2,
+                  userImg: "./assets/img/chat-me.png",
+                },
+                {
+                  size: "one",
+                  number: 1,
+                  userImg: "./assets/img/chat-me.png",
+                },
+                {
+                  size: "two",
+                  number: 2,
+                  userImg: "./assets/img/chat-me.png",
+                },
+              ].map((el, idx) => {
+                const { size, number, userImg } = el;
+
+                return (
+                  <div key={"load-item" + idx} className="item">
+                    <div className={`number${size ? " " + size : ""}`}>
+                      <div className="text">{number}</div>
+                    </div>
+                    <img src={userImg} alt="" />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ const WorkshopArticles = () => {
 
       <TabContents tabGroupName="workshop-articles-tabs">
         <TabContentItem target="forms">
-          <div className="d-flex justify-content-between title-container mt-5">
+          <div className="d-flex justify-content-between title-container mt-4">
             <div className="title">
               <h3 className="section-title text-dark-1 d-flex align-items-center">
                 <img
@@ -172,7 +172,7 @@ const WorkshopArticles = () => {
                     <div className="row">
                       <div className="col-6">
                         <FancyInput
-                          icon="./assets/vectors/cart.svg"
+                          icon="vectors/cart.svg"
                           prominantBlue
                           mdPaddingBottom
                           sMargin
@@ -262,7 +262,7 @@ const WorkshopArticles = () => {
                     <div className="row">
                       <div className="col-6">
                         <FancyInput
-                          icon="./assets/vectors/cart.svg"
+                          icon="vectors/cart.svg"
                           prominantBlue
                           mdPaddingBottom
                           sMargin

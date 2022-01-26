@@ -62,7 +62,7 @@ const WorkshopNoded = () => {
             </div>
           </div>
 
-          <div className="d-flex justify-content-between mt-5">
+          <div className="d-flex justify-content-between mt-5 pt-5">
             <h3 className="section-title">Client</h3>
             <button className="btn btn-dark btn-update">
               <img

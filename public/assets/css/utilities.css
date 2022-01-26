@@ -481,6 +481,15 @@ button,
   transition: 0.4s ease;
 }
 
+.btn.center-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn.btn-primary {
   background: #4acbd3;
   color: #fff;
@@ -1990,6 +1999,76 @@ button,
           transform: translate(-50%, 0) rotate(45deg);
 }
 
+.checkbox-container-5 {
+  font-family: "manrope", sans-serif;
+  font-weight: 400;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 12px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container-5 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-container-5 .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 2px solid transparent;
+  background: #f0f3f3;
+  border-radius: 4px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* On mouse-over, add a grey background color */
+/* When the checkbox is checked, add a blue background */
+.checkbox-container-5 input:checked ~ .checkmark {
+  background-color: #1e55a9;
+  border-color: #1e55a9;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container-5 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container-5 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container-5 .checkmark:after {
+  left: 4px;
+  top: -1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .card {
   border-radius: 10px;
   padding: 30px 20px;
@@ -2525,6 +2604,11 @@ textarea {
   color: #eca0a0;
 }
 
+.tag.light-blue {
+  color: #1e55a9;
+  background: rgba(30, 85, 169, 0.08);
+}
+
 .vector-img-container {
   width: 48px;
   height: 48px;
@@ -2629,6 +2713,16 @@ input {
 
 .collapses-container .collapse .body .collapse-section .collapse-item .text {
   font-weight: 600;
+}
+
+.collapses-container .collapse .body .collapse-section .input .icon {
+  left: 0;
+  right: unset;
+  top: 14px;
+}
+
+.collapses-container .collapse .body .collapse-section .input .icon ~ input {
+  padding-left: 2rem;
 }
 
 .collapses-container .collapse .foot {

@@ -70,6 +70,9 @@ const FancyInput = ({
           />
         ) : (
           <>
+            {icon && (
+              <img className="icon" src={`./assets/${icon}`} alt={alt} />
+            )}
             <input
               {...rest}
               className={`custom-input${
@@ -82,7 +85,6 @@ const FancyInput = ({
             />
           </>
         )}
-        {icon && <img className="icon" src={`./assets/${icon}`} alt={alt} />}
       </div>
     </div>
   );

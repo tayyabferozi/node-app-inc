@@ -187,8 +187,8 @@ const FinancesExpense = () => {
             <div className="col-12">
               <Tabs
                 verticalButtons
-                tabClassName="mb-4 mb-sm-0"
-                className="mt-4 flex-column flex-sm-row w-100"
+                tabClassName=""
+                className="mt-4 w-100"
                 tabGroupName="finance-expense-tabs"
                 data={[
                   {
@@ -438,7 +438,7 @@ const FinancesExpense = () => {
                                   {data.lowPrice}$
                                 </div>
                               </div>
-                              <div className="col-2 d-flex justify-content-end pe-5">
+                              <div className="col-2 d-flex justify-content-end pe-5 chip-text-container">
                                 <div className="chip blue">
                                   <div className="chip-text">
                                     {data.chipName}

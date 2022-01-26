@@ -19,7 +19,7 @@ const WorkshopTabs = () => {
           target: "realtime",
         },
         {
-          to: "/workshop-appointment ",
+          to: "/workshop-appointment",
           icon: "./assets/vectors/appointment.svg",
           iconActive: "./assets/vectors/appointment-active.svg",
           label: "Appointment",

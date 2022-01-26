@@ -468,6 +468,11 @@ button,
     // }
   }
 
+  &.center-content {
+    display: flex;
+    align-items: center;
+  }
+
   &.btn-primary {
     background: $color6;
     color: #fff;
@@ -1832,6 +1837,79 @@ button,
   transform: translate(-50%, 0) rotate(45deg);
 }
 
+.checkbox-container-5 {
+  font-family: "manrope", sans-serif;
+  font-weight: 400;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 12px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container-5 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-container-5 .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 2px solid transparent;
+  background: $color35;
+  border-radius: 4px;
+  transition: 0.4s ease;
+  transform: translateY(-50%);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container-5:hover input ~ .checkmark {
+  // background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container-5 input:checked ~ .checkmark {
+  background-color: $color4;
+  border-color: $color4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container-5 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container-5 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container-5 .checkmark:after {
+  left: 4px;
+  top: -1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .card {
   border-radius: 10px;
   padding: 30px 20px;
@@ -2343,6 +2421,11 @@ textarea {
     background: $color78;
     color: $color23;
   }
+
+  &.light-blue {
+    color: $color4;
+    background: $color15;
+  }
 }
 
 .vector-img-container {
@@ -2432,6 +2515,21 @@ input {
 
           .text {
             font-weight: 600;
+          }
+        }
+
+        .input {
+          // input {
+          //   padding-left: 2rem;
+          // }
+          .icon {
+            left: 0;
+            right: unset;
+            top: 14px;
+          }
+
+          .icon ~ input {
+            padding-left: 2rem;
           }
         }
       }

@@ -117,7 +117,7 @@ const inventoryData = [
 ];
 
 const Inventory = () => {
-  const [serviceBrakeSelected, setServiceBrakeSelected] = useState(false);
+  const [serviceBrakeSelected, setServiceBrakeSelected] = useState(true);
   return (
     <MainLayout
       headVector="./assets/vectors/inventory.svg"
@@ -332,19 +332,20 @@ const Inventory = () => {
           </div>
         ) : (
           <div className="container-fluid service-brake">
-            <div className="row pt-5 gx-5">
+            <div className="row pt-5 gx-sm-5">
               <div className="col-12 col-lg-7 pt-2 pe-3">
                 <div className="row gx-0">
-                  <div className="col-12 d-flex justify-content-between align-items-center py-3 title">
+                  <div className="col-12 d-flex justify-content-between flex-sm-row flex-column align-items-sm-center align-items-start py-3 title">
                     <div className="service-brake-text">Service Brake</div>
-                    <div className="d-flex justify-content-center align-items-center gap-2 text-manrope">
-                      <input type="checkbox" name="" id="" />
+                    <label class="checkbox-container-5">
                       Available To Book
-                    </div>
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-sm-6">
                     <div className="custom-form-control my-3">
                       <label className="text-light-5 fs-14" htmlFor="">
                         Default Location
@@ -359,7 +360,7 @@ const Inventory = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-sm-6">
                     <div className="row">
                       <div className="col-6">
                         <div className="custom-form-control my-3">
@@ -376,7 +377,7 @@ const Inventory = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-6">
+                      <div className="col-sm-6">
                         <div className="custom-form-control my-3">
                           <label className="text-light-5 fs-14" htmlFor="">
                             Duration
@@ -393,7 +394,7 @@ const Inventory = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-sm-6">
                     <div className="custom-form-control my-3">
                       <label className="text-light-5 fs-14" htmlFor="">
                         Category
@@ -408,35 +409,35 @@ const Inventory = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-sm-6">
                     <div className="row">
                       <div className="col-4 d-flex flex-column align-items-start justify-content-end">
-                        <div className="fs-14 text-dark-3 text-bold text-poppins pb-2">
+                        <div className="fs-14 text-dark-3 fw-600 text-poppins pb-2">
                           Add Variant
                         </div>
-                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope text-bold box">
+                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box">
                           +
                         </div>
                       </div>
                       <div className="col-4 d-flex flex-column align-items-start justify-content-end">
-                        <div className="fs-14 text-dark-3 text-bold text-poppins pb-2">
+                        <div className="fs-14 text-dark-3 fw-600 text-poppins pb-2">
                           Node Form
                         </div>
-                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope text-bold box">
+                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box">
                           +
                         </div>
                       </div>
                       <div className="col-4 d-flex flex-column align-items-start justify-content-end">
-                        <div className="fs-14 text-dark-3 text-bold text-poppins pb-2">
+                        <div className="fs-14 text-dark-3 fw-600 text-poppins pb-2">
                           Schedule
                         </div>
-                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope text-bold box">
+                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box">
                           +
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-sm-6">
                     <div className="custom-form-control my-3">
                       <label className="text-light-5 fs-14" htmlFor="">
                         Type Of Service
@@ -451,7 +452,7 @@ const Inventory = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-sm-6">
                     <div className="row">
                       <div className="col-8">
                         <div className="custom-form-control my-3">
@@ -602,9 +603,9 @@ const Inventory = () => {
               <div className="col-12 col-lg-4 custom-border custom-rounded service-details">
                 <div className="row g-3 py-4 gap-3">
                   <div className="col-12">
-                    <div className="service-details-text pt-4 pb-2 text-dark-3 text-manrope text-bold fs-18">
+                    <h3 className="service-details-text pt-3 pb-2 section-title">
                       Service Details
-                    </div>
+                    </h3>
                   </div>
                   <div className="col-12">
                     <div className="row">

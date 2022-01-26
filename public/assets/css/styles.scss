@@ -1035,6 +1035,9 @@ button {
     color: $color3;
     font-family: "Manrope", sans-serif;
   }
+  .chip-text-container {
+    min-width: 142px;
+  }
   .chip {
     padding: 5px;
     border-radius: 20px;
@@ -2311,6 +2314,14 @@ button {
   }
 }
 
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
+//  *********************************************************** WORKSHOP PAGE ********************************************************
+
+// ***********************************************************************************************************************************
+// ***********************************************************************************************************************************
+
 #workshop-main-content {
   .tabs.workshop-tabs {
     padding-left: 0;
@@ -2761,6 +2772,112 @@ button {
       }
     }
   }
+
+  .appointment-container {
+    .week-load {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-radius: 10px;
+      border: 1px solid $color84;
+      padding: 24px 30px;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+        & > * {
+          width: 100%;
+          margin: 1rem 0;
+        }
+      }
+
+      .left {
+        width: 160px;
+        flex-shrink: 0;
+        margin-right: 2rem;
+
+        @media screen and (max-width: 768px) {
+          margin: 0 auto 1rem;
+        }
+
+        .selector {
+          margin-top: 56px;
+        }
+      }
+
+      .right {
+        flex-grow: 1;
+        max-width: 800px;
+
+        .load-main {
+          display: flex;
+          justify-content: space-between;
+
+          @media screen and (max-width: 470px) {
+            flex-wrap: wrap;
+
+            & > .item {
+              margin: 1rem;
+            }
+          }
+
+          .item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            .number {
+              background: $color15;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+
+              .text {
+                color: $color4;
+                font-weight: 700;
+                font-family: "manrope", sans-serif;
+                font-size: 18px;
+              }
+
+              &.one {
+                width: 35px;
+                height: 35px;
+              }
+
+              &.two {
+                width: 55px;
+                height: 55px;
+              }
+
+              &.three {
+                width: 35px;
+                height: 35px;
+              }
+
+              &.four {
+                width: 70px;
+                height: 70px;
+              }
+
+              &.five {
+                width: 84px;
+                height: 84px;
+              }
+            }
+
+            img {
+              width: 30px;
+              height: 30px;
+              margin-top: 30px;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 #workshop-forms-main-content {
@@ -2857,6 +2974,14 @@ button {
           align-items: center;
         }
       }
+    }
+  }
+
+  .details-foot {
+    border-top: 1px solid $color28;
+
+    @media screen and (min-width: 992px) {
+      margin-top: 175px;
     }
   }
 

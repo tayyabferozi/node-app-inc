@@ -1126,6 +1126,10 @@ button {
   font-family: "Manrope", sans-serif;
 }
 
+.finances-invoice-main-content .chip-text-container {
+  min-width: 142px;
+}
+
 .finances-invoice-main-content .chip {
   padding: 5px;
   border-radius: 20px;
@@ -2806,6 +2810,146 @@ button {
   background: rgba(30, 85, 169, 0.08);
 }
 
+#workshop-main-content .appointment-container .week-load {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 10px;
+  border: 1px solid rgba(216, 216, 216, 0.4);
+  padding: 24px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #workshop-main-content .appointment-container .week-load {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #workshop-main-content .appointment-container .week-load > * {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+#workshop-main-content .appointment-container .week-load .left {
+  width: 160px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  #workshop-main-content .appointment-container .week-load .left {
+    margin: 0 auto 1rem;
+  }
+}
+
+#workshop-main-content .appointment-container .week-load .left .selector {
+  margin-top: 56px;
+}
+
+#workshop-main-content .appointment-container .week-load .right {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 800px;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 470px) {
+  #workshop-main-content .appointment-container .week-load .right .load-main {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #workshop-main-content .appointment-container .week-load .right .load-main > .item {
+    margin: 1rem;
+  }
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item .number {
+  background: rgba(30, 85, 169, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item .number .text {
+  color: #1e55a9;
+  font-weight: 700;
+  font-family: "manrope", sans-serif;
+  font-size: 18px;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item .number.one {
+  width: 35px;
+  height: 35px;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item .number.two {
+  width: 55px;
+  height: 55px;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item .number.three {
+  width: 35px;
+  height: 35px;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item .number.four {
+  width: 70px;
+  height: 70px;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item .number.five {
+  width: 84px;
+  height: 84px;
+}
+
+#workshop-main-content .appointment-container .week-load .right .load-main .item img {
+  width: 30px;
+  height: 30px;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
 @media screen and (min-width: 992px) {
   #workshop-forms-main-content .row .wrap {
     max-width: 647px;
@@ -2916,6 +3060,16 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#workshop-forms-main-content .details-foot {
+  border-top: 1px solid #f0f0f3;
+}
+
+@media screen and (min-width: 992px) {
+  #workshop-forms-main-content .details-foot {
+    margin-top: 175px;
+  }
 }
 
 #workshop-forms-main-content .noded-container .noded-item {
