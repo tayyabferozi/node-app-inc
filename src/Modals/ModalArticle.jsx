@@ -4,10 +4,15 @@ import Modal from "./Modal";
 import AddBtn from "../components/AddBtn";
 import FancyInput from "../components/FancyInput";
 
-const ModalArticle = () => {
+const ModalArticle = (props) => {
   return (
     <div>
-      <Modal className="article-modal" title="Article" buttonText="Update list">
+      <Modal
+        className="article-modal"
+        title="Article"
+        buttonText="Update list"
+        {...props}
+      >
         <div className="article-modal-body">
           <FancyInput
             prominant

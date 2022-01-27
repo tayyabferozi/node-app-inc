@@ -1,4 +1,5 @@
 import Switch from "./Switch";
+import isEmpty from "../utils/is-empty";
 
 const Input = ({
   checkbox,
@@ -30,7 +31,7 @@ const Input = ({
         rootClassName ? " " + rootClassName : ""
       }${withToggler ? " with-toggler" : ""}`}
     >
-      {label && (
+      {!isEmpty(label) && (
         <label htmlFor={id} className="input-label">
           {label}
         </label>
@@ -42,7 +43,7 @@ const Input = ({
       >
         {checkbox ? (
           <>
-            {options &&
+            {!isEmpty(options) &&
               options.map((el, idx) => {
                 const { text } = el;
 
@@ -55,16 +56,16 @@ const Input = ({
                         : "checkbox-container-3"
                     }
                   >
-                    {greenCheckbox ? (
-                      <span className="text">{text}</span>
-                    ) : (
-                      { text }
-                    )}
                     <input
                       name={name}
                       type="checkbox"
                       defaultChecked={defaultChecked}
                     />
+                    {greenCheckbox ? (
+                      <span className="text">{text}</span>
+                    ) : (
+                      text
+                    )}
                     <span className="checkmark"></span>
                   </label>
                 );

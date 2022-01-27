@@ -2,10 +2,10 @@ import React from "react";
 
 import Modal from "./Modal";
 
-const ModalScan = () => {
+const ModalScan = (props) => {
   return (
     <div>
-      <Modal title="Scan to Move">
+      <Modal title="Scan to Move" {...props}>
         <div className="scan-modal-body">
           <div className="container-fluid px-0">
             <div className="row">

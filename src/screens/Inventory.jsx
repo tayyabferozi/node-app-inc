@@ -5,6 +5,10 @@ import TabContentItem from "../components/TabContentItem";
 import TabContents from "../components/TabContents";
 import Tabs from "../components/Tabs";
 import MainLayout from "../layouts/MainLayout";
+import ModalArticle from "../modals/ModalArticle";
+import ModalForm from "../modals/ModalForm";
+import ModalNewVarient from "../modals/ModalNewVarient";
+import ModalSchedule from "../modals/ModalSchedule";
 
 const servicesOfferData = [
   {
@@ -117,7 +121,20 @@ const inventoryData = [
 ];
 
 const Inventory = () => {
-  const [serviceBrakeSelected, setServiceBrakeSelected] = useState(true);
+  const [articleModalOpenState, setArticleModalOpenState] = useState(false);
+  const [variantModalOpenState, setVariantModalOpenState] = useState(false);
+  const [formModalOpenState, setFormModalOpenState] = useState(false);
+  const [scheduleModalOpenState, setScheduleModalOpenState] = useState(false);
+  const [serviceBrakeSelected, setServiceBrakeSelected] = useState(false);
+
+  const modalOpenHandler = (func) => {
+    func(true);
+  };
+
+  const modalCloseHandler = (func) => {
+    func(false);
+  };
+
   return (
     <MainLayout
       headVector="./assets/vectors/inventory.svg"
@@ -176,6 +193,22 @@ const Inventory = () => {
       })}
     >
       <div id="inventory-main-content">
+        <ModalArticle
+          isOpen={articleModalOpenState}
+          modalCloseHandler={() => modalCloseHandler(setArticleModalOpenState)}
+        />
+        <ModalNewVarient
+          isOpen={variantModalOpenState}
+          modalCloseHandler={() => modalCloseHandler(setVariantModalOpenState)}
+        />
+        <ModalForm
+          isOpen={formModalOpenState}
+          modalCloseHandler={() => modalCloseHandler(setFormModalOpenState)}
+        />
+        <ModalSchedule
+          isOpen={scheduleModalOpenState}
+          modalCloseHandler={() => modalCloseHandler(setScheduleModalOpenState)}
+        />
         {!serviceBrakeSelected ? (
           <div className="container-fluid">
             <div className="row">
@@ -188,13 +221,13 @@ const Inventory = () => {
                       icon: "./assets/vectors/mail.svg",
                       label: "Articles",
                       target: "articles",
-                      // active: true,
+                      active: true,
                     },
                     {
                       icon: "./assets/vectors/invoices.svg",
                       label: "Services Offer",
                       target: "services-offer",
-                      active: true,
+                      // active: true,
                     },
                   ]}
                 />
@@ -281,7 +314,14 @@ const Inventory = () => {
                             </div>
                             <img src="./assets/img/inventory-1.png" alt="" />
                             <div className="name">
-                              <div className="title">{data.name}</div>
+                              <div
+                                className="title c-pointer"
+                                onClick={() =>
+                                  modalOpenHandler(setArticleModalOpenState)
+                                }
+                              >
+                                {data.name}
+                              </div>
                               <div className="caption text-light-5">
                                 {data.number}
                               </div>
@@ -415,7 +455,12 @@ const Inventory = () => {
                         <div className="fs-14 text-dark-3 fw-600 text-poppins pb-2">
                           Add Variant
                         </div>
-                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box">
+                        <div
+                          onClick={() =>
+                            modalOpenHandler(setVariantModalOpenState)
+                          }
+                          className="rounded c-pointer d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box"
+                        >
                           +
                         </div>
                       </div>
@@ -423,7 +468,12 @@ const Inventory = () => {
                         <div className="fs-14 text-dark-3 fw-600 text-poppins pb-2">
                           Node Form
                         </div>
-                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box">
+                        <div
+                          onClick={() =>
+                            modalOpenHandler(setFormModalOpenState)
+                          }
+                          className="rounded c-pointer d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box"
+                        >
                           +
                         </div>
                       </div>
@@ -431,7 +481,12 @@ const Inventory = () => {
                         <div className="fs-14 text-dark-3 fw-600 text-poppins pb-2">
                           Schedule
                         </div>
-                        <div className="rounded d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box">
+                        <div
+                          onClick={() =>
+                            modalOpenHandler(setScheduleModalOpenState)
+                          }
+                          className="rounded c-pointer d-flex justify-content-center align-items-center fs-16 text-manrope fw-600 box"
+                        >
                           +
                         </div>
                       </div>
@@ -457,7 +512,7 @@ const Inventory = () => {
                       <div className="col-8">
                         <div className="custom-form-control my-3">
                           <label className="text-light-5 fs-14" htmlFor="">
-                            Start & End Date
+                            Start &amp; End Date
                           </label>
                           <div className="input">
                             <input
@@ -589,12 +644,17 @@ const Inventory = () => {
                 </div>
                 <div className="row gx-0 py-3">
                   <div className="col-12 d-flex gap-3">
-                    <button className={`btn btn-add`}>Add Article</button>
+                    <button
+                      className={`btn btn-add`}
+                      onClick={() => modalOpenHandler(setArticleModalOpenState)}
+                    >
+                      Add Article
+                    </button>
                     <button
                       onClick={() => setServiceBrakeSelected(false)}
                       className={`btn blue`}
                     >
-                      Save & Return
+                      Save &amp; Return
                     </button>
                   </div>
                 </div>

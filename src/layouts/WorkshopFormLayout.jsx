@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import ModalNode from "../modals/ModalNode";
 
 import MainLayout from "../layouts/MainLayout";
 
 const WorkshopFormLayout = ({ children }) => {
+  const [nodeOpenState, setNodeOpenState] = useState(false);
+
+  const modalOpenHandler = (func) => {
+    func(true);
+  };
+
+  const modalCloseHandler = (func) => {
+    func(false);
+  };
+
   return (
     <MainLayout
       headVector="./assets/vectors/workshop.svg"
@@ -47,6 +58,10 @@ const WorkshopFormLayout = ({ children }) => {
         );
       })}
     >
+      <ModalNode
+        isOpen={nodeOpenState}
+        modalCloseHandler={() => modalCloseHandler(setNodeOpenState)}
+      />
       <div id="workshop-forms-main-content">
         <div className="container-fluid px-0">
           <div className="row gy-5">
@@ -59,7 +74,10 @@ const WorkshopFormLayout = ({ children }) => {
 
                 <div className="details-main">
                   <div className="item">
-                    <div className="img">
+                    <div
+                      className="c-pointer img"
+                      onClick={() => modalOpenHandler(setNodeOpenState)}
+                    >
                       <img src="./assets/vectors/details-img.svg" alt="img" />
                     </div>
                     <div className="text">
@@ -109,7 +127,10 @@ const WorkshopFormLayout = ({ children }) => {
                     </div>
                   </div>
                   <div className="item">
-                    <div className="img">
+                    <div
+                      className="c-pointer img"
+                      onClick={() => modalOpenHandler(setNodeOpenState)}
+                    >
                       <img src="./assets/vectors/details-img.svg" alt="img" />
                     </div>
                     <div className="text">
@@ -126,7 +147,10 @@ const WorkshopFormLayout = ({ children }) => {
                     </div>
                   </div>
                   <div className="item">
-                    <div className="img">
+                    <div
+                      className="c-pointer img"
+                      onClick={() => modalOpenHandler(setNodeOpenState)}
+                    >
                       <img src="./assets/vectors/details-img.svg" alt="img" />
                     </div>
                     <div className="text">

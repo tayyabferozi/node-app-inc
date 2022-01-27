@@ -5,6 +5,7 @@ import SearchInput from "../components/SearchInput";
 import FancyInput from "../components/FancyInput";
 import Tabs from "../components/Tabs";
 import MainLayout from "../layouts/MainLayout";
+import ModalInvoice from "../modals/ModalInvoice";
 
 const dummyData = [
   {
@@ -74,6 +75,15 @@ const dummyData = [
 
 const FinancesIncome = () => {
   const [incomeConvertedSelected, setIncomeConvertedSelected] = useState(false);
+  const [paymentModalOpenState, setPaymentModalOpenState] = useState(false);
+
+  const modalOpenHandler = (func) => {
+    func(true);
+  };
+
+  const modalCloseHandler = (func) => {
+    func(false);
+  };
   return (
     <MainLayout
       headVector="./assets/vectors/wallet.svg"
@@ -114,6 +124,10 @@ const FinancesIncome = () => {
         );
       })}
     >
+      <ModalInvoice
+        isOpen={paymentModalOpenState}
+        modalCloseHandler={() => modalCloseHandler(setPaymentModalOpenState)}
+      />
       <div className="finances-invoice-main-content">
         {!incomeConvertedSelected ? (
           <div className="container-fluid">
@@ -502,7 +516,10 @@ const FinancesIncome = () => {
                     <button className={`btn padding btn-add`}>
                       Add &amp; Pay Later
                     </button>
-                    <button onClick={() => {}} className={`btn padding blue`}>
+                    <button
+                      onClick={() => modalOpenHandler(setPaymentModalOpenState)}
+                      className={`btn padding blue`}
+                    >
                       Add Payment
                     </button>
                   </div>

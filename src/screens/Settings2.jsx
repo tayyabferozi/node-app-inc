@@ -4,6 +4,7 @@ import SettingsLayout from "../layouts/SettingsLayout";
 import Input from "../components/Input";
 import AddBtn from "../components/AddBtn";
 import SettingsUserImg from "../components/SettingsUserImg";
+import ModalArticle from "../modals/ModalArticle";
 
 const Settings1 = () => {
   const [formState, setFormState] = useState({
@@ -13,6 +14,15 @@ const Settings1 = () => {
     ibeaconId: "",
     apiKey: "",
   });
+  const [isModalOpenState, setIsModalOpenState] = useState(false);
+
+  const modalOpenHandler = () => {
+    setIsModalOpenState(true);
+  };
+
+  const modalCloseHandler = () => {
+    setIsModalOpenState(false);
+  };
 
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -24,6 +34,10 @@ const Settings1 = () => {
 
   return (
     <SettingsLayout>
+      <ModalArticle
+        isOpen={isModalOpenState}
+        modalCloseHandler={modalCloseHandler}
+      />
       <SettingsUserImg placeholder />
 
       <div className="form business-settings">
@@ -129,7 +143,7 @@ const Settings1 = () => {
               <h3 className="section-title">Locations</h3>
               <div className="title-label text-light-5">Manage below</div>
             </div>
-            <AddBtn title="ADD" />
+            <AddBtn onClick={modalOpenHandler} title="ADD" />
           </div>
 
           <div className="table-container short-vertical-scrollbar">
@@ -191,7 +205,7 @@ const Settings1 = () => {
             <div className="title">
               <h3 className="section-title">Categories</h3>
             </div>
-            <AddBtn title="ADD" />
+            <AddBtn onClick={modalOpenHandler} title="ADD" />
           </div>
         </div>
       </div>

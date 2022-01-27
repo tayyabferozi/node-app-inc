@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import AddBtn from "../components/AddBtn";
-import Input from "../components/Input";
 
 import Tabs from "../components/Tabs";
 import WorkshopLayout from "../layouts/WorkshopLayout";
+import ModalOrder from "../modals/ModalOrder";
 
 const WorkshopRequests = () => {
+  const [isModalOpenState, setIsModalOpenState] = useState(false);
+
+  const modalOpenHandler = () => {
+    setIsModalOpenState(true);
+  };
+
+  const modalCloseHandler = () => {
+    setIsModalOpenState(false);
+  };
+
   return (
     <WorkshopLayout>
+      <ModalOrder
+        isOpen={isModalOpenState}
+        modalCloseHandler={modalCloseHandler}
+      />
       <div className="requests-container">
         <div className="d-flex justify-content-between align-items-center mt-4 table-head">
           <Tabs
@@ -54,7 +68,7 @@ const WorkshopRequests = () => {
               <div className="fw-700 fs-12 text-manrope">FILTER</div>
               <img src="./assets/vectors/filter-user-img.svg" alt="filter" />
             </div>
-            <AddBtn blue title="NEW" />
+            <AddBtn onClick={modalOpenHandler} blue title="NEW" />
           </div>
         </div>
 

@@ -3,13 +3,14 @@ import React from "react";
 import Modal from "./Modal";
 import FancyInput from "../components/FancyInput";
 
-const ModalClient = () => {
+const ModalClient = (props) => {
   return (
     <div>
       <Modal
         title="Client"
         subTitle="If your Client already have Node, click on Scan"
         buttonText="Add"
+        {...props}
       >
         <div className="client-modal-body">
           <div className="container-fluid px-0">

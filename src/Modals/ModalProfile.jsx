@@ -3,7 +3,7 @@ import React from "react";
 import Modal from "./Modal";
 import FancyInput from "../components/FancyInput";
 
-const ModalProfile = () => {
+const ModalProfile = (props) => {
   return (
     <div>
       <Modal
@@ -17,6 +17,7 @@ const ModalProfile = () => {
           label: "Profile type",
           value: "VEHICLE",
         }}
+        {...props}
       >
         <div className="profile-modal-body">
           <div className="container-fluid px-0">

@@ -2,6 +2,7 @@ import React from "react";
 
 import WorkshopLayout from "../layouts/WorkshopLayout";
 import AddBtn from "../components/AddBtn";
+import Schedular from "../components/Schedular";
 
 const WorkshopAppointment = () => {
   return (
@@ -16,6 +17,8 @@ const WorkshopAppointment = () => {
           />
           <AddBtn blue title="NEW" />
         </div>
+
+        <Schedular />
 
         <div className="week-load">
           <div className="left">

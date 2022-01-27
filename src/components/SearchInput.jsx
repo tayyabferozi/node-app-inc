@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchInput = ({ withFilter, icon, placeholder, ...rest }) => {
+const SearchInput = ({ onQrClick, withFilter, icon, placeholder, ...rest }) => {
   return (
     <div className="main-search">
       <div className="custom-form-control d-flex">
@@ -28,7 +28,14 @@ const SearchInput = ({ withFilter, icon, placeholder, ...rest }) => {
             readOnly
             {...rest}
           />
-          {icon && <img src={icon} className="icon qr" alt="qr" />}
+          {icon && (
+            <img
+              onClick={onQrClick}
+              src={icon}
+              className="icon qr c-pointer"
+              alt="qr"
+            />
+          )}
         </div>
       </div>
     </div>

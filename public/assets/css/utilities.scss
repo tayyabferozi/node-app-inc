@@ -62,14 +62,30 @@ h5.sus-evidence-word {
   margin-bottom: 14px;
 }
 
+.c-pointer {
+  cursor: pointer;
+}
+
 a {
   color: $color22;
+
+  &,
+  * {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 a,
 button,
 .btn {
   cursor: pointer;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 .d-1300-none {
@@ -462,10 +478,6 @@ button,
     line-height: 1;
     font-weight: bold;
     transition: 0.4s ease;
-
-    // &:hover {
-    //   transform: scale(1.2);
-    // }
   }
 
   &.center-content {
@@ -499,6 +511,10 @@ button,
     padding: 14px 30px;
     display: inline-block;
 
+    &:hover {
+      background-color: $color1;
+    }
+
     &.btn-update {
     }
   }
@@ -512,11 +528,12 @@ button,
   }
 
   &.btn-blue {
-    background-color: $color5;
-    color: $color19;
-    padding: 8px 22px;
-    border-radius: 4px;
-    font-weight: 600;
+    // background-color: $color5;
+    // color: $color19;
+    // padding: 8px 22px;
+    // border-radius: 4px;
+    // font-weight: 600;
+    // transform: scale(1.1);
 
     &.btn-rounded {
       border-radius: 50px;
@@ -561,10 +578,18 @@ button,
 
     &.black {
       background-color: $color3;
+
+      &:hover {
+        background-color: $color1;
+      }
     }
 
     &.blue {
       background-color: $color4;
+
+      &:hover {
+        background-color: $color85;
+      }
     }
   }
 
@@ -599,6 +624,10 @@ button,
     color: #fff;
     font-weight: bold;
     font-family: "lato", sans-serif;
+
+    &:hover {
+      background-color: $color85;
+    }
   }
 
   &.btn-grey {
@@ -1010,9 +1039,67 @@ button,
 
             .img {
               display: flex;
+              width: 25px;
 
               @media screen and (max-width: 575px) {
                 height: 20px;
+              }
+            }
+
+            &:nth-child(1) {
+              .text {
+                position: relative;
+                top: 3px;
+              }
+            }
+
+            &:nth-child(2) {
+              .img {
+                width: 30px;
+                position: relative;
+                top: -3px;
+              }
+            }
+
+            &:nth-child(3) {
+              .img {
+                width: 27px;
+                position: relative;
+                top: -3px;
+              }
+            }
+
+            &:nth-child(4) {
+              .img {
+                width: 23px;
+              }
+
+              .text {
+                position: relative;
+                top: 2px;
+              }
+            }
+
+            &:nth-child(5) {
+              .img {
+                width: 32px;
+                position: relative;
+                top: 3px;
+                left: 4px;
+              }
+              .text {
+                position: relative;
+                top: 1px;
+              }
+            }
+
+            &:nth-child(6) {
+              .img {
+                width: 29px;
+              }
+              .text {
+                position: relative;
+                top: -2px;
               }
             }
 
@@ -1036,7 +1123,7 @@ button,
               margin: 0 5px;
             }
 
-            img {
+            svg {
               @media screen and (max-width: 768px) {
                 width: 18px;
               }
@@ -2104,6 +2191,7 @@ button,
     border: none;
     font-weight: bold;
     color: $color3;
+    text-decoration: none;
     transition: 0.25s ease;
 
     &::after {
@@ -2353,22 +2441,61 @@ textarea {
   resize: none;
 }
 
-.custom-modal {
-  max-width: 622px;
-  max-height: 100%;
+.modal-overlay {
   position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.4s ease;
+
+  &.show {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+.custom-modal {
+  position: fixed;
+  max-width: 622px;
+  max-height: 95%;
   background: #fff;
   box-shadow: 0 6px 16px $color75;
   border-radius: 4px;
   overflow: hidden;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 90%;
   transform: translate(-50%, -50%);
   overflow-y: scroll;
+  z-index: 2;
+  transition: 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
 
   & > * {
     padding: 35px 30px 0;
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &.bottom-aligned {
+    top: unset;
+    max-height: 95%;
+    transform: translate(-50%, 0);
+    bottom: -95%;
+    opacity: 1;
+
+    &.show {
+      bottom: 0;
+    }
   }
 
   .modal-head {

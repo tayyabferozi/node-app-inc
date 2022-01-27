@@ -5,7 +5,7 @@ import AddBtn from "../components/AddBtn";
 import Input from "../components/Input";
 import FancyInput from "../components/FancyInput";
 
-const ModalProfile = () => {
+const ModalProfile = (props) => {
   return (
     <div>
       <Modal
@@ -31,6 +31,7 @@ const ModalProfile = () => {
             </div>
           </div>
         }
+        {...props}
       >
         <div className="profile-modal-body">
           <div className="profile-modal-main">
@@ -174,7 +175,7 @@ const ModalProfile = () => {
                       <div className="text-2">
                         <span className="fs-11 fw-600">{name}</span>{" "}
                         <span className="fs-11 fw-500"> {edit}</span>{" "}
-                        <span className="text-light-5 fs-11">{date}</span>
+                        <span className="text-light-5 fs-11">{editDate}</span>
                       </div>
                     )}
                     {attachment && (

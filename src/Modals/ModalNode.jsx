@@ -3,13 +3,14 @@ import React from "react";
 import Modal from "./Modal";
 import FancyInput from "../components/FancyInput";
 
-const ModalNode = () => {
+const ModalNode = (props) => {
   return (
     <div>
       <Modal
         buttonText="Node"
         className="node-modal"
         bodyClassName="node-modal-body-container"
+        {...props}
       >
         <div className="node-modal-body">
           <div className="fs-26 fw-500 text-blue lh-1">

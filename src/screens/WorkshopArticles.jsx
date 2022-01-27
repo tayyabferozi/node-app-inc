@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import FancyInput from "../components/FancyInput";
 import AddBtn from "../components/AddBtn";
@@ -7,10 +7,30 @@ import TabContents from "../components/TabContents";
 import TabContentItem from "../components/TabContentItem";
 import Tabs from "../components/Tabs";
 import WorkshopFormLayout from "../layouts/WorkshopFormLayout";
+import ModalOrder from "../modals/ModalOrder";
+import ModalArticle from "../modals/ModalArticle";
 
 const WorkshopArticles = () => {
+  const [orderModalOpenState, setOrderModalOpenState] = useState(false);
+  const [articleModalOpenState, setArticleModalOpenState] = useState(false);
+
+  const modalOpenHandler = (func) => {
+    func(true);
+  };
+
+  const modalCloseHandler = (func) => {
+    func(false);
+  };
   return (
     <WorkshopFormLayout>
+      <ModalOrder
+        isOpen={orderModalOpenState}
+        modalCloseHandler={() => modalCloseHandler(setOrderModalOpenState)}
+      />
+      <ModalArticle
+        isOpen={articleModalOpenState}
+        modalCloseHandler={() => modalCloseHandler(setArticleModalOpenState)}
+      />
       <div className="articles-container">
         <Tabs
           verticalButtons
@@ -42,7 +62,11 @@ const WorkshopArticles = () => {
                 Forms
               </h3>
             </div>
-            <AddBtn title="NEW" blue />
+            <AddBtn
+              onClick={() => modalOpenHandler(setOrderModalOpenState)}
+              title="NEW"
+              blue
+            />
           </div>
 
           <div className="files forms">
@@ -145,7 +169,10 @@ const WorkshopArticles = () => {
         </TabContentItem>
         <TabContentItem target="articles">
           <div className="d-flex justify-content-end mt-4 mb-3">
-            <AddBtn blue />
+            <AddBtn
+              onClick={() => modalOpenHandler(setArticleModalOpenState)}
+              blue
+            />
           </div>
           <div className="collapses-container">
             <div className="collapse">

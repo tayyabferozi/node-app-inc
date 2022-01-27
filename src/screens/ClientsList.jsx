@@ -6,9 +6,21 @@ import TabContents from "../components/TabContents";
 import TabContentItem from "../components/TabContentItem";
 import AddBtn from "../components/AddBtn";
 import SearchInput from "../components/SearchInput";
+import ModalLifeActivity from "../modals/ModalLifeActivity";
+import ModalOrder from "../modals/ModalOrder";
 
 const ClientsList = () => {
+  const [activityOpenState, setActivityOpenState] = useState(false);
+  const [orderModalOpenState, setOrderModalOpenState] = useState(false);
   const [clientSelected, setClientSelected] = useState(false);
+
+  const modalOpenHandler = (func) => {
+    func(true);
+  };
+
+  const modalCloseHandler = (func) => {
+    func(false);
+  };
 
   return (
     <MainLayout
@@ -67,6 +79,14 @@ const ClientsList = () => {
         );
       })}
     >
+      <ModalLifeActivity
+        isOpen={activityOpenState}
+        modalCloseHandler={() => modalCloseHandler(setActivityOpenState)}
+      />
+      <ModalOrder
+        isOpen={orderModalOpenState}
+        modalCloseHandler={() => modalCloseHandler(setOrderModalOpenState)}
+      />
       {clientSelected ? (
         <div id="client-overview-main-content" className="mt-4 mt-sm-0">
           <div className="container-fluid">
@@ -132,7 +152,10 @@ const ClientsList = () => {
                             </div>
                           </div>
                         </div>
-                        <button className="btn btn-blue-high ms-md-4 ms-0 mt-md-0 mt-3">
+                        <button
+                          onClick={() => modalOpenHandler(setActivityOpenState)}
+                          className="btn btn-blue-high ms-md-4 ms-0 mt-md-0 mt-3"
+                        >
                           Life Activity
                         </button>
                       </div>
@@ -723,8 +746,11 @@ const ClientsList = () => {
 
                                 return (
                                   <div
-                                    className="requests-list-item"
+                                    className="requests-list-item c-pointer"
                                     key={"req-list" + idx}
+                                    onClick={() =>
+                                      modalOpenHandler(setOrderModalOpenState)
+                                    }
                                   >
                                     <div className="mini-info">
                                       <img

@@ -3,7 +3,7 @@ import React from "react";
 import Modal from "./Modal";
 import FancyInput from "../components/FancyInput";
 
-const ModalNewVarient = () => {
+const ModalNewVarient = (props) => {
   return (
     <div>
       <Modal
@@ -18,6 +18,7 @@ const ModalNewVarient = () => {
           label: "Which type of Profile",
           placeholder: "Start typing to search...",
         }}
+        {...props}
       >
         <div className="varient-modal-body">
           <div className="item">

@@ -601,6 +601,11 @@ button {
             justify-content: center;
             align-items: center;
             border-radius: 6px;
+            transition: 0.4s ease;
+
+            &:hover {
+              background-color: $color21;
+            }
 
             &:last-child {
               margin-right: 0;
@@ -1202,10 +1207,18 @@ button {
     font-size: 14px;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
+
+    &:hover {
+      background: $color21;
+    }
   }
   .btn.blue {
     background-color: $color4;
     color: white;
+
+    &:hover {
+      background-color: $color85;
+    }
   }
   .expense-add {
     .add-to-purhase-btn {
@@ -1440,6 +1453,11 @@ button {
         font-size: 14px;
         font-weight: bold;
         font-family: "Poppins", sans-serif;
+        transition: 0.4s ease;
+
+        &:hover {
+          background: $color21;
+        }
       }
       .services-offer-menu {
         width: 36px;
@@ -1515,6 +1533,11 @@ button {
       font-size: 14px;
       font-weight: bold;
       font-family: "Poppins", sans-serif;
+      transition: 0.4s ease;
+
+      &:hover {
+        background: $color21;
+      }
     }
     // button.is-brake {
     //   background-color: rgba($color: $color37, $alpha: 0.08);
@@ -1581,10 +1604,20 @@ button {
       font-size: 14px;
       font-weight: 600;
       font-family: "Poppins", sans-serif;
+      transition: 0.4s ease;
+
+      &:hover {
+        background: $color21;
+      }
     }
     .btn.blue {
       background-color: $color4;
       color: white;
+      transition: 0.4s ease;
+
+      &:hover {
+        background: $color85;
+      }
     }
     .service-details {
       .title {
@@ -1696,8 +1729,10 @@ button {
         display: flex;
         padding: 16px 20px;
         cursor: pointer;
+        transition: 0.4s ease;
 
-        &.active {
+        &.active,
+        &:hover {
           background-color: $color5;
         }
 
@@ -1946,6 +1981,10 @@ button {
         text-align: center;
         line-height: 2.5;
         border-radius: 50px;
+
+        &:hover {
+          background-color: $color85;
+        }
       }
     }
   }
@@ -2781,6 +2820,7 @@ button {
       border-radius: 10px;
       border: 1px solid $color84;
       padding: 24px 30px;
+      margin-top: 120px;
 
       @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -3280,6 +3320,7 @@ button {
 
       .blurred-overlay {
         position: absolute;
+        padding-top: 3rem;
         left: 0;
         right: 0;
         top: 0;

@@ -3,7 +3,7 @@ import React from "react";
 import Modal from "./Modal";
 import FancyInput from "../components/FancyInput";
 
-const ModalAppointment = () => {
+const ModalAppointment = (props) => {
   return (
     <div>
       <Modal
@@ -17,6 +17,7 @@ const ModalAppointment = () => {
           name: "assignedTo",
           label: "Assigned to",
         }}
+        {...props}
       >
         <div className="client-modal-body">
           <div className="container-fluid px-0">

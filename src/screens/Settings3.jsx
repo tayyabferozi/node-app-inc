@@ -4,7 +4,7 @@ import Input from "../components/Input";
 import SettingsLayout from "../layouts/SettingsLayout";
 import AddBtn from "../components/AddBtn";
 
-const Settings1 = () => {
+const Settings3 = () => {
   const [formState, setFormState] = useState({
     employee: "",
     admin: "",
@@ -106,7 +106,7 @@ const Settings1 = () => {
                       text: "Hide Finances data",
                     },
                     {
-                      text: "Can’t Manage Articles & Services",
+                      text: "Can’t Manage Articles &amp; Services",
                     },
                     {
                       text: "Can’t Manage Clients",
@@ -203,4 +203,4 @@ const Settings1 = () => {
   );
 };
 
-export default Settings1;
+export default Settings3;

@@ -50,7 +50,6 @@ const FancyInput = ({
             {...rest}
           >
             {options.map((el, idx) => {
-              console.log(el);
               return (
                 <option
                   key={"select" + idx}

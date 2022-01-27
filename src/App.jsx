@@ -22,18 +22,18 @@ import WorkshopStorage from "./screens/WorkshopStorage";
 import WorkshopArticles from "./screens/WorkshopArticles";
 import WorkshopNoded from "./screens/WorkshopNoded";
 
-import ModalForm from "./Modals/ModalForm";
-import ModalScan from "./Modals/ModalScan";
-import ModalNewVarient from "./Modals/ModalNewVarient";
-import ModalArticle from "./Modals/ModalArticle";
-import ModalNode from "./Modals/ModalNode";
-import ModalProfile from "./Modals/ModalProfile";
-import ModalClient from "./Modals/ModalClient";
-import ModalAppointment from "./Modals/ModalAppointment";
-import ModalSchedule from "./Modals/ModalSchedule";
-import ModalLiveActivity from "./Modals/ModalLifeActivity";
-import ModalInvoice from "./Modals/ModalInvoice";
-import ModalOrder from "./Modals/ModalOrder";
+import ModalForm from "./modals/ModalForm";
+import ModalScan from "./modals/ModalScan";
+import ModalNewVarient from "./modals/ModalNewVarient";
+import ModalArticle from "./modals/ModalArticle";
+import ModalNode from "./modals/ModalNode";
+import ModalProfile from "./modals/ModalProfile";
+import ModalClient from "./modals/ModalClient";
+import ModalAppointment from "./modals/ModalAppointment";
+import ModalSchedule from "./modals/ModalSchedule";
+import ModalLiveActivity from "./modals/ModalLifeActivity";
+import ModalInvoice from "./modals/ModalInvoice";
+import ModalOrder from "./modals/ModalOrder";
 
 function App() {
   return (
@@ -66,18 +66,18 @@ function App() {
           <Route path="/workshop-articles" element={<WorkshopArticles />} />
           <Route path="/workshop-noded" element={<WorkshopNoded />} />
 
-          <Route path="/modal-1" element={<ModalForm />} />
-          <Route path="/modal-2" element={<ModalScan />} />
-          <Route path="/modal-3" element={<ModalNewVarient />} />
-          <Route path="/modal-4" element={<ModalArticle />} />
-          <Route path="/modal-5" element={<ModalNode />} />
-          <Route path="/modal-6" element={<ModalProfile />} />
-          <Route path="/modal-7" element={<ModalClient />} />
-          <Route path="/modal-8" element={<ModalAppointment />} />
-          <Route path="/modal-9" element={<ModalSchedule />} />
-          <Route path="/modal-10" element={<ModalLiveActivity />} />
-          <Route path="/modal-11" element={<ModalInvoice />} />
-          <Route path="/modal-12" element={<ModalOrder />} />
+          <Route path="/modal-1" element={<ModalForm isOpen />} />
+          <Route path="/modal-2" element={<ModalScan isOpen />} />
+          <Route path="/modal-3" element={<ModalNewVarient isOpen />} />
+          <Route path="/modal-4" element={<ModalArticle isOpen />} />
+          <Route path="/modal-5" element={<ModalNode isOpen />} />
+          <Route path="/modal-6" element={<ModalProfile isOpen />} />
+          <Route path="/modal-7" element={<ModalClient isOpen />} />
+          <Route path="/modal-8" element={<ModalAppointment isOpen />} />
+          <Route path="/modal-9" element={<ModalSchedule isOpen />} />
+          <Route path="/modal-10" element={<ModalLiveActivity isOpen />} />
+          <Route path="/modal-11" element={<ModalInvoice isOpen />} />
+          <Route path="/modal-12" element={<ModalOrder isOpen />} />
 
           <Route path="/" element={<Navigate to="/signup-1" />} />
         </Routes>

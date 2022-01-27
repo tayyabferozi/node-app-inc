@@ -2,10 +2,10 @@ import React from "react";
 
 import Modal from "./Modal";
 
-const ModalLifeActivity = () => {
+const ModalLifeActivity = (props) => {
   return (
     <div>
-      <Modal title="Life Activity">
+      <Modal title="Life Activity" bottomAligned {...props}>
         <div className="schedule-modal-body">
           <div className="head">
             <div className="d-flex align-items-center">

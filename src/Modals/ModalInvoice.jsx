@@ -2,10 +2,14 @@ import React from "react";
 
 import Modal from "./Modal";
 
-const ModalLifeActivity = () => {
+const ModalLifeActivity = ({ modalCloseHandler, ...rest }) => {
   return (
     <div>
-      <Modal className="invoice-modal">
+      <Modal
+        className="invoice-modal"
+        modalCloseHandler={modalCloseHandler}
+        {...rest}
+      >
         <div className="left">
           <h2 className="main-title">Invoice #AA-04-19-1890</h2>
 
@@ -137,7 +141,10 @@ const ModalLifeActivity = () => {
           <textarea name="" id="" rows="4"></textarea>
 
           <div className="d-flex justify-content-end mt-4 pb-5">
-            <button className="btn btn-blue btn-rounded">
+            <button
+              onClick={modalCloseHandler}
+              className="btn btn-blue btn-rounded"
+            >
               Add Transaction
             </button>
           </div>
